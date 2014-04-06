@@ -7,12 +7,16 @@
 //
 
 #import "GeoViewController.h"
-
 #import <GoogleMaps/GoogleMaps.h>
+#import "PanoramaViewController.h"
+
+@interface GeoViewController ()
+@end
 
 @implementation GeoViewController {
     GMSMapView *mapView_;
 }
+
 
 - (void)viewDidLoad {
     // Create a GMSCameraPosition that tells the map to display the
@@ -30,6 +34,16 @@
     marker.title = @"Beijing";
     marker.snippet = @"China";
     marker.map = mapView_;
+    
+    
+    UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(40, 40, 70, 70)];
+    
+    backButton.titleLabel.text=@"StreetView";
+    
+    backButton.titleLabel.textColor=[UIColor redColor];
+    
+    [mapView_ addSubview:backButton];
+
 }
 
 @end
