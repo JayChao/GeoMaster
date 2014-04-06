@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A476ACB118F1ECB800B7121D /* FitBoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A476ACB018F1ECB800B7121D /* FitBoundsViewController.m */; };
+		A496A66E18F2050100C18EBB /* GeoGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A496A66D18F2050100C18EBB /* GeoGame.m */; };
 		A4A3A87F18F1D48300EC6657 /* PanoramaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A3A87E18F1D48300EC6657 /* PanoramaViewController.m */; };
 		A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B618F1AE2000299AD1 /* Foundation.framework */; };
 		A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */; };
@@ -55,6 +56,8 @@
 /* Begin PBXFileReference section */
 		A476ACB018F1ECB800B7121D /* FitBoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitBoundsViewController.m; sourceTree = "<group>"; };
 		A476ACB218F1ECBD00B7121D /* FitBoundsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitBoundsViewController.h; sourceTree = "<group>"; };
+		A496A66C18F2050100C18EBB /* GeoGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoGame.h; sourceTree = "<group>"; };
+		A496A66D18F2050100C18EBB /* GeoGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoGame.m; sourceTree = "<group>"; };
 		A4A3A87D18F1D48300EC6657 /* PanoramaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoramaViewController.h; sourceTree = "<group>"; };
 		A4A3A87E18F1D48300EC6657 /* PanoramaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramaViewController.m; sourceTree = "<group>"; };
 		A4F1A1B318F1AE2000299AD1 /* Geo Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geo Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +197,8 @@
 				A476ACB018F1ECB800B7121D /* FitBoundsViewController.m */,
 				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
 				A4F1A1BD18F1AE2000299AD1 /* Supporting Files */,
+				A496A66C18F2050100C18EBB /* GeoGame.h */,
+				A496A66D18F2050100C18EBB /* GeoGame.m */,
 			);
 			path = "Geo Master";
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */,
 				A4F1A1C318F1AE2000299AD1 /* main.m in Sources */,
 				A476ACB118F1ECB800B7121D /* FitBoundsViewController.m in Sources */,
+				A496A66E18F2050100C18EBB /* GeoGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
