@@ -26,7 +26,6 @@
 		A4F1A1E318F1AE2000299AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1E118F1AE2000299AD1 /* InfoPlist.strings */; };
 		A4F1A1E518F1AE2000299AD1 /* Geo_MasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1E418F1AE2000299AD1 /* Geo_MasterTests.m */; };
 		A4F1A1EF18F1B7F900299AD1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */; };
-		A4F1A1F118F1B83100299AD1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1F018F1B83100299AD1 /* GoogleMaps.bundle */; };
 		A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */; };
 		A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F318F1B8B800299AD1 /* CoreData.framework */; };
 		A4F1A20218F1B8B800299AD1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F418F1B8B800299AD1 /* CoreLocation.framework */; };
@@ -81,7 +80,6 @@
 		A4F1A1E218F1AE2000299AD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A4F1A1E418F1AE2000299AD1 /* Geo_MasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Geo_MasterTests.m; sourceTree = "<group>"; };
 		A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		A4F1A1F018F1B83100299AD1 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A4F1A1F318F1B8B800299AD1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A4F1A1F418F1B8B800299AD1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -103,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F1A1EF18F1B7F900299AD1 /* GoogleMaps.framework in Frameworks */,
 				A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */,
 				A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */,
 				A4F1A20218F1B8B800299AD1 /* CoreLocation.framework in Frameworks */,
@@ -119,7 +118,6 @@
 				A4F1A20D18F1B8B800299AD1 /* SystemConfiguration.framework in Frameworks */,
 				A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */,
 				A4F1A1BB18F1AE2000299AD1 /* UIKit.framework in Frameworks */,
-				A4F1A1EF18F1B7F900299AD1 /* GoogleMaps.framework in Frameworks */,
 				A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,7 +171,6 @@
 				A4F1A1FD18F1B8B800299AD1 /* OpenGLES.framework */,
 				A4F1A1FE18F1B8B800299AD1 /* QuartzCore.framework */,
 				A4F1A1FF18F1B8B800299AD1 /* SystemConfiguration.framework */,
-				A4F1A1F018F1B83100299AD1 /* GoogleMaps.bundle */,
 				A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */,
 				A4F1A1B618F1AE2000299AD1 /* Foundation.framework */,
 				A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */,
@@ -314,7 +311,6 @@
 				A4F1A1D218F1AE2000299AD1 /* Images.xcassets in Resources */,
 				A4F1A1CA18F1AE2000299AD1 /* Main_iPhone.storyboard in Resources */,
 				A4F1A1C118F1AE2000299AD1 /* InfoPlist.strings in Resources */,
-				A4F1A1F118F1B83100299AD1 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +473,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/ychao/Desktop/Geo\\ Master",
+					/Users/jvolker/Desktop/GoeMaster,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
@@ -495,7 +491,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/ychao/Desktop/Geo\\ Master",
+					/Users/jvolker/Desktop/GoeMaster,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
