@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A476ACB118F1ECB800B7121D /* FitBoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A476ACB018F1ECB800B7121D /* FitBoundsViewController.m */; };
+		A4A3A87F18F1D48300EC6657 /* PanoramaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A3A87E18F1D48300EC6657 /* PanoramaViewController.m */; };
 		A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B618F1AE2000299AD1 /* Foundation.framework */; };
 		A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */; };
 		A4F1A1BB18F1AE2000299AD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1BA18F1AE2000299AD1 /* UIKit.framework */; };
@@ -51,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A476ACB018F1ECB800B7121D /* FitBoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitBoundsViewController.m; sourceTree = "<group>"; };
+		A476ACB218F1ECBD00B7121D /* FitBoundsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitBoundsViewController.h; sourceTree = "<group>"; };
+		A4A3A87D18F1D48300EC6657 /* PanoramaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoramaViewController.h; sourceTree = "<group>"; };
+		A4A3A87E18F1D48300EC6657 /* PanoramaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramaViewController.m; sourceTree = "<group>"; };
 		A4F1A1B318F1AE2000299AD1 /* Geo Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geo Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F1A1B618F1AE2000299AD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -182,6 +188,10 @@
 				A4F1A1C818F1AE2000299AD1 /* Main_iPhone.storyboard */,
 				A4F1A1CE18F1AE2000299AD1 /* GeoViewController.h */,
 				A4F1A1CF18F1AE2000299AD1 /* GeoViewController.m */,
+				A4A3A87D18F1D48300EC6657 /* PanoramaViewController.h */,
+				A4A3A87E18F1D48300EC6657 /* PanoramaViewController.m */,
+				A476ACB218F1ECBD00B7121D /* FitBoundsViewController.h */,
+				A476ACB018F1ECB800B7121D /* FitBoundsViewController.m */,
 				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
 				A4F1A1BD18F1AE2000299AD1 /* Supporting Files */,
 			);
@@ -319,8 +329,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F1A1D018F1AE2000299AD1 /* GeoViewController.m in Sources */,
+				A4A3A87F18F1D48300EC6657 /* PanoramaViewController.m in Sources */,
 				A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */,
 				A4F1A1C318F1AE2000299AD1 /* main.m in Sources */,
+				A476ACB118F1ECB800B7121D /* FitBoundsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +560,7 @@
 				A4F1A1EA18F1AE2000299AD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4F1A1EB18F1AE2000299AD1 /* Build configuration list for PBXNativeTarget "Geo MasterTests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +569,7 @@
 				A4F1A1ED18F1AE2000299AD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
