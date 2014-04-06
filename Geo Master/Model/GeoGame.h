@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface GeoGame : NSObject
+
+@property(nonatomic) NSNumber *score;
+@property(nonatomic) NSArray *coordinatesToGuess;
+@property(nonatomic) NSArray *guessedCoordinates;
+-(void)calculateScore:(NSArray*)guessedCoords;
 
 @end
