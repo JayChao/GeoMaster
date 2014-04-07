@@ -39,6 +39,7 @@
 		BB8E7EC918F1D6F400416258 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E7EC818F1D6F400416258 /* GoogleMaps.framework */; };
 		BB8E7ECB18F1D71900416258 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB8E7ECA18F1D71900416258 /* GoogleMaps.bundle */; };
 		BB8E7F0F18F1DD0800416258 /* StreetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8E7F0E18F1DD0800416258 /* StreetViewController.m */; };
+		BB8E7F3B18F239DD00416258 /* RandomPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8E7F3A18F239DD00416258 /* RandomPlace.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		BB8E7ECA18F1D71900416258 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		BB8E7F0D18F1DD0800416258 /* StreetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetViewController.h; sourceTree = "<group>"; };
 		BB8E7F0E18F1DD0800416258 /* StreetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetViewController.m; sourceTree = "<group>"; };
+		BB8E7F3918F239DD00416258 /* RandomPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomPlace.h; sourceTree = "<group>"; };
+		BB8E7F3A18F239DD00416258 /* RandomPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomPlace.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 				A4F1A1C818F1AE2000299AD1 /* Main_iPhone.storyboard */,
 				BB8E7F0D18F1DD0800416258 /* StreetViewController.h */,
 				BB8E7F0E18F1DD0800416258 /* StreetViewController.m */,
+				BB8E7F3918F239DD00416258 /* RandomPlace.h */,
+				BB8E7F3A18F239DD00416258 /* RandomPlace.m */,
 				A4F1A1CE18F1AE2000299AD1 /* GeoViewController.h */,
 				A4F1A1CF18F1AE2000299AD1 /* GeoViewController.m */,
 				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
@@ -325,6 +330,7 @@
 			files = (
 				A4F1A1D018F1AE2000299AD1 /* GeoViewController.m in Sources */,
 				A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */,
+				BB8E7F3B18F239DD00416258 /* RandomPlace.m in Sources */,
 				A4F1A1C318F1AE2000299AD1 /* main.m in Sources */,
 				BB8E7F0F18F1DD0800416258 /* StreetViewController.m in Sources */,
 			);

@@ -7,11 +7,15 @@
 //
 
 #import "StreetViewController.h"
+#import "RandomPlace.h"
 #import <GoogleMaps/GoogleMaps.h>
+
 
 @interface StreetViewController ()<GMSPanoramaViewDelegate>
 //a list of all cities that Google Map Street View covered
 @property (strong,nonatomic)NSMutableArray* citiesList;
+
+@property RandomPlace *randomPlace;
 
 @end
 
@@ -20,7 +24,6 @@
 
 GMSPanoramaView *view_;
 //Coordinate of random place
-CLLocationCoordinate2D coordinate;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -28,6 +31,7 @@ CLLocationCoordinate2D coordinate;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.randomPlace=[[RandomPlace alloc]init];
     }
     return self;
 }
@@ -40,19 +44,13 @@ CLLocationCoordinate2D coordinate;
     [self showStreetView];
 }
 
--(void)findRandomPlace{
-
-    
-}
-
 -(CLLocationCoordinate2D)getCoordinate{
-    return coordinate;
+    return [self.randomPlace getCoordinate];
 }
 
 
 -(void)showStreetView{
-    [self findRandomPlace];
-    view_ = [GMSPanoramaView panoramaWithFrame:CGRectZero nearCoordinate:coordinate];
+    view_ = [GMSPanoramaView panoramaWithFrame:CGRectZero nearCoordinate:[self.randomPlace getCoordinate]];
     view_.camera = [GMSPanoramaCamera cameraWithHeading:180 pitch:-10 zoom:0];
     view_.delegate = self;
     view_.orientationGestures = YES;
