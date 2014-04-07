@@ -22,8 +22,6 @@
 		A4F1A1DB18F1AE2000299AD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1BA18F1AE2000299AD1 /* UIKit.framework */; };
 		A4F1A1E318F1AE2000299AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1E118F1AE2000299AD1 /* InfoPlist.strings */; };
 		A4F1A1E518F1AE2000299AD1 /* Geo_MasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1E418F1AE2000299AD1 /* Geo_MasterTests.m */; };
-		A4F1A1EF18F1B7F900299AD1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */; };
-		A4F1A1F118F1B83100299AD1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1F018F1B83100299AD1 /* GoogleMaps.bundle */; };
 		A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */; };
 		A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F318F1B8B800299AD1 /* CoreData.framework */; };
 		A4F1A20218F1B8B800299AD1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F418F1B8B800299AD1 /* CoreLocation.framework */; };
@@ -38,6 +36,9 @@
 		A4F1A20B18F1B8B800299AD1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FD18F1B8B800299AD1 /* OpenGLES.framework */; };
 		A4F1A20C18F1B8B800299AD1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FE18F1B8B800299AD1 /* QuartzCore.framework */; };
 		A4F1A20D18F1B8B800299AD1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FF18F1B8B800299AD1 /* SystemConfiguration.framework */; };
+		BB8E7EC918F1D6F400416258 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E7EC818F1D6F400416258 /* GoogleMaps.framework */; };
+		BB8E7ECB18F1D71900416258 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB8E7ECA18F1D71900416258 /* GoogleMaps.bundle */; };
+		BB8E7F0F18F1DD0800416258 /* StreetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8E7F0E18F1DD0800416258 /* StreetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +72,6 @@
 		A4F1A1E018F1AE2000299AD1 /* Geo MasterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Geo MasterTests-Info.plist"; sourceTree = "<group>"; };
 		A4F1A1E218F1AE2000299AD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A4F1A1E418F1AE2000299AD1 /* Geo_MasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Geo_MasterTests.m; sourceTree = "<group>"; };
-		A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		A4F1A1F018F1B83100299AD1 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A4F1A1F318F1B8B800299AD1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A4F1A1F418F1B8B800299AD1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -87,6 +86,10 @@
 		A4F1A1FD18F1B8B800299AD1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A4F1A1FE18F1B8B800299AD1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A4F1A1FF18F1B8B800299AD1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BB8E7EC818F1D6F400416258 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		BB8E7ECA18F1D71900416258 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		BB8E7F0D18F1DD0800416258 /* StreetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetViewController.h; sourceTree = "<group>"; };
+		BB8E7F0E18F1DD0800416258 /* StreetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 				A4F1A20318F1B8B800299AD1 /* CoreText.framework in Frameworks */,
 				A4F1A20418F1B8B800299AD1 /* GLKit.framework in Frameworks */,
 				A4F1A20518F1B8B800299AD1 /* ImageIO.framework in Frameworks */,
+				BB8E7EC918F1D6F400416258 /* GoogleMaps.framework in Frameworks */,
 				A4F1A20618F1B8B800299AD1 /* libc++.dylib in Frameworks */,
 				A4F1A20718F1B8B800299AD1 /* libc.dylib in Frameworks */,
 				A4F1A20818F1B8B800299AD1 /* libicucore.dylib in Frameworks */,
@@ -110,7 +114,6 @@
 				A4F1A20D18F1B8B800299AD1 /* SystemConfiguration.framework in Frameworks */,
 				A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */,
 				A4F1A1BB18F1AE2000299AD1 /* UIKit.framework in Frameworks */,
-				A4F1A1EF18F1B7F900299AD1 /* GoogleMaps.framework in Frameworks */,
 				A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +153,8 @@
 		A4F1A1B518F1AE2000299AD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB8E7ECA18F1D71900416258 /* GoogleMaps.bundle */,
+				BB8E7EC818F1D6F400416258 /* GoogleMaps.framework */,
 				A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */,
 				A4F1A1F318F1B8B800299AD1 /* CoreData.framework */,
 				A4F1A1F418F1B8B800299AD1 /* CoreLocation.framework */,
@@ -164,8 +169,6 @@
 				A4F1A1FD18F1B8B800299AD1 /* OpenGLES.framework */,
 				A4F1A1FE18F1B8B800299AD1 /* QuartzCore.framework */,
 				A4F1A1FF18F1B8B800299AD1 /* SystemConfiguration.framework */,
-				A4F1A1F018F1B83100299AD1 /* GoogleMaps.bundle */,
-				A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */,
 				A4F1A1B618F1AE2000299AD1 /* Foundation.framework */,
 				A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */,
 				A4F1A1BA18F1AE2000299AD1 /* UIKit.framework */,
@@ -180,6 +183,8 @@
 				A4F1A1C518F1AE2000299AD1 /* GeoAppDelegate.h */,
 				A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */,
 				A4F1A1C818F1AE2000299AD1 /* Main_iPhone.storyboard */,
+				BB8E7F0D18F1DD0800416258 /* StreetViewController.h */,
+				BB8E7F0E18F1DD0800416258 /* StreetViewController.m */,
 				A4F1A1CE18F1AE2000299AD1 /* GeoViewController.h */,
 				A4F1A1CF18F1AE2000299AD1 /* GeoViewController.m */,
 				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
@@ -299,7 +304,7 @@
 				A4F1A1D218F1AE2000299AD1 /* Images.xcassets in Resources */,
 				A4F1A1CA18F1AE2000299AD1 /* Main_iPhone.storyboard in Resources */,
 				A4F1A1C118F1AE2000299AD1 /* InfoPlist.strings in Resources */,
-				A4F1A1F118F1B83100299AD1 /* GoogleMaps.bundle in Resources */,
+				BB8E7ECB18F1D71900416258 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +326,7 @@
 				A4F1A1D018F1AE2000299AD1 /* GeoViewController.m in Sources */,
 				A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */,
 				A4F1A1C318F1AE2000299AD1 /* main.m in Sources */,
+				BB8E7F0F18F1DD0800416258 /* StreetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +466,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ychao/Desktop/Geo\\ Master",
+					/Users/shufang/Desktop/GoeMaster,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
@@ -478,6 +485,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ychao/Desktop/Geo\\ Master",
+					/Users/shufang/Desktop/GoeMaster,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
@@ -548,6 +556,7 @@
 				A4F1A1EA18F1AE2000299AD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4F1A1EB18F1AE2000299AD1 /* Build configuration list for PBXNativeTarget "Geo MasterTests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +565,7 @@
 				A4F1A1ED18F1AE2000299AD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
