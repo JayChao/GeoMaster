@@ -21,9 +21,12 @@
 - (void)viewDidLoad {
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-                                                            longitude:151.20
-                                                                 zoom:6];
+    GeoGame *game = [[GeoGame alloc] init];
+    NSNumber *lat = [[game coordinatesToGuess] objectAtIndex:0];
+    NSNumber *lon = [[game coordinatesToGuess] objectAtIndex:1];
+        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[lat doubleValue]
+                                                                longitude:[lon doubleValue]
+                                                                     zoom:6];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.myLocationEnabled = YES;
     self.view = mapView_;
