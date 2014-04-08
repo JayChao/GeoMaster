@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A476ACB118F1ECB800B7121D /* FitBoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A476ACB018F1ECB800B7121D /* FitBoundsViewController.m */; };
+		A416379A18F463AE00D8B8F4 /* Random.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379918F463AE00D8B8F4 /* Random.m */; };
+		A416379D18F4641E00D8B8F4 /* StreetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379C18F4641E00D8B8F4 /* StreetViewController.m */; };
+		A41637A018F464BF00D8B8F4 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379F18F464BF00D8B8F4 /* XMLParser.m */; };
+		A41637A318F4661A00D8B8F4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41637A218F4661A00D8B8F4 /* MapViewController.m */; };
 		A496A66E18F2050100C18EBB /* GeoGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A496A66D18F2050100C18EBB /* GeoGame.m */; };
-		A4A3A87F18F1D48300EC6657 /* PanoramaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A3A87E18F1D48300EC6657 /* PanoramaViewController.m */; };
 		A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B618F1AE2000299AD1 /* Foundation.framework */; };
 		A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */; };
 		A4F1A1BB18F1AE2000299AD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1BA18F1AE2000299AD1 /* UIKit.framework */; };
@@ -53,12 +55,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A476ACB018F1ECB800B7121D /* FitBoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FitBoundsViewController.m; sourceTree = "<group>"; };
-		A476ACB218F1ECBD00B7121D /* FitBoundsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitBoundsViewController.h; sourceTree = "<group>"; };
+		A416379818F463AE00D8B8F4 /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Random.h; path = ../Random.h; sourceTree = "<group>"; };
+		A416379918F463AE00D8B8F4 /* Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Random.m; path = ../Random.m; sourceTree = "<group>"; };
+		A416379B18F4641E00D8B8F4 /* StreetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreetViewController.h; path = ../StreetViewController.h; sourceTree = "<group>"; };
+		A416379C18F4641E00D8B8F4 /* StreetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StreetViewController.m; path = ../StreetViewController.m; sourceTree = "<group>"; };
+		A416379E18F464BF00D8B8F4 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLParser.h; path = ../XMLParser.h; sourceTree = "<group>"; };
+		A416379F18F464BF00D8B8F4 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLParser.m; path = ../XMLParser.m; sourceTree = "<group>"; };
+		A41637A118F4661A00D8B8F4 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
+		A41637A218F4661A00D8B8F4 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
 		A496A66C18F2050100C18EBB /* GeoGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoGame.h; sourceTree = "<group>"; };
 		A496A66D18F2050100C18EBB /* GeoGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoGame.m; sourceTree = "<group>"; };
-		A4A3A87D18F1D48300EC6657 /* PanoramaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoramaViewController.h; sourceTree = "<group>"; };
-		A4A3A87E18F1D48300EC6657 /* PanoramaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramaViewController.m; sourceTree = "<group>"; };
 		A4F1A1B318F1AE2000299AD1 /* Geo Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geo Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F1A1B618F1AE2000299AD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -186,14 +192,18 @@
 				A4F1A1C518F1AE2000299AD1 /* GeoAppDelegate.h */,
 				A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */,
 				A4F1A1C818F1AE2000299AD1 /* Main_iPhone.storyboard */,
-				A4A3A87D18F1D48300EC6657 /* PanoramaViewController.h */,
-				A4A3A87E18F1D48300EC6657 /* PanoramaViewController.m */,
-				A476ACB218F1ECBD00B7121D /* FitBoundsViewController.h */,
-				A476ACB018F1ECB800B7121D /* FitBoundsViewController.m */,
 				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
+				A41637A118F4661A00D8B8F4 /* MapViewController.h */,
+				A41637A218F4661A00D8B8F4 /* MapViewController.m */,
 				A4F1A1BD18F1AE2000299AD1 /* Supporting Files */,
 				A496A66C18F2050100C18EBB /* GeoGame.h */,
 				A496A66D18F2050100C18EBB /* GeoGame.m */,
+				A416379818F463AE00D8B8F4 /* Random.h */,
+				A416379918F463AE00D8B8F4 /* Random.m */,
+				A416379B18F4641E00D8B8F4 /* StreetViewController.h */,
+				A416379C18F4641E00D8B8F4 /* StreetViewController.m */,
+				A416379E18F464BF00D8B8F4 /* XMLParser.h */,
+				A416379F18F464BF00D8B8F4 /* XMLParser.m */,
 			);
 			path = "Geo Master";
 			sourceTree = "<group>";
@@ -328,10 +338,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4A3A87F18F1D48300EC6657 /* PanoramaViewController.m in Sources */,
 				A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */,
+				A416379D18F4641E00D8B8F4 /* StreetViewController.m in Sources */,
 				A4F1A1C318F1AE2000299AD1 /* main.m in Sources */,
-				A476ACB118F1ECB800B7121D /* FitBoundsViewController.m in Sources */,
+				A41637A318F4661A00D8B8F4 /* MapViewController.m in Sources */,
+				A41637A018F464BF00D8B8F4 /* XMLParser.m in Sources */,
+				A416379A18F463AE00D8B8F4 /* Random.m in Sources */,
 				A496A66E18F2050100C18EBB /* GeoGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

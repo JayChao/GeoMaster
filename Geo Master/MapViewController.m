@@ -2,18 +2,18 @@
 #error "This file requires ARC support."
 #endif
 
-#import "FitBoundsViewController.h"
+#import "MapViewController.h"
 #import "GeoGame.h"
-#import "PanoramaViewController.h"
+#import "StreetViewController.h"
 
 #import <GoogleMaps/GoogleMaps.h>
 
-@interface FitBoundsViewController () <GMSMapViewDelegate>
+@interface MapViewController () <GMSMapViewDelegate>
 @property (nonatomic) BOOL thereIsAPin;
 @property (nonatomic) GeoGame *game;
 @end
 
-@implementation FitBoundsViewController {
+@implementation MapViewController {
   GMSMapView *mapView_;
   NSMutableArray *markers_;
 }
@@ -45,7 +45,7 @@
     streetView.frame = CGRectMake(mapView_.bounds.size.width - 110, mapView_.bounds.size.height - 30, 100, 20);
     streetView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
     [streetView setTitle:@"Street View" forState:UIControlStateNormal];
-    PanoramaViewController *View2Controller = [[PanoramaViewController alloc] initWithNibName:@"View2" bundle:nil];
+    StreetViewController *View2Controller = [[StreetViewController alloc] initWithNibName:@"View2" bundle:nil];
     [self.navigationController pushViewController:View2Controller animated:YES];
     [mapView_ addSubview:streetView];
     

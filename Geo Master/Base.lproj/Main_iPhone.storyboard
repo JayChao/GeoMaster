@@ -4,28 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Geo View Controller-->
-        <scene sceneID="4lr-3T-tHG">
-            <objects>
-                <viewController id="oTW-Kb-p6K" customClass="GeoViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mpQ-MP-kNC"/>
-                        <viewControllerLayoutGuide type="bottom" id="T8a-WY-yWm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IG8-M5-GpJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fJa-pS-zDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-253" y="33"/>
-        </scene>
-        <!--Fit Bounds View Controller-->
+        <!--Street View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="FitBoundsViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="StreetViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LKk-dG-HKU"/>
                         <viewControllerLayoutGuide type="bottom" id="hsT-tS-csO"/>
@@ -35,30 +17,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="9M6-kf-7xA" appends="YES" id="yQ5-p6-cjh"/>
-                            <outletCollection property="gestureRecognizers" destination="Nmh-Os-T5m" appends="YES" id="fRL-08-Hif"/>
-                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="9M6-kf-7xA">
-                    <connections>
-                        <segue destination="mhU-KZ-xfp" kind="modal" id="d3k-iw-0zw"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="Nmh-Os-T5m">
-                    <connections>
-                        <segue destination="oTW-Kb-p6K" kind="modal" id="Bns-2n-iHv"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="203" y="69"/>
+            <point key="canvasLocation" x="215" y="-2"/>
         </scene>
-        <!--Panorama View Controller-->
+        <!--Fit Bounds View Controller-->
         <scene sceneID="8v1-FS-Igm">
             <objects>
-                <viewController id="mhU-KZ-xfp" customClass="PanoramaViewController" sceneMemberID="viewController">
+                <viewController id="mhU-KZ-xfp" customClass="FitBoundsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cU2-2e-wx5"/>
                         <viewControllerLayoutGuide type="bottom" id="XQo-L0-5jl"/>
@@ -72,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgN-K4-wig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="670" y="69"/>
+            <point key="canvasLocation" x="575" y="-2"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
