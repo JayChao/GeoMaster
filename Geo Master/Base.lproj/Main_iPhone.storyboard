@@ -20,7 +20,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJa-pS-zDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-381" y="77"/>
+            <point key="canvasLocation" x="-253" y="33"/>
         </scene>
         <!--Fit Bounds View Controller-->
         <scene sceneID="ufC-wZ-h7g">

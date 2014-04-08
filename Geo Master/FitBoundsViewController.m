@@ -4,6 +4,7 @@
 
 #import "FitBoundsViewController.h"
 #import "GeoGame.h"
+#import "PanoramaViewController.h"
 
 #import <GoogleMaps/GoogleMaps.h>
 
@@ -39,6 +40,16 @@
                                       target:self
                                       action:@selector(didTapFitBounds)];
   self.navigationItem.rightBarButtonItem = fitBoundsButton;
+    
+    UIButton *streetView = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    streetView.frame = CGRectMake(mapView_.bounds.size.width - 110, mapView_.bounds.size.height - 30, 100, 20);
+    streetView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
+    [streetView setTitle:@"Street View" forState:UIControlStateNormal];
+    PanoramaViewController *View2Controller = [[PanoramaViewController alloc] initWithNibName:@"View2" bundle:nil];
+    [self.navigationController pushViewController:View2Controller animated:YES];
+    [mapView_ addSubview:streetView];
+    
+
 }
 
 - (void)didTapFitBounds {

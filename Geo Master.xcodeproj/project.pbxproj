@@ -18,13 +18,13 @@
 		A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */; };
 		A4F1A1CA18F1AE2000299AD1 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1C818F1AE2000299AD1 /* Main_iPhone.storyboard */; };
 		A4F1A1CD18F1AE2000299AD1 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1CB18F1AE2000299AD1 /* Main_iPad.storyboard */; };
-		A4F1A1D018F1AE2000299AD1 /* GeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1CF18F1AE2000299AD1 /* GeoViewController.m */; };
 		A4F1A1D218F1AE2000299AD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1D118F1AE2000299AD1 /* Images.xcassets */; };
 		A4F1A1D918F1AE2000299AD1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1D818F1AE2000299AD1 /* XCTest.framework */; };
 		A4F1A1DA18F1AE2000299AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B618F1AE2000299AD1 /* Foundation.framework */; };
 		A4F1A1DB18F1AE2000299AD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1BA18F1AE2000299AD1 /* UIKit.framework */; };
 		A4F1A1E318F1AE2000299AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1E118F1AE2000299AD1 /* InfoPlist.strings */; };
 		A4F1A1E518F1AE2000299AD1 /* Geo_MasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1E418F1AE2000299AD1 /* Geo_MasterTests.m */; };
+		A4F1A1EF18F1B7F900299AD1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */; };
 		A4F1A1F118F1B83100299AD1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1F018F1B83100299AD1 /* GoogleMaps.bundle */; };
 		A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */; };
 		A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F318F1B8B800299AD1 /* CoreData.framework */; };
@@ -40,8 +40,6 @@
 		A4F1A20B18F1B8B800299AD1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FD18F1B8B800299AD1 /* OpenGLES.framework */; };
 		A4F1A20C18F1B8B800299AD1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FE18F1B8B800299AD1 /* QuartzCore.framework */; };
 		A4F1A20D18F1B8B800299AD1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FF18F1B8B800299AD1 /* SystemConfiguration.framework */; };
-		FA63CF4D18F1D98200268840 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */; };
-		FA63CF5018F1DA4A00268840 /* GeoGame.m in Sources */ = {isa = PBXBuildFile; fileRef = FA63CF4F18F1DA4A00268840 /* GeoGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +71,6 @@
 		A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoAppDelegate.m; sourceTree = "<group>"; };
 		A4F1A1C918F1AE2000299AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A4F1A1CC18F1AE2000299AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		A4F1A1CE18F1AE2000299AD1 /* GeoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoViewController.h; sourceTree = "<group>"; };
-		A4F1A1CF18F1AE2000299AD1 /* GeoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoViewController.m; sourceTree = "<group>"; };
 		A4F1A1D118F1AE2000299AD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4F1A1D718F1AE2000299AD1 /* Geo MasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Geo MasterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F1A1D818F1AE2000299AD1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -97,8 +93,6 @@
 		A4F1A1FD18F1B8B800299AD1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A4F1A1FE18F1B8B800299AD1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A4F1A1FF18F1B8B800299AD1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		FA63CF4E18F1DA4A00268840 /* GeoGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoGame.h; path = Model/GeoGame.h; sourceTree = "<group>"; };
-		FA63CF4F18F1DA4A00268840 /* GeoGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoGame.m; path = Model/GeoGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA63CF4D18F1D98200268840 /* GoogleMaps.framework in Frameworks */,
-				A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */,
 				A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */,
+				A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */,
 				A4F1A20218F1B8B800299AD1 /* CoreLocation.framework in Frameworks */,
 				A4F1A20318F1B8B800299AD1 /* CoreText.framework in Frameworks */,
 				A4F1A20418F1B8B800299AD1 /* GLKit.framework in Frameworks */,
@@ -123,6 +116,7 @@
 				A4F1A20D18F1B8B800299AD1 /* SystemConfiguration.framework in Frameworks */,
 				A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */,
 				A4F1A1BB18F1AE2000299AD1 /* UIKit.framework in Frameworks */,
+				A4F1A1EF18F1B7F900299AD1 /* GoogleMaps.framework in Frameworks */,
 				A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,8 +186,6 @@
 				A4F1A1C518F1AE2000299AD1 /* GeoAppDelegate.h */,
 				A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */,
 				A4F1A1C818F1AE2000299AD1 /* Main_iPhone.storyboard */,
-				A4F1A1CE18F1AE2000299AD1 /* GeoViewController.h */,
-				A4F1A1CF18F1AE2000299AD1 /* GeoViewController.m */,
 				A4A3A87D18F1D48300EC6657 /* PanoramaViewController.h */,
 				A4A3A87E18F1D48300EC6657 /* PanoramaViewController.m */,
 				A476ACB218F1ECBD00B7121D /* FitBoundsViewController.h */,
@@ -336,7 +328,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4F1A1D018F1AE2000299AD1 /* GeoViewController.m in Sources */,
 				A4A3A87F18F1D48300EC6657 /* PanoramaViewController.m in Sources */,
 				A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */,
 				A4F1A1C318F1AE2000299AD1 /* main.m in Sources */,
@@ -480,7 +471,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jvolker/Desktop/GoeMaster,
+					"/Users/ychao/Desktop/Geo\\ Master",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
@@ -498,7 +489,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jvolker/Desktop/GoeMaster,
+					"/Users/ychao/Desktop/Geo\\ Master",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";

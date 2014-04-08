@@ -20,27 +20,17 @@
     return _coordinatesToGuess;
 }
 
-//uses the haversine formula to calculate the distance
-//between two sets of geocoordinates
-//when I ran it, i had rounding error of 2%, so it should be acceptable
+//return the distance from a given set of coordinates to the target set of coordinates
 -(void)calculateScore:(NSArray*)guessedCoords
 {
-    double lat1rad = [[_coordinatesToGuess objectAtIndex:0] doubleValue] * M_PI/180;
-    double long1rad = [[_coordinatesToGuess objectAtIndex:1] doubleValue] * M_PI/180;
-    double lat2rad = [[guessedCoords objectAtIndex:0] doubleValue] * M_PI/180;
-    double long2rad = [[guessedCoords objectAtIndex:1] doubleValue] * M_PI/180;
+    double lat1 = [[_coordinatesToGuess objectAtIndex:0] doubleValue];
+    double long1 = [[_coordinatesToGuess objectAtIndex:1] doubleValue];
+    double lat2 = [[guessedCoords objectAtIndex:0] doubleValue];
+    double long2 = [[guessedCoords objectAtIndex:1] doubleValue];
     
-    double dLat = lat2rad - lat1rad;
-    double dLong = long2rad - long1rad;
-    
-    double a = (2 * sin(dLat*1000 / 2)) + ((2 * sin(dLong*1000/2)) * cos(lat1rad*1000) * cos(lat2rad*1000));
-    double c = 2 * asin(sqrt(a));
-    
-    _score = [NSNumber numberWithDouble:6372.8 * c];
-    NSLog(@"lat1rad %f", lat1rad);
-    NSLog(@"long1rad %f", long1rad);
-    NSLog(@"lat2rad %f", lat2rad);
-    NSLog(@"long2rad %f", long2rad);
+    double a2 = pow((long1 - long2), 2);
+    double b2 = pow((lat2 - lat1), 2);
+    _score = [NSNumber numberWithDouble:sqrt(a2 + b2)];
 }
 
 @end
