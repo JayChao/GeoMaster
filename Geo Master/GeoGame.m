@@ -33,7 +33,7 @@
     double dLat = lat2rad - lat1rad;
     double dLong = long2rad - long1rad;
     
-    double a = (2 * sin(dLat / 2)) + ((2 * sin(dLong/2)) * cos(lat1rad) * cos(lat2rad));
+    double a = (2 * sin(dLat*1000 / 2)) + ((2 * sin(dLong*1000/2)) * cos(lat1rad*1000) * cos(lat2rad*1000));
     double c = 2 * asin(sqrt(a));
     
     _score = [NSNumber numberWithDouble:6372.8 * c];
