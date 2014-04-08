@@ -31,7 +31,7 @@
                                                             longitude:0.966085
                                                                  zoom:4];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView_.delegate = self;
+    mapView_.delegate = self; 
     self.view = mapView_;
     [mapView_ clear];
     self.game = [[GeoGame alloc]init];
@@ -47,15 +47,9 @@
                                     action:@selector(didTapFitBounds)];
     self.navigationItem.rightBarButtonItem = fitBoundsButton;
     
-    UIButton *streetView = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    streetView.frame = CGRectMake(mapView_.bounds.size.width - 110, mapView_.bounds.size.height - 30, 100, 20);
-    streetView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
-    [streetView setTitle:@"Street View" forState:UIControlStateNormal];
-    StreetViewController *View2Controller = [[StreetViewController alloc] initWithNibName:@"View2" bundle:nil];
-    [self.navigationController pushViewController:View2Controller animated:YES];
-    [mapView_ addSubview:streetView];
+
     
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didTapFitBounds {

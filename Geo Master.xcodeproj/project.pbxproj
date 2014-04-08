@@ -144,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				A4F1A1BC18F1AE2000299AD1 /* Geo Master */,
-				A4F1A1DE18F1AE2000299AD1 /* Geo MasterTests */,
 				A4F1A1B518F1AE2000299AD1 /* Frameworks */,
 				A4F1A1B418F1AE2000299AD1 /* Products */,
 			);
@@ -204,6 +203,7 @@
 				A416379C18F4641E00D8B8F4 /* StreetViewController.m */,
 				A416379E18F464BF00D8B8F4 /* XMLParser.h */,
 				A416379F18F464BF00D8B8F4 /* XMLParser.m */,
+				A4F1A1DE18F1AE2000299AD1 /* Geo MasterTests */,
 			);
 			path = "Geo Master";
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 				A4F1A1DF18F1AE2000299AD1 /* Supporting Files */,
 			);
 			path = "Geo MasterTests";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		A4F1A1DF18F1AE2000299AD1 /* Supporting Files */ = {
 			isa = PBXGroup;

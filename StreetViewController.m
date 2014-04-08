@@ -17,15 +17,22 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "XMLParser.h"
 #import "Random.h"
+#import "MapViewController.h"
+#import "GeoGame.h"
 
 @interface StreetViewController ()<GMSPanoramaViewDelegate>
 @property (strong,nonatomic)NSMutableString *randomCityName;
 
 @property XMLParser *parser;
+@property (strong,nonatomic)MapViewController *MapViewController;
+@property (nonatomic) GeoGame *game;
+
 @end
+
 @implementation StreetViewController
 GMSPanoramaView *view_;
 CLLocationCoordinate2D coordinate;
+
 
 
 - (void)viewDidLoad
@@ -35,6 +42,8 @@ CLLocationCoordinate2D coordinate;
     
     
     [self showStreetView];
+    
+
 }
 
 -(void)findRandomPlace{
@@ -54,7 +63,8 @@ CLLocationCoordinate2D coordinate;
     
     coordinate.latitude     =   lat;
     coordinate.longitude    =   lng;
-    NSLog(@"%.20g,%.20g",lat,lng);
+    NSLog(@"START LOCATION %.20g,%.20g",lat,lng);
+    [self.game setCoordinatesToGuess:[NSArray arrayWithObjects:[NSNumber numberWithDouble: lat],[NSNumber numberWithDouble: lng],nil]];
 }
 
 
@@ -75,6 +85,9 @@ CLLocationCoordinate2D coordinate;
     view_.navigationLinksHidden = YES;
     view_.streetNamesHidden=YES;
     self.view = view_;
+}
+
+- (IBAction)mapView:(UIBarButtonItem *)sender {
 }
 
 
