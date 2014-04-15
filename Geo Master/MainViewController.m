@@ -28,8 +28,8 @@
     StreetViewController *StreeVC=[[StreetViewController alloc]init];
     [self presentViewController:StreeVC animated:YES completion:^{}];
     
-    
 }
+
 
 - (void)viewDidLoad
 {
