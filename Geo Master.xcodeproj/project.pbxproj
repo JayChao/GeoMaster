@@ -27,7 +27,6 @@
 		A4F1A1DB18F1AE2000299AD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1BA18F1AE2000299AD1 /* UIKit.framework */; };
 		A4F1A1E318F1AE2000299AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1E118F1AE2000299AD1 /* InfoPlist.strings */; };
 		A4F1A1E518F1AE2000299AD1 /* Geo_MasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1E418F1AE2000299AD1 /* Geo_MasterTests.m */; };
-		A4F1A1EF18F1B7F900299AD1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */; };
 		A4F1A1F118F1B83100299AD1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1F018F1B83100299AD1 /* GoogleMaps.bundle */; };
 		A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */; };
 		A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F318F1B8B800299AD1 /* CoreData.framework */; };
@@ -43,6 +42,7 @@
 		A4F1A20B18F1B8B800299AD1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FD18F1B8B800299AD1 /* OpenGLES.framework */; };
 		A4F1A20C18F1B8B800299AD1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FE18F1B8B800299AD1 /* QuartzCore.framework */; };
 		A4F1A20D18F1B8B800299AD1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FF18F1B8B800299AD1 /* SystemConfiguration.framework */; };
+		FA17801018FDEC7B007F258D /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA17801018FDEC7B007F258D /* GoogleMaps.framework in Frameworks */,
 				A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */,
 				A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */,
 				A4F1A20218F1B8B800299AD1 /* CoreLocation.framework in Frameworks */,
@@ -125,7 +126,6 @@
 				A4F1A20D18F1B8B800299AD1 /* SystemConfiguration.framework in Frameworks */,
 				A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */,
 				A4F1A1BB18F1AE2000299AD1 /* UIKit.framework in Frameworks */,
-				A4F1A1EF18F1B7F900299AD1 /* GoogleMaps.framework in Frameworks */,
 				A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +482,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ychao/Desktop/Geo\\ Master",
+					/Users/jvolker/Desktop/GeoMaster,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
@@ -500,6 +501,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ychao/Desktop/Geo\\ Master",
+					/Users/jvolker/Desktop/GeoMaster,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
