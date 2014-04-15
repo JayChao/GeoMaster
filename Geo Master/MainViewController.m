@@ -26,7 +26,7 @@
 - (IBAction)startButtonPressed:(UIButton *)sender {
 
     StreetViewController *StreeVC=[[StreetViewController alloc]init];
-    [self presentViewController:StreeVC animated:NO completion:^{}];
+    [self presentViewController:StreeVC animated:YES completion:^{}];
     
     
 }

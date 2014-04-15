@@ -196,18 +196,14 @@
 				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
 				A496A66C18F2050100C18EBB /* GeoGame.h */,
 				A496A66D18F2050100C18EBB /* GeoGame.m */,
-				A41637A118F4661A00D8B8F4 /* MapViewController.h */,
-				A41637A218F4661A00D8B8F4 /* MapViewController.m */,
 				A47F120E18FDDFA80077429C /* MainViewController.h */,
 				A47F120F18FDDFB10077429C /* MainViewController.m */,
-				A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */,
-				A4F1A1BD18F1AE2000299AD1 /* Supporting Files */,
-				A416379818F463AE00D8B8F4 /* Random.h */,
-				A416379918F463AE00D8B8F4 /* Random.m */,
+				A41637A118F4661A00D8B8F4 /* MapViewController.h */,
+				A41637A218F4661A00D8B8F4 /* MapViewController.m */,
 				A416379B18F4641E00D8B8F4 /* StreetViewController.h */,
 				A416379C18F4641E00D8B8F4 /* StreetViewController.m */,
-				A416379E18F464BF00D8B8F4 /* XMLParser.h */,
-				A416379F18F464BF00D8B8F4 /* XMLParser.m */,
+				A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */,
+				A4F1A1BD18F1AE2000299AD1 /* Supporting Files */,
 				A4F1A1DE18F1AE2000299AD1 /* Geo MasterTests */,
 			);
 			path = "Geo Master";
@@ -216,6 +212,10 @@
 		A4F1A1BD18F1AE2000299AD1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A416379818F463AE00D8B8F4 /* Random.h */,
+				A416379918F463AE00D8B8F4 /* Random.m */,
+				A416379E18F464BF00D8B8F4 /* XMLParser.h */,
+				A416379F18F464BF00D8B8F4 /* XMLParser.m */,
 				A4F1A1CB18F1AE2000299AD1 /* Main_iPad.storyboard */,
 				A4F1A1BE18F1AE2000299AD1 /* Geo Master-Info.plist */,
 				A4F1A1BF18F1AE2000299AD1 /* InfoPlist.strings */,

@@ -26,8 +26,8 @@
     double long2 = [[guessedCoords objectAtIndex:1] doubleValue];
     
     
-    NSLog(@"%f",lat1);
-    NSLog(@"%f",lat2);
+    NSLog(@"g %f",lat1);
+    NSLog(@"guessedCoords %f",lat2);
     
     double a2 = pow((long1 - long2), 2);
     double b2 = pow((lat2 - lat1), 2);

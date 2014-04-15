@@ -22,8 +22,8 @@
 
 @interface StreetViewController ()<GMSPanoramaViewDelegate>
 @property (strong,nonatomic)NSMutableString *randomCityName;
-
 @property XMLParser *parser;
+
 @property (strong,nonatomic)MapViewController *MapViewController;
 @property (nonatomic) GeoGame *game;
 
@@ -51,7 +51,6 @@ CLLocationCoordinate2D coordinate;
 -(void)setCoordinate{
     self.parser=[[XMLParser alloc] loadXMLByURL:@"http://maps.google.com/maps/api/geocode/xml?address=chicago&sensor=true"];
     
-    NSLog(@"%@ %@ %@ %@",self.parser.southwest_lat,self.parser.southwest_lng,self.parser.northeast_lat,self.parser.northeast_lng);
     double southwest_lat=[self.parser.southwest_lat doubleValue];
     double southwest_lng=[self.parser.southwest_lng doubleValue];
     double northeast_lat=[self.parser.northeast_lat doubleValue];
