@@ -11,6 +11,8 @@
 		A416379D18F4641E00D8B8F4 /* StreetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379C18F4641E00D8B8F4 /* StreetViewController.m */; };
 		A41637A018F464BF00D8B8F4 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379F18F464BF00D8B8F4 /* XMLParser.m */; };
 		A41637A318F4661A00D8B8F4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41637A218F4661A00D8B8F4 /* MapViewController.m */; };
+		A47F120D18FDDF9D0077429C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */; };
+		A47F121018FDDFB10077429C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F120F18FDDFB10077429C /* MainViewController.m */; };
 		A496A66E18F2050100C18EBB /* GeoGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A496A66D18F2050100C18EBB /* GeoGame.m */; };
 		A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B618F1AE2000299AD1 /* Foundation.framework */; };
 		A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */; };
@@ -18,7 +20,6 @@
 		A4F1A1C118F1AE2000299AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1BF18F1AE2000299AD1 /* InfoPlist.strings */; };
 		A4F1A1C318F1AE2000299AD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1C218F1AE2000299AD1 /* main.m */; };
 		A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */; };
-		A4F1A1CA18F1AE2000299AD1 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1C818F1AE2000299AD1 /* Main_iPhone.storyboard */; };
 		A4F1A1CD18F1AE2000299AD1 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1CB18F1AE2000299AD1 /* Main_iPad.storyboard */; };
 		A4F1A1D218F1AE2000299AD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1D118F1AE2000299AD1 /* Images.xcassets */; };
 		A4F1A1D918F1AE2000299AD1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1D818F1AE2000299AD1 /* XCTest.framework */; };
@@ -63,6 +64,9 @@
 		A416379F18F464BF00D8B8F4 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLParser.m; path = ../XMLParser.m; sourceTree = "<group>"; };
 		A41637A118F4661A00D8B8F4 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
 		A41637A218F4661A00D8B8F4 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
+		A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		A47F120E18FDDFA80077429C /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A47F120F18FDDFB10077429C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		A496A66C18F2050100C18EBB /* GeoGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoGame.h; sourceTree = "<group>"; };
 		A496A66D18F2050100C18EBB /* GeoGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoGame.m; sourceTree = "<group>"; };
 		A4F1A1B318F1AE2000299AD1 /* Geo Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geo Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +79,6 @@
 		A4F1A1C418F1AE2000299AD1 /* Geo Master-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Geo Master-Prefix.pch"; sourceTree = "<group>"; };
 		A4F1A1C518F1AE2000299AD1 /* GeoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoAppDelegate.h; sourceTree = "<group>"; };
 		A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoAppDelegate.m; sourceTree = "<group>"; };
-		A4F1A1C918F1AE2000299AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A4F1A1CC18F1AE2000299AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		A4F1A1D118F1AE2000299AD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4F1A1D718F1AE2000299AD1 /* Geo MasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Geo MasterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,10 +193,12 @@
 			children = (
 				A4F1A1C518F1AE2000299AD1 /* GeoAppDelegate.h */,
 				A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */,
-				A4F1A1C818F1AE2000299AD1 /* Main_iPhone.storyboard */,
 				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
 				A41637A118F4661A00D8B8F4 /* MapViewController.h */,
 				A41637A218F4661A00D8B8F4 /* MapViewController.m */,
+				A47F120E18FDDFA80077429C /* MainViewController.h */,
+				A47F120F18FDDFB10077429C /* MainViewController.m */,
+				A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */,
 				A4F1A1BD18F1AE2000299AD1 /* Supporting Files */,
 				A496A66C18F2050100C18EBB /* GeoGame.h */,
 				A496A66D18F2050100C18EBB /* GeoGame.m */,
@@ -317,7 +322,7 @@
 			files = (
 				A4F1A1CD18F1AE2000299AD1 /* Main_iPad.storyboard in Resources */,
 				A4F1A1D218F1AE2000299AD1 /* Images.xcassets in Resources */,
-				A4F1A1CA18F1AE2000299AD1 /* Main_iPhone.storyboard in Resources */,
+				A47F120D18FDDF9D0077429C /* Main_iPhone.storyboard in Resources */,
 				A4F1A1C118F1AE2000299AD1 /* InfoPlist.strings in Resources */,
 				A4F1A1F118F1B83100299AD1 /* GoogleMaps.bundle in Resources */,
 			);
@@ -341,6 +346,7 @@
 				A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */,
 				A416379D18F4641E00D8B8F4 /* StreetViewController.m in Sources */,
 				A4F1A1C318F1AE2000299AD1 /* main.m in Sources */,
+				A47F121018FDDFB10077429C /* MainViewController.m in Sources */,
 				A41637A318F4661A00D8B8F4 /* MapViewController.m in Sources */,
 				A41637A018F464BF00D8B8F4 /* XMLParser.m in Sources */,
 				A416379A18F463AE00D8B8F4 /* Random.m in Sources */,
@@ -373,14 +379,6 @@
 				A4F1A1C018F1AE2000299AD1 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A4F1A1C818F1AE2000299AD1 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A4F1A1C918F1AE2000299AD1 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		A4F1A1CB18F1AE2000299AD1 /* Main_iPad.storyboard */ = {

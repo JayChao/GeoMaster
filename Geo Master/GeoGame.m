@@ -25,6 +25,10 @@
     double lat2 = [[guessedCoords objectAtIndex:0] doubleValue];
     double long2 = [[guessedCoords objectAtIndex:1] doubleValue];
     
+    
+    NSLog(@"%f",lat1);
+    NSLog(@"%f",lat2);
+    
     double a2 = pow((long1 - long2), 2);
     double b2 = pow((lat2 - lat1), 2);
     _score = [NSNumber numberWithDouble:sqrt(a2 + b2)];

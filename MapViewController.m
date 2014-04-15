@@ -16,22 +16,34 @@
 
 @interface MapViewController () <GMSMapViewDelegate>
 @property (nonatomic) BOOL thereIsAPin;
+@property (strong,nonatomic)StreetViewController *StreetViewController;
 @property (nonatomic) GeoGame *game;
 @end
 
 @implementation MapViewController {
     GMSMapView *mapView_;
     NSMutableArray *markers_;
+    CLLocationCoordinate2D coordinate;
+    
 }
 //-(instancetype)init
 
+-(instancetype)loadWithCoordintae:(CLLocationCoordinate2D) cd{
+    
+    coordinate=cd;
+    
+    return self;
+    
+    NSLog(@"!!!!!!!!!!%f",coordinate.latitude);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:6.8
-                                                            longitude:0.966085
-                                                                 zoom:4];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:41
+                                                            longitude:-87
+                                                                 zoom:2];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-    mapView_.delegate = self; 
+    mapView_.delegate = self;
     self.view = mapView_;
     [mapView_ clear];
     self.game = [[GeoGame alloc]init];
@@ -40,16 +52,11 @@
     
     // Create a button that, when pressed, updates the camera to fit the bounds
     // of the specified markers.
-    UIBarButtonItem *fitBoundsButton =
-    [[UIBarButtonItem alloc] initWithTitle:@"Fit Bounds"
-                                     style:UIBarButtonItemStylePlain
-                                    target:self
-                                    action:@selector(didTapFitBounds)];
-    self.navigationItem.rightBarButtonItem = fitBoundsButton;
-    
-
-    
-    [self.navigationController popViewControllerAnimated:YES];
+    UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 70, 40)];
+    [Switch setTitle:@"Back" forState:UIControlStateNormal];
+    [Switch setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.view addSubview:Switch];
+    [Switch addTarget:self action:@selector(switchView) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didTapFitBounds {
@@ -89,6 +96,12 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     marker.map = mapView_;
     
     // delete the new marker to the list of markers.
+    
+}
+
+-(void)switchView{
+    StreetViewController *StreeVC=[[StreetViewController alloc]init];
+    [self presentViewController:StreeVC animated:NO completion:^{}];
     
 }
 

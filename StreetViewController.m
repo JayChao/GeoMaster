@@ -42,8 +42,6 @@ CLLocationCoordinate2D coordinate;
     
     
     [self showStreetView];
-    
-
 }
 
 -(void)findRandomPlace{
@@ -85,9 +83,19 @@ CLLocationCoordinate2D coordinate;
     view_.navigationLinksHidden = YES;
     view_.streetNamesHidden=YES;
     self.view = view_;
+    
+    UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 70, 40)];
+    [Switch setTitle:@"Map" forState:UIControlStateNormal];
+    [Switch setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [self.view addSubview:Switch];
+    [Switch addTarget:self action:@selector(switchView) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
-- (IBAction)mapView:(UIBarButtonItem *)sender {
+-(void)switchView{
+    MapViewController *StreeVC=[[MapViewController alloc]loadWithCoordintae:coordinate];
+    [self presentViewController:StreeVC animated:NO completion:^{}];
+    
 }
 
 
