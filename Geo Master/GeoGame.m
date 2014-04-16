@@ -27,7 +27,7 @@
     
     double a2 = pow((long1 - long2), 2);
     double b2 = pow((lat2 - lat1), 2);
-    _score = [NSNumber numberWithDouble:sqrt(a2 + b2)];
+    _score = [ NSNumber numberWithDouble:100 - sqrt(a2 + b2)];
     NSLog(@"Socre %@",_score);
 }
 

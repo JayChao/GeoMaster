@@ -23,7 +23,7 @@
 @interface StreetViewController ()<GMSPanoramaViewDelegate,GMSMapViewDelegate>
 @property (strong,nonatomic)NSMutableString *randomCityName;
 @property XMLParser *parser;
-
+@property UILabel *scoreLable;
 @property (nonatomic) GeoGame *game;
 
 @end
@@ -41,6 +41,7 @@ CLLocationCoordinate2D coordinatesToGuess;
 	// Do any additional setup after loading the view.
     
     self.game = [[GeoGame alloc]init];
+    self.scoreLable=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
     
     [self showStreetView];
 }
@@ -113,12 +114,17 @@ CLLocationCoordinate2D coordinatesToGuess;
     [self.view addSubview:Switch];
     [Switch addTarget:self action:@selector(backView) forControlEvents:UIControlEventTouchUpInside];
     
+    
+    
+    
+    
 }
 
 - (void)mapView:(GMSMapView *)mapView
 didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     GMSMarker *marker = [[GMSMarker alloc] init];
     [mapView_ clear];
+    self.scoreLable.text = nil;
     
     marker.title = [NSString stringWithFormat:@"Marker at: %.2f,%.2f",
                     coordinate.latitude, coordinate.longitude];
@@ -132,6 +138,14 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     
     [self.game calculateScore:gameArray
                        second:coordinatesToGuess];
+    
+    //UILabel *scoreLable=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
+    NSString *text = [NSString stringWithFormat:@"Score is %@",self.game.score];
+    [self.scoreLable setText:text];
+    self.scoreLable.textColor = [UIColor blackColor];
+    self.scoreLable.backgroundColor = [UIColor clearColor];
+    
+    [self.view addSubview:self.scoreLable];
     // delete the new marker to the list of markers.
 }
 
