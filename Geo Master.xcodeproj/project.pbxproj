@@ -12,6 +12,8 @@
 		A41637A018F464BF00D8B8F4 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379F18F464BF00D8B8F4 /* XMLParser.m */; };
 		A47F120D18FDDF9D0077429C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */; };
 		A47F121018FDDFB10077429C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F120F18FDDFB10077429C /* MainViewController.m */; };
+		A47F128918FE0D310077429C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47F128818FE0D310077429C /* FacebookSDK.framework */; };
+		A47F128B18FE0E850077429C /* USCities.txt in Resources */ = {isa = PBXBuildFile; fileRef = A47F128A18FE0E850077429C /* USCities.txt */; };
 		A496A66E18F2050100C18EBB /* GeoGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A496A66D18F2050100C18EBB /* GeoGame.m */; };
 		A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B618F1AE2000299AD1 /* Foundation.framework */; };
 		A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */; };
@@ -26,7 +28,6 @@
 		A4F1A1DB18F1AE2000299AD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1BA18F1AE2000299AD1 /* UIKit.framework */; };
 		A4F1A1E318F1AE2000299AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1E118F1AE2000299AD1 /* InfoPlist.strings */; };
 		A4F1A1E518F1AE2000299AD1 /* Geo_MasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1E418F1AE2000299AD1 /* Geo_MasterTests.m */; };
-		A4F1A1F118F1B83100299AD1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1F018F1B83100299AD1 /* GoogleMaps.bundle */; };
 		A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */; };
 		A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F318F1B8B800299AD1 /* CoreData.framework */; };
 		A4F1A20218F1B8B800299AD1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F418F1B8B800299AD1 /* CoreLocation.framework */; };
@@ -42,7 +43,6 @@
 		A4F1A20C18F1B8B800299AD1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FE18F1B8B800299AD1 /* QuartzCore.framework */; };
 		A4F1A20D18F1B8B800299AD1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FF18F1B8B800299AD1 /* SystemConfiguration.framework */; };
 		FA17801018FDEC7B007F258D /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */; };
-		FA17801318FDF2B4007F258D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA17801218FDF2B4007F258D /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +65,8 @@
 		A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A47F120E18FDDFA80077429C /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		A47F120F18FDDFB10077429C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A47F128818FE0D310077429C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		A47F128A18FE0E850077429C /* USCities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = USCities.txt; sourceTree = "<group>"; };
 		A496A66C18F2050100C18EBB /* GeoGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoGame.h; sourceTree = "<group>"; };
 		A496A66D18F2050100C18EBB /* GeoGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoGame.m; sourceTree = "<group>"; };
 		A4F1A1B318F1AE2000299AD1 /* Geo Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geo Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +101,6 @@
 		A4F1A1FD18F1B8B800299AD1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A4F1A1FE18F1B8B800299AD1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A4F1A1FF18F1B8B800299AD1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		FA17801218FDF2B4007F258D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA17801318FDF2B4007F258D /* FacebookSDK.framework in Frameworks */,
 				FA17801018FDEC7B007F258D /* GoogleMaps.framework in Frameworks */,
+				A47F128918FE0D310077429C /* FacebookSDK.framework in Frameworks */,
 				A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */,
 				A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */,
 				A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */,
@@ -164,7 +165,7 @@
 		A4F1A1B518F1AE2000299AD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA17801218FDF2B4007F258D /* FacebookSDK.framework */,
+				A47F128818FE0D310077429C /* FacebookSDK.framework */,
 				A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */,
 				A4F1A1F318F1B8B800299AD1 /* CoreData.framework */,
 				A4F1A1F418F1B8B800299AD1 /* CoreLocation.framework */,
@@ -211,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				A416379818F463AE00D8B8F4 /* Random.h */,
+				A47F128A18FE0E850077429C /* USCities.txt */,
 				A416379918F463AE00D8B8F4 /* Random.m */,
 				A416379E18F464BF00D8B8F4 /* XMLParser.h */,
 				A416379F18F464BF00D8B8F4 /* XMLParser.m */,
@@ -322,6 +324,7 @@
 				A4F1A1D218F1AE2000299AD1 /* Images.xcassets in Resources */,
 				A47F120D18FDDF9D0077429C /* Main_iPhone.storyboard in Resources */,
 				A4F1A1C118F1AE2000299AD1 /* InfoPlist.strings in Resources */,
+				A47F128B18FE0E850077429C /* USCities.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +343,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4F1A1D018F1AE2000299AD1 /* GeoViewController.m in Sources */,
-				A476ACB118F1ECB800B7121D /* FitBoundsViewController.m in Sources */,
-				A4A3A87F18F1D48300EC6657 /* PanoramaViewController.m in Sources */,
 				A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */,
 				A416379D18F4641E00D8B8F4 /* StreetViewController.m in Sources */,
 				A4F1A1C318F1AE2000299AD1 /* main.m in Sources */,
@@ -483,6 +483,7 @@
 					"/Users/ychao/Desktop/Geo\\ Master",
 					/Users/jvolker/Desktop/GeoMaster,
 					/Users/jvolker/Desktop/GeoMaster/FacebookSDK,
+					"/Users/ychao/Desktop/Geo\\ Master/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
@@ -503,6 +504,7 @@
 					"/Users/ychao/Desktop/Geo\\ Master",
 					/Users/jvolker/Desktop/GeoMaster,
 					/Users/jvolker/Desktop/GeoMaster/FacebookSDK,
+					"/Users/ychao/Desktop/Geo\\ Master/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
