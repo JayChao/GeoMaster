@@ -10,7 +10,6 @@
 		A416379A18F463AE00D8B8F4 /* Random.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379918F463AE00D8B8F4 /* Random.m */; };
 		A416379D18F4641E00D8B8F4 /* StreetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379C18F4641E00D8B8F4 /* StreetViewController.m */; };
 		A41637A018F464BF00D8B8F4 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379F18F464BF00D8B8F4 /* XMLParser.m */; };
-		A41637A318F4661A00D8B8F4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41637A218F4661A00D8B8F4 /* MapViewController.m */; };
 		A47F120D18FDDF9D0077429C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */; };
 		A47F121018FDDFB10077429C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F120F18FDDFB10077429C /* MainViewController.m */; };
 		A496A66E18F2050100C18EBB /* GeoGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A496A66D18F2050100C18EBB /* GeoGame.m */; };
@@ -63,8 +62,6 @@
 		A416379C18F4641E00D8B8F4 /* StreetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StreetViewController.m; path = ../StreetViewController.m; sourceTree = "<group>"; };
 		A416379E18F464BF00D8B8F4 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLParser.h; path = ../XMLParser.h; sourceTree = "<group>"; };
 		A416379F18F464BF00D8B8F4 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLParser.m; path = ../XMLParser.m; sourceTree = "<group>"; };
-		A41637A118F4661A00D8B8F4 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
-		A41637A218F4661A00D8B8F4 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
 		A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A47F120E18FDDFA80077429C /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		A47F120F18FDDFB10077429C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -201,8 +198,6 @@
 				A496A66D18F2050100C18EBB /* GeoGame.m */,
 				A47F120E18FDDFA80077429C /* MainViewController.h */,
 				A47F120F18FDDFB10077429C /* MainViewController.m */,
-				A41637A118F4661A00D8B8F4 /* MapViewController.h */,
-				A41637A218F4661A00D8B8F4 /* MapViewController.m */,
 				A416379B18F4641E00D8B8F4 /* StreetViewController.h */,
 				A416379C18F4641E00D8B8F4 /* StreetViewController.m */,
 				A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */,
@@ -352,7 +347,6 @@
 				A416379D18F4641E00D8B8F4 /* StreetViewController.m in Sources */,
 				A4F1A1C318F1AE2000299AD1 /* main.m in Sources */,
 				A47F121018FDDFB10077429C /* MainViewController.m in Sources */,
-				A41637A318F4661A00D8B8F4 /* MapViewController.m in Sources */,
 				A41637A018F464BF00D8B8F4 /* XMLParser.m in Sources */,
 				A416379A18F463AE00D8B8F4 /* Random.m in Sources */,
 				A496A66E18F2050100C18EBB /* GeoGame.m in Sources */,

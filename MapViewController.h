@@ -10,5 +10,4 @@
 #import "GeoGame.h"
 
 @interface MapViewController : UIViewController
--(id)loadWithCoordintae:(CLLocationCoordinate2D) cd;
 @end

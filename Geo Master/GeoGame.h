@@ -12,8 +12,8 @@
 @interface GeoGame : NSObject
 
 @property(nonatomic) NSNumber *score;
-@property(nonatomic) NSArray *coordinatesToGuess;
-@property(nonatomic) NSArray *guessedCoordinates;
--(void)calculateScore:(NSArray*)guessedCoords;
+
+-(void)calculateScore:(NSArray*)guessedCoords
+               second:(NSArray*)coordinatesToGuess;
 
 @end
