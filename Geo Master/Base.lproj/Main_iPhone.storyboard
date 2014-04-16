@@ -1,31 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0lX-Jf-1M5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Geo View Controller-->
-        <scene sceneID="4lr-3T-tHG">
-            <objects>
-                <viewController id="oTW-Kb-p6K" customClass="GeoViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mpQ-MP-kNC"/>
-                        <viewControllerLayoutGuide type="bottom" id="T8a-WY-yWm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IG8-M5-GpJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fJa-pS-zDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-381" y="77"/>
-        </scene>
-        <!--Fit Bounds View Controller-->
+        <!--Street View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="FitBoundsViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="StreetViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LKk-dG-HKU"/>
                         <viewControllerLayoutGuide type="bottom" id="hsT-tS-csO"/>
@@ -35,44 +17,55 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="9M6-kf-7xA" appends="YES" id="yQ5-p6-cjh"/>
-                            <outletCollection property="gestureRecognizers" destination="Nmh-Os-T5m" appends="YES" id="fRL-08-Hif"/>
-                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="S8Z-6o-EY9">
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="x9H-mu-JfR">
+                            <connections>
+                                <action selector="mapView:" destination="vXZ-lx-hvc" id="FOi-sW-tqp"/>
+                                <segue destination="Ldc-nd-IfK" kind="modal" id="ZWx-NQ-B8q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="9M6-kf-7xA">
-                    <connections>
-                        <segue destination="mhU-KZ-xfp" kind="modal" id="d3k-iw-0zw"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="Nmh-Os-T5m">
-                    <connections>
-                        <segue destination="oTW-Kb-p6K" kind="modal" id="Bns-2n-iHv"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="203" y="69"/>
+            <point key="canvasLocation" x="650" y="-50"/>
         </scene>
-        <!--Panorama View Controller-->
-        <scene sceneID="8v1-FS-Igm">
+        <!--Map View Controller-->
+        <scene sceneID="trd-Y2-gaK">
             <objects>
-                <viewController id="mhU-KZ-xfp" customClass="PanoramaViewController" sceneMemberID="viewController">
+                <viewController id="Ldc-nd-IfK" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cU2-2e-wx5"/>
-                        <viewControllerLayoutGuide type="bottom" id="XQo-L0-5jl"/>
+                        <viewControllerLayoutGuide type="top" id="fHd-Rg-K8n"/>
+                        <viewControllerLayoutGuide type="bottom" id="xhB-j8-Nhd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PlG-fg-0bJ">
+                    <view key="view" contentMode="scaleToFill" id="qgv-pI-Swr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wc5-gK-fev"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TgN-K4-wig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sep-Q5-l8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="670" y="69"/>
+            <point key="canvasLocation" x="1041" y="-50"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VVE-Jo-Gtx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0lX-Jf-1M5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ajL-f3-6Ne">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="HwZ-4x-E1b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dxp-ES-iYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253" y="-50"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

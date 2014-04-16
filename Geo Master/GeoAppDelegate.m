@@ -8,12 +8,14 @@
 
 #import "GeoAppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @implementation GeoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [FBLoginView class];
     [GMSServices provideAPIKey:@"AIzaSyCtGILRnz4sF78fb67SnfIRIvwi4U1e_XI"];
     return YES;
 }
@@ -43,6 +45,19 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application
+             openURL:(NSURL *)url
+   sourceApplication:(NSString *)sourceApplication
+          annotation:(id)annotation {
+    
+    // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
+    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    
+    // You can add your app-specific url handling code here if needed
+    
+    return wasHandled;
 }
 
 @end

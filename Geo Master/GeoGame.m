@@ -11,12 +11,9 @@
 
 @implementation GeoGame
 
--(NSArray*)coordinatesToGuess
+-(NSArray*)coordinatesToGuess:(NSArray*)CoordsToGuess
 {
-    if(!_coordinatesToGuess)
-        _coordinatesToGuess = [[NSArray alloc] init];
-    
-    _coordinatesToGuess = [NSArray arrayWithObjects:[NSNumber numberWithDouble:6.8], [NSNumber numberWithDouble: 39.2833], nil];
+    _coordinatesToGuess = CoordsToGuess;
     return _coordinatesToGuess;
 }
 
