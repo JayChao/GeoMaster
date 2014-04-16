@@ -490,6 +490,7 @@
 				INFOPLIST_FILE = "Geo Master/Geo Master-Info.plist";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -510,6 +511,7 @@
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
 				INFOPLIST_FILE = "Geo Master/Geo Master-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
