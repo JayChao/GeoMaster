@@ -1,10 +1,3 @@
-//this class can generate a random coordinate of a Street view in Chicago
-
-
-
-
-
-
 
 //  StreetViewController.m
 //  Geo Master
@@ -17,14 +10,16 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "XMLParser.h"
 #import "Random.h"
-
+#import "UIButton+Bootstrap.h"
 #import "GeoGame.h"
 
-@interface StreetViewController ()<GMSPanoramaViewDelegate,GMSMapViewDelegate>
+@interface StreetViewController ()<GMSPanoramaViewDelegate,GMSMapViewDelegate,UIGestureRecognizerDelegate>
 @property (strong,nonatomic)NSMutableString *randomCityName;
 @property XMLParser *parser;
 @property UILabel *scoreLable;
 @property (nonatomic) GeoGame *game;
+@property UILabel *walkCountLabel;
+@property int walkCount;
 
 @end
 
@@ -32,6 +27,7 @@
 GMSPanoramaView *view_;
 GMSMapView *mapView_;
 CLLocationCoordinate2D coordinatesToGuess;
+//int walkCount;
 
 
 
@@ -41,9 +37,27 @@ CLLocationCoordinate2D coordinatesToGuess;
 	// Do any additional setup after loading the view.
     
     self.game = [[GeoGame alloc]init];
-    self.scoreLable=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
     
+    self.scoreLable=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
+    self.walkCountLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
+
+    
+    UIAlertView *mBoxView =[[UIAlertView alloc]initWithTitle:@"Tip" message:@"‘Double click’ along street to walk around \n Find more in Guides" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    mBoxView.alpha=0.1;
+    [mBoxView show];
+    
+    self.walkCount=0;
     [self showStreetView];
+}
+
+
+-(void)oneFingerTwoTaps
+{
+    self.walkCount++;
+    NSString *text = [NSString stringWithFormat:@"You walked: %d steps",self.walkCount];
+    [self.walkCountLabel setText:text];
+
+    
 }
 
 -(void)findRandomPlace{
@@ -68,7 +82,11 @@ CLLocationCoordinate2D coordinatesToGuess;
     
     coordinatesToGuess.latitude     =   lat;
     coordinatesToGuess.longitude    =   lng;
+    NSLog(@"%@",self.parser.address);
     NSLog(@"START LOCATION %.20g,%.20g",lat,lng);
+    if (!lat) {
+        [self setCoordinate];
+    }
 }
 
 
@@ -99,15 +117,41 @@ CLLocationCoordinate2D coordinatesToGuess;
     view_.streetNamesHidden=YES;
     self.view = view_;
     
-    UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 70, 40)];
+    
+    UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 40, 20)];
     [Switch setTitle:@"Map" forState:UIControlStateNormal];
-    [Switch setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [Switch setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    //[Switch primaryStyle];
     [self.view addSubview:Switch];
     [Switch addTarget:self action:@selector(switchView) forControlEvents:UIControlEventTouchUpInside];
     
+    UIButton *quit=[[UIButton alloc]initWithFrame:CGRectMake(270, 30, 40, 20)];
+    [quit setTitle:@"Quit" forState:UIControlStateNormal];
+    [quit setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    //[quit primaryStyle];
+    [self.view addSubview:quit];
+    [quit addTarget:self action:@selector(quitButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    
+    UITapGestureRecognizer *oneFingerTwoTaps =
+    [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(oneFingerTwoTaps)];
+    [oneFingerTwoTaps setNumberOfTapsRequired:2];
+    [oneFingerTwoTaps setNumberOfTouchesRequired:1];
+    [[self view] addGestureRecognizer:oneFingerTwoTaps];
+    
+    NSString *text = [NSString stringWithFormat:@"You walked: %d steps",self.walkCount];
+    [self.walkCountLabel setText:text];
+    self.walkCountLabel.textColor = [UIColor blackColor];
+    self.walkCountLabel.backgroundColor = [UIColor clearColor];
+    
+    [view_ addSubview:self.walkCountLabel];
+
+    
+    
 }
 
-
+-(void)quitButtonPressed{
+    [self dismissViewControllerAnimated:NO completion:^{}];
+}
 
 
 
@@ -123,7 +167,7 @@ CLLocationCoordinate2D coordinatesToGuess;
     
     
     
-    UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 70, 40)];
+    UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 45, 20)];
     [Switch setTitle:@"Back" forState:UIControlStateNormal];
     [Switch setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [self.view addSubview:Switch];
