@@ -12,5 +12,4 @@
 @interface MainViewController : UIViewController <FBLoginViewDelegate>{
     FSAudioStream *_audioStream;
 }
-
 @end

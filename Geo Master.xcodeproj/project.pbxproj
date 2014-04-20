@@ -14,6 +14,7 @@
 		A47F121018FDDFB10077429C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F120F18FDDFB10077429C /* MainViewController.m */; };
 		A47F128B18FE0E850077429C /* USCities.txt in Resources */ = {isa = PBXBuildFile; fileRef = A47F128A18FE0E850077429C /* USCities.txt */; };
 		A496A66E18F2050100C18EBB /* GeoGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A496A66D18F2050100C18EBB /* GeoGame.m */; };
+		A498DCF8190459BE0057C27A /* resultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A498DCF7190459BE0057C27A /* resultViewController.m */; };
 		A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B618F1AE2000299AD1 /* Foundation.framework */; };
 		A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */; };
 		A4F1A1BB18F1AE2000299AD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1BA18F1AE2000299AD1 /* UIKit.framework */; };
@@ -91,6 +92,8 @@
 		A47F128A18FE0E850077429C /* USCities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = USCities.txt; sourceTree = "<group>"; };
 		A496A66C18F2050100C18EBB /* GeoGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoGame.h; sourceTree = "<group>"; };
 		A496A66D18F2050100C18EBB /* GeoGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoGame.m; sourceTree = "<group>"; };
+		A498DCF6190459BE0057C27A /* resultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resultViewController.h; sourceTree = "<group>"; };
+		A498DCF7190459BE0057C27A /* resultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resultViewController.m; sourceTree = "<group>"; };
 		A4F1A1B318F1AE2000299AD1 /* Geo Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geo Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F1A1B618F1AE2000299AD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -270,6 +273,8 @@
 				A416379B18F4641E00D8B8F4 /* StreetViewController.h */,
 				A416379C18F4641E00D8B8F4 /* StreetViewController.m */,
 				A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */,
+				A498DCF6190459BE0057C27A /* resultViewController.h */,
+				A498DCF7190459BE0057C27A /* resultViewController.m */,
 				BBD2E33118FE3F7E009A08AD /* OpenViewController.h */,
 				BBD2E33218FE3F7E009A08AD /* OpenViewController.m */,
 				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
@@ -469,6 +474,7 @@
 			files = (
 				BBA405EA18FFA04C0002CABC /* FSAudioController.m in Sources */,
 				BBD2E33318FE3F7E009A08AD /* OpenViewController.m in Sources */,
+				A498DCF8190459BE0057C27A /* resultViewController.m in Sources */,
 				A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */,
 				BBA4060218FFA05A0002CABC /* http_stream.cpp in Sources */,
 				BBA405F018FFA04C0002CABC /* FSXMLHttpRequest.m in Sources */,
