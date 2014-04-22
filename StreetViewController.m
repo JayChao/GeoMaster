@@ -22,7 +22,6 @@
 @property UILabel *walkCountLabel;
 @property UILabel *gamePrograssLable;
 @property int walkCount;
-@property int gamePrograss;
 @end
 
 @implementation StreetViewController
@@ -48,6 +47,7 @@ CLLocationCoordinate2D coordinatesToGuess;
     mBoxView.alpha=0.1;
     [mBoxView show];
     
+   
     
     self.walkCount=0;
     [self showStreetView];
@@ -62,21 +62,26 @@ CLLocationCoordinate2D coordinatesToGuess;
 }
 
 -(void)gameWillRepeatForFiveTimes{
-    self.gamePrograss++;
-    NSString *text = [NSString stringWithFormat:@"Game Progress: %d/5",self.gamePrograss];
+    int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
+
+    gameProgress++;
+    NSString *text = [NSString stringWithFormat:@"Game Progress: %d/5", gameProgress];
     [self.gamePrograssLable setText:text];
     self.gamePrograssLable.textColor = [UIColor blackColor];
     self.gamePrograssLable.backgroundColor = [UIColor clearColor];
-    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:_gamePrograss] forKey:@"gameProgress"];
+    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:gameProgress] forKey:@"gameProgress"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 
     
-    StreetViewController *StreeVC=[[StreetViewController alloc]init];
-    [self presentViewController:StreeVC animated:YES completion:^{}];
     
-//    if (_gamePrograss == 6) {
-//        resultViewController *resultVC = [[resultViewController alloc]init];
-//        [self presentViewController:resultVC animated:YES completion:^{}];
-//    }
+    
+   if (gameProgress >= 2) {
+       gameProgress = 0;
+       [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:gameProgress] forKey:@"gameProgress"];
+       [[NSUserDefaults standardUserDefaults] synchronize];
+       resultViewController *resultVC = [[resultViewController alloc]init];
+       [self presentViewController:resultVC animated:NO completion:nil];
+    }
 }
 
 -(void)findRandomPlace{
@@ -164,7 +169,6 @@ CLLocationCoordinate2D coordinatesToGuess;
     
     [view_ addSubview:self.walkCountLabel];
 
-    
     [self gameWillRepeatForFiveTimes];
     [view_ addSubview:self.gamePrograssLable];
     
@@ -228,7 +232,7 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     [makeGuess setTitle:@"MakeGuess" forState:UIControlStateNormal];
     [makeGuess setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [self.view addSubview:makeGuess];
-    [makeGuess addTarget:self action:@selector(gameWillRepeatForFiveTimes) forControlEvents:UIControlEventTouchUpInside];
+    [makeGuess addTarget:self action:@selector(initStreetView) forControlEvents:UIControlEventTouchUpInside];
 }
 
 -(void)backView{
@@ -238,5 +242,9 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     
 }
 
+-(void)initStreetView{
+    StreetViewController *StreeVC=[[StreetViewController alloc]init];
+    [self presentViewController:StreeVC animated:YES completion:^{}];
+}
 
 @end

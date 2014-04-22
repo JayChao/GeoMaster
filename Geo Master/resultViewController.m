@@ -8,6 +8,7 @@
 
 #import "resultViewController.h"
 #import "MainViewController.h"
+#import "StreetViewController.h"
 
 @interface resultViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *PlayAgain;
@@ -28,13 +29,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+        
     UIButton *playAgain=[[UIButton alloc]initWithFrame:CGRectMake(180, 180, 180, 20)];
     [playAgain setTitle:@"playAgain" forState:UIControlStateNormal];
-    [playAgain setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+   [playAgain setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     //[quit primaryStyle];
     [self.view addSubview:playAgain];
-    [playAgain addTarget:self action:@selector(playAgain) forControlEvents:UIControlEventTouchUpInside];
+  [playAgain addTarget:self action:@selector(playAgain) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
