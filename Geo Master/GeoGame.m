@@ -34,7 +34,7 @@
         x = x -25;
     }
     if (x<60 && x>50) {
-        x = x -40;
+        x = x -35;
     }
     
     _score = [ NSNumber numberWithInt:(int)x*10];
