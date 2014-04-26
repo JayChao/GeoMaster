@@ -24,6 +24,7 @@
 @property UILabel *walkCountLabel;
 @property UILabel *gamePrograssLable;
 @property UILabel *finalResultBabel;
+@property UIButton *makeGuess;
 
 @property int walkCount;
 @end
@@ -32,6 +33,7 @@
 GMSPanoramaView *view_;
 GMSMapView *mapView_;
 CLLocationCoordinate2D coordinatesToGuess;
+CLLocationCoordinate2D end;
 //int walkCount;
 
 
@@ -249,7 +251,7 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     [mapView_ clear];
     self.scoreLable.text = nil;
     
-    marker.title = [NSString stringWithFormat:@"Marker at: %.2f,%.2f",
+    marker.title = [NSString stringWithFormat:@"You guessed location: %.2f,%.2f",
                     coordinate.latitude, coordinate.longitude];
     
     NSArray *gameArray = [NSArray arrayWithObjects:[NSNumber numberWithDouble:coordinate.latitude], [NSNumber numberWithDouble:coordinate.longitude],nil];
@@ -258,6 +260,8 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     marker.position = coordinate;
     marker.appearAnimation = kGMSMarkerAnimationPop;
     marker.map = mapView_;
+    
+    end = coordinate;
     
     [self.game calculateScore:gameArray
                        second:coordinatesToGuess];
@@ -271,17 +275,42 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     [self.view addSubview:self.scoreLable];
     // delete the new marker to the list of markers.
     
-    UIButton *makeGuess=[[UIButton alloc]initWithFrame:CGRectMake(200, 30, 100, 20)];
-    [makeGuess setTitle:@"MakeGuess" forState:UIControlStateNormal];
-    [makeGuess setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [self.view addSubview:makeGuess];
-    [makeGuess addTarget:self action:@selector(initStreetView) forControlEvents:UIControlEventTouchUpInside];
+    self.makeGuess=[[UIButton alloc]initWithFrame:CGRectMake(200, 30, 100, 20)];
+    [_makeGuess setTitle:@"MakeGuess" forState:UIControlStateNormal];
+    [_makeGuess setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [self.view addSubview:_makeGuess];
+    [_makeGuess addTarget:self action:@selector(continueButton) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
 }
 
 -(void)backView{
     //StreetViewController *StreeVC=[[StreetViewController alloc]init];
     //[self dismissViewControllerAnimated:YES completion:^{}];
     self.view = view_;
+    
+}
+
+-(void)continueButton{
+    [_makeGuess removeFromSuperview];
+    
+    GMSMarker *marker = [[GMSMarker alloc] init];
+    marker.title = [NSString stringWithFormat:@"Right location: %.2f,%.2f",
+                    coordinatesToGuess.latitude, coordinatesToGuess.longitude];
+    marker.position = coordinatesToGuess;
+    marker.appearAnimation = kGMSMarkerAnimationPop;
+    marker.map = mapView_;
+    
+    CLLocationCoordinate2D start = { (coordinatesToGuess.latitude), (coordinatesToGuess.longitude) };
+    [mapView_ showRouteFrom to];
+    self.r
+    ;
+    UIButton *continueButton=[[UIButton alloc]initWithFrame:CGRectMake(200, 30, 100, 20)];
+    [continueButton setTitle:@"Continue" forState:UIControlStateNormal];
+    [continueButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [self.view addSubview:continueButton];
+    [continueButton addTarget:self action:@selector(initStreetView) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
