@@ -16,6 +16,7 @@
 @property (strong,nonatomic) NSMutableString *northeast_lat;
 @property (strong,nonatomic) NSMutableString *northeast_lng;
 @property (strong,nonatomic) NSMutableString *address;
+@property (strong, nonatomic) NSString *cityState;
 
 -(id)loadXMLByURL:(NSString *)urlString;
 

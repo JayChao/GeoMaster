@@ -138,7 +138,10 @@ CLLocationCoordinate2D end;
     NSString *randomCityNameURL=[NSString stringWithFormat:@"http://maps.google.com/maps/api/geocode/xml?address=%@&sensor=true",randomCityName];
     
     self.parser=[[XMLParser alloc] loadXMLByURL:randomCityNameURL];
+    NSString *city = [[randomCityName componentsSeparatedByString:@"%20"] objectAtIndex:1];
     
+    NSString *state = [[randomCityName componentsSeparatedByString:@"%20"] objectAtIndex:2];
+    self.parser.cityState = [NSString stringWithFormat:@"%@, %@", city, state];
     
     double southwest_lat=[self.parser.southwest_lat doubleValue];
     double southwest_lng=[self.parser.southwest_lng doubleValue];
@@ -155,7 +158,6 @@ CLLocationCoordinate2D end;
         [self setCoordinate];
     }
 }
-
 
 -(CLLocationCoordinate2D)getCoordinate{
     return coordinatesToGuess;
@@ -264,9 +266,12 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     NSArray *gameArray = [NSArray arrayWithObjects:[NSNumber numberWithDouble:coordinate.latitude], [NSNumber numberWithDouble:coordinate.longitude],nil];
     NSArray *coordinatesToGuess = [NSArray arrayWithObjects:[NSNumber numberWithDouble:self.getCoordinate.latitude],[NSNumber numberWithDouble:self.getCoordinate.longitude],nil];;
     
+    
+    marker.title = [NSString stringWithFormat:@"Your guess"];
     marker.position = coordinate;
     marker.appearAnimation = kGMSMarkerAnimationPop;
     marker.map = mapView_;
+    
     
     end = coordinate;
     
@@ -309,8 +314,10 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     [_makeGuess removeFromSuperview];
     
     GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.title = [NSString stringWithFormat:@"Right location: %.2f,%.2f",
-                    coordinatesToGuess.latitude, coordinatesToGuess.longitude];
+    marker.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
+//    marker.title = [NSString stringWithFormat:@"xx\nRight location: %.2f,%.2f",
+//                    coordinatesToGuess.latitude, coordinatesToGuess.longitude];
+    marker.title = self.parser.address;
     marker.position = coordinatesToGuess;
     marker.appearAnimation = kGMSMarkerAnimationPop;
     marker.map = mapView_;

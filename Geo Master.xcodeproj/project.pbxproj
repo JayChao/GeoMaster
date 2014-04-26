@@ -82,7 +82,7 @@
 		A416379818F463AE00D8B8F4 /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Random.h; path = ../Random.h; sourceTree = "<group>"; };
 		A416379918F463AE00D8B8F4 /* Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Random.m; path = ../Random.m; sourceTree = "<group>"; };
 		A416379B18F4641E00D8B8F4 /* StreetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreetViewController.h; path = ../StreetViewController.h; sourceTree = "<group>"; };
-		A416379C18F4641E00D8B8F4 /* StreetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StreetViewController.m; path = ../StreetViewController.m; sourceTree = "<group>"; };
+		A416379C18F4641E00D8B8F4 /* StreetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = StreetViewController.m; path = ../StreetViewController.m; sourceTree = "<group>"; usesTabs = 1; };
 		A416379E18F464BF00D8B8F4 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLParser.h; path = ../XMLParser.h; sourceTree = "<group>"; };
 		A416379F18F464BF00D8B8F4 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLParser.m; path = ../XMLParser.m; sourceTree = "<group>"; };
 		A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
