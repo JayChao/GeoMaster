@@ -51,7 +51,7 @@ CLLocationCoordinate2D end;
 
     int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
     if (gameProgress==0) {
-        UIAlertView *mBoxView =[[UIAlertView alloc]initWithTitle:@"Tip" message:@"‘Double click’ on streets to walk around \n Find more in Guides" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *mBoxView =[[UIAlertView alloc]initWithTitle:@"Tip" message:@"‘Double click’ on streets to walk around \n Find more in Guides. \n \nYour score(1000) will be minus by 10 for every walk" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         mBoxView.alpha=0.1;
         [mBoxView show];
     }
@@ -271,7 +271,8 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     end = coordinate;
     
     [self.game calculateScore:gameArray
-                       second:coordinatesToGuess];
+                       second:coordinatesToGuess
+                    walkcount:self.walkCount];
     
     //UILabel *scoreLable=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
     NSString *text = [NSString stringWithFormat:@"Score is %@",self.game.score];

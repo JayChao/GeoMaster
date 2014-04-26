@@ -15,6 +15,7 @@
 //return the distance from a given set of coordinates to the target set of coordinates
 -(void)calculateScore:(NSArray*)guessedCoords
                second:(NSArray*)coordinatesToGuess
+            walkcount:(int)Count
 {
     double lat1 = [[coordinatesToGuess objectAtIndex:0] doubleValue];
     double long1 = [[coordinatesToGuess objectAtIndex:1] doubleValue];
@@ -23,7 +24,7 @@
     
     double a2 = pow((long1 - long2), 2);
     double b2 = pow((lat2 - lat1), 2);
-    int x =(int)100 - sqrt(a2 + b2);
+    int x =(int)100 - sqrt(a2 + b2) - Count*10;
     if (x<90 &&  x>80) {
         x = x -10;
     }

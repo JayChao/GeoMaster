@@ -14,6 +14,7 @@
 @property(nonatomic) NSNumber *score;
 
 -(void)calculateScore:(NSArray*)guessedCoords
-               second:(NSArray*)coordinatesToGuess;
+               second:(NSArray*)coordinatesToGuess
+            walkcount:(int)Count;
 
 @end

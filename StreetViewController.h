@@ -11,4 +11,5 @@
 
 @interface StreetViewController : UIViewController
 -(CLLocationCoordinate2D)getCoordinate;
+
 @end
