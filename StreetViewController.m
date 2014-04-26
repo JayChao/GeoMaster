@@ -23,7 +23,7 @@
 
 @property UILabel *walkCountLabel;
 @property UILabel *gamePrograssLable;
-@property UILabel *finalResultBabel;
+@property UILabel *finalResultLabel;
 @property UIButton *makeGuess;
 
 @property int walkCount;
@@ -47,7 +47,7 @@ CLLocationCoordinate2D end;
     self.gamePrograssLable = [[UILabel alloc] initWithFrame:CGRectMake(90, 50, 180, 40)];
     self.scoreLable=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
     self.walkCountLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
-    self.finalResultBabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
+    self.finalResultLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
 
     int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
     if (gameProgress==0) {
@@ -55,10 +55,6 @@ CLLocationCoordinate2D end;
         mBoxView.alpha=0.1;
         [mBoxView show];
     }
-
-
-    
-   
     
     self.walkCount=0;
     [self showStreetView];
@@ -99,9 +95,9 @@ CLLocationCoordinate2D end;
        NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
        NSString *text = [NSString stringWithFormat:@"Your score is: %@", score];
        
-       [self.finalResultBabel setText:text];
-       self.finalResultBabel.textColor = [UIColor blackColor];
-       self.finalResultBabel.backgroundColor = [UIColor clearColor];
+       [self.finalResultLabel setText:text];
+       self.finalResultLabel.textColor = [UIColor blackColor];
+       self.finalResultLabel.backgroundColor = [UIColor clearColor];
        
        UIButton *playAgain=[[UIButton alloc]initWithFrame:CGRectMake(120, 180, 90, 20)];
        //[playAgain setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/3.0*2)];
@@ -112,7 +108,9 @@ CLLocationCoordinate2D end;
        [self.view addSubview:playAgain];
        [playAgain addTarget:self action:@selector(playAgain) forControlEvents:UIControlEventTouchUpInside];
        
-       [resultView addSubview:self.finalResultBabel];
+       self.view.backgroundColor=[UIColor colorWithRed:0.800 green:0.600 blue:0.400 alpha:0.900];
+       
+       [resultView addSubview:self.finalResultLabel];
        
 
    }
@@ -302,10 +300,20 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     marker.appearAnimation = kGMSMarkerAnimationPop;
     marker.map = mapView_;
     
+    //draw a line between two markers
     CLLocationCoordinate2D start = { (coordinatesToGuess.latitude), (coordinatesToGuess.longitude) };
-    [mapView_ showRouteFrom to];
-    self.r
-    ;
+    GMSMutablePath *path = [GMSMutablePath path];
+    [path addCoordinate:start];
+    [path addCoordinate:end];
+    GMSPolyline *polyline = [GMSPolyline polylineWithPath:path];
+    polyline.strokeWidth = 2.f;
+    polyline.geodesic = YES;
+    polyline.strokeColor = [UIColor redColor];
+    polyline.map = mapView_;
+    
+    
+    
+    
     UIButton *continueButton=[[UIButton alloc]initWithFrame:CGRectMake(200, 30, 100, 20)];
     [continueButton setTitle:@"Continue" forState:UIControlStateNormal];
     [continueButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
