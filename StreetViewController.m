@@ -1,10 +1,3 @@
-//this class can generate a random coordinate of a Street view in Chicago
-
-
-
-
-
-
 
 //  StreetViewController.m
 //  Geo Master
@@ -17,22 +10,29 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "XMLParser.h"
 #import "Random.h"
-
+#import "UIButton+Bootstrap.h"
 #import "GeoGame.h"
+#import "MainViewController.h"
 
-@interface StreetViewController ()<GMSPanoramaViewDelegate,GMSMapViewDelegate>
+@interface StreetViewController ()<GMSPanoramaViewDelegate,GMSMapViewDelegate,UIGestureRecognizerDelegate>
 @property (strong,nonatomic)NSMutableString *randomCityName;
 @property XMLParser *parser;
 @property UILabel *scoreLable;
 @property (nonatomic) GeoGame *game;
+@property (nonatomic) MainViewController *main;
 
+@property UILabel *walkCountLabel;
+@property UILabel *gamePrograssLable;
+@property UILabel *finalResultBabel;
+
+@property int walkCount;
 @end
 
 @implementation StreetViewController
 GMSPanoramaView *view_;
 GMSMapView *mapView_;
 CLLocationCoordinate2D coordinatesToGuess;
-
+//int walkCount;
 
 
 - (void)viewDidLoad
@@ -41,10 +41,91 @@ CLLocationCoordinate2D coordinatesToGuess;
 	// Do any additional setup after loading the view.
     
     self.game = [[GeoGame alloc]init];
-    self.scoreLable=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
     
+    self.gamePrograssLable = [[UILabel alloc] initWithFrame:CGRectMake(90, 50, 180, 40)];
+    self.scoreLable=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
+    self.walkCountLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
+    self.finalResultBabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
+
+    int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
+    if (gameProgress==0) {
+        UIAlertView *mBoxView =[[UIAlertView alloc]initWithTitle:@"Tip" message:@"‘Double click’ on streets to walk around \n Find more in Guides" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        mBoxView.alpha=0.1;
+        [mBoxView show];
+    }
+
+
+    
+   
+    
+    self.walkCount=0;
     [self showStreetView];
 }
+
+
+-(void)oneFingerTwoTaps{
+    self.walkCount++;
+    NSString *text = [NSString stringWithFormat:@"You walked: %d steps",self.walkCount];
+    [self.walkCountLabel setText:text];
+    
+}
+
+-(void)gameWillRepeatForFiveTimes{
+    int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
+
+    gameProgress++;
+    NSString *text = [NSString stringWithFormat:@"Game Progress: %d/5", gameProgress];
+    [self.gamePrograssLable setText:text];
+    self.gamePrograssLable.textColor = [UIColor blackColor];
+    self.gamePrograssLable.backgroundColor = [UIColor clearColor];
+    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:gameProgress] forKey:@"gameProgress"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    
+    
+    
+   if (gameProgress >= 6) {
+       gameProgress = 0;
+       [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:gameProgress] forKey:@"gameProgress"];
+       [[NSUserDefaults standardUserDefaults] synchronize];
+       //[self.main changeToResultViewController];
+       UIView *resultView=[[UIView alloc]init];
+       resultView.backgroundColor=[UIColor whiteColor];
+     
+       
+       
+       NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
+       NSString *text = [NSString stringWithFormat:@"Your score is: %@", score];
+       
+       [self.finalResultBabel setText:text];
+       self.finalResultBabel.textColor = [UIColor blackColor];
+       self.finalResultBabel.backgroundColor = [UIColor clearColor];
+       
+       UIButton *playAgain=[[UIButton alloc]initWithFrame:CGRectMake(120, 180, 90, 20)];
+       //[playAgain setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/3.0*2)];
+       [playAgain setTitle:@"playAgain" forState:UIControlStateNormal];
+       [playAgain setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+       //[quit primaryStyle];
+       self.view=resultView;
+       [self.view addSubview:playAgain];
+       [playAgain addTarget:self action:@selector(playAgain) forControlEvents:UIControlEventTouchUpInside];
+       
+       [resultView addSubview:self.finalResultBabel];
+       
+
+   }
+}
+
+-(void)playAgain{
+    
+    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:0] forKey:@"gameProgress"];
+    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:0] forKey:@"finalScore"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
+    StreetViewController *StreeVC=[[StreetViewController alloc]init];
+    [self presentViewController:StreeVC animated:YES completion:^{}];
+   }
 
 -(void)findRandomPlace{
     
@@ -68,7 +149,11 @@ CLLocationCoordinate2D coordinatesToGuess;
     
     coordinatesToGuess.latitude     =   lat;
     coordinatesToGuess.longitude    =   lng;
+    NSLog(@"%@",self.parser.address);
     NSLog(@"START LOCATION %.20g,%.20g",lat,lng);
+    if (!lat) {
+        [self setCoordinate];
+    }
 }
 
 
@@ -99,15 +184,42 @@ CLLocationCoordinate2D coordinatesToGuess;
     view_.streetNamesHidden=YES;
     self.view = view_;
     
-    UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 70, 40)];
+    
+    UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 40, 20)];
     [Switch setTitle:@"Map" forState:UIControlStateNormal];
-    [Switch setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [Switch setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    //[Switch primaryStyle];
     [self.view addSubview:Switch];
     [Switch addTarget:self action:@selector(switchView) forControlEvents:UIControlEventTouchUpInside];
     
+    UIButton *quit=[[UIButton alloc]initWithFrame:CGRectMake(270, 30, 40, 20)];
+    [quit setTitle:@"Quit" forState:UIControlStateNormal];
+    [quit setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    //[quit primaryStyle];
+    [self.view addSubview:quit];
+    [quit addTarget:self action:@selector(quitButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    
+    UITapGestureRecognizer *oneFingerTwoTaps =
+    [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(oneFingerTwoTaps)];
+    [oneFingerTwoTaps setNumberOfTapsRequired:2];
+    [oneFingerTwoTaps setNumberOfTouchesRequired:1];
+    [[self view] addGestureRecognizer:oneFingerTwoTaps];
+    
+    NSString *text = [NSString stringWithFormat:@"You walked: %d steps",self.walkCount];
+    [self.walkCountLabel setText:text];
+    self.walkCountLabel.textColor = [UIColor blackColor];
+    self.walkCountLabel.backgroundColor = [UIColor clearColor];
+    
+    [view_ addSubview:self.walkCountLabel];
+
+    [self gameWillRepeatForFiveTimes];
+    [view_ addSubview:self.gamePrograssLable];
+    
 }
 
-
+-(void)quitButtonPressed{
+    [self dismissViewControllerAnimated:NO completion:^{}];
+}
 
 
 
@@ -123,17 +235,13 @@ CLLocationCoordinate2D coordinatesToGuess;
     
     
     
-    UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 70, 40)];
+    UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 45, 20)];
     [Switch setTitle:@"Back" forState:UIControlStateNormal];
     [Switch setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [self.view addSubview:Switch];
     [Switch addTarget:self action:@selector(backView) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    
-    
-    
 }
+
 
 - (void)mapView:(GMSMapView *)mapView
 didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
@@ -162,6 +270,12 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     
     [self.view addSubview:self.scoreLable];
     // delete the new marker to the list of markers.
+    
+    UIButton *makeGuess=[[UIButton alloc]initWithFrame:CGRectMake(200, 30, 100, 20)];
+    [makeGuess setTitle:@"MakeGuess" forState:UIControlStateNormal];
+    [makeGuess setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [self.view addSubview:makeGuess];
+    [makeGuess addTarget:self action:@selector(initStreetView) forControlEvents:UIControlEventTouchUpInside];
 }
 
 -(void)backView{
@@ -171,5 +285,20 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     
 }
 
+-(void)initStreetView{
+    StreetViewController *StreeVC=[[StreetViewController alloc]init];
+    [self presentViewController:StreeVC animated:YES completion:^{}];
+}
 
+-(void)viewDidDisappear:(BOOL)animated{
+    NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
+    float value = [score floatValue];
+    float value2 = [self.game.score floatValue];
+    
+    float sum=value+value2;
+    
+    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithFloat:sum] forKey:@"finalScore"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+}
 @end

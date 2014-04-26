@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
-
-@interface MainViewController : UIViewController <FBLoginViewDelegate>
+@class FSAudioStream;
+@interface MainViewController : UIViewController <FBLoginViewDelegate>{
+    FSAudioStream *_audioStream;
+}
 
 @end

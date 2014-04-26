@@ -9,12 +9,21 @@
 #import "MainViewController.h"
 #import "StreetViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "FSAudioStream.h"
+#import "UIButton+Bootstrap.h"
+
 
 @interface MainViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *StartButton;
+@property (strong, nonatomic) IBOutlet UIButton *SettingsButton;
+@property (strong, nonatomic) IBOutlet UIButton *ScoreButton;
+@property (strong, nonatomic) IBOutlet UIButton *BackButton;
+@property (strong, nonatomic) IBOutlet UIButton *GuideButton;
 @property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
 @end
 
-@implementation MainViewController
+@implementation MainViewController{
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,6 +34,11 @@
     return self;
 }
 - (IBAction)startButtonPressed:(UIButton *)sender {
+
+    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:0] forKey:@"gameProgress"];
+    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:0] forKey:@"finalScore"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
 
     StreetViewController *StreeVC=[[StreetViewController alloc]init];
     [self presentViewController:StreeVC animated:YES completion:^{}];
@@ -37,14 +51,22 @@
     FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"basic_info"]];
     loginView.delegate = self;
     loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), self.view.center.y);
+    loginView.center=CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/4.0*3);
     [self.view addSubview:loginView];
+    
+    _audioStream = [[FSAudioStream alloc] init];
+    [_audioStream playFromURL:[NSURL URLWithString:@"http://sites.google.com/site/georaphymaster/bgm/03%20Morning%20air%20%E6%99%A8%E9%9B%BE.mp3"]];
+    [_audioStream stop];
+    self.view.backgroundColor=[UIColor colorWithRed:0.800 green:0.600 blue:0.400 alpha:1.000];
+    
+    [self.StartButton primaryStyle];
+    [self.SettingsButton primaryStyle];
+    [self.ScoreButton primaryStyle];
+    [self.BackButton primaryStyle];
+    [self.GuideButton primaryStyle];
+
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 // This method will be called when the user information has been fetched
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
@@ -114,5 +136,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
 
 @end

@@ -12,7 +12,6 @@
 		A41637A018F464BF00D8B8F4 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379F18F464BF00D8B8F4 /* XMLParser.m */; };
 		A47F120D18FDDF9D0077429C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */; };
 		A47F121018FDDFB10077429C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F120F18FDDFB10077429C /* MainViewController.m */; };
-		A47F128918FE0D310077429C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47F128818FE0D310077429C /* FacebookSDK.framework */; };
 		A47F128B18FE0E850077429C /* USCities.txt in Resources */ = {isa = PBXBuildFile; fileRef = A47F128A18FE0E850077429C /* USCities.txt */; };
 		A496A66E18F2050100C18EBB /* GeoGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A496A66D18F2050100C18EBB /* GeoGame.m */; };
 		A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B618F1AE2000299AD1 /* Foundation.framework */; };
@@ -28,7 +27,6 @@
 		A4F1A1DB18F1AE2000299AD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1BA18F1AE2000299AD1 /* UIKit.framework */; };
 		A4F1A1E318F1AE2000299AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1E118F1AE2000299AD1 /* InfoPlist.strings */; };
 		A4F1A1E518F1AE2000299AD1 /* Geo_MasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1E418F1AE2000299AD1 /* Geo_MasterTests.m */; };
-		A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */; };
 		A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F318F1B8B800299AD1 /* CoreData.framework */; };
 		A4F1A20218F1B8B800299AD1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F418F1B8B800299AD1 /* CoreLocation.framework */; };
 		A4F1A20318F1B8B800299AD1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F518F1B8B800299AD1 /* CoreText.framework */; };
@@ -42,7 +40,32 @@
 		A4F1A20B18F1B8B800299AD1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FD18F1B8B800299AD1 /* OpenGLES.framework */; };
 		A4F1A20C18F1B8B800299AD1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FE18F1B8B800299AD1 /* QuartzCore.framework */; };
 		A4F1A20D18F1B8B800299AD1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1FF18F1B8B800299AD1 /* SystemConfiguration.framework */; };
-		FA17801018FDEC7B007F258D /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */; };
+		BB7F126519001000004E6099 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */; };
+		BB7F126B19001040004E6099 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB7F126619001040004E6099 /* FontAwesome.ttf */; };
+		BB7F126C19001040004E6099 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7F126819001040004E6099 /* NSString+FontAwesome.m */; };
+		BB7F126D19001040004E6099 /* UIButton+Bootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7F126A19001040004E6099 /* UIButton+Bootstrap.m */; };
+		BBA405D218FFA0010002CABC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA405D118FFA0000002CABC /* CFNetwork.framework */; };
+		BBA405D418FFA00B0002CABC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA405D318FFA00B0002CABC /* AudioToolbox.framework */; };
+		BBA405D618FFA0200002CABC /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA405D518FFA0200002CABC /* libxml2.dylib */; };
+		BBA405D818FFA02D0002CABC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA405D718FFA02D0002CABC /* MediaPlayer.framework */; };
+		BBA405EA18FFA04C0002CABC /* FSAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA405DB18FFA04C0002CABC /* FSAudioController.m */; };
+		BBA405EB18FFA04C0002CABC /* FSAudioStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = BBA405DD18FFA04C0002CABC /* FSAudioStream.mm */; };
+		BBA405EC18FFA04C0002CABC /* FSCheckContentTypeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA405DF18FFA04C0002CABC /* FSCheckContentTypeRequest.m */; };
+		BBA405ED18FFA04C0002CABC /* FSParsePlaylistRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA405E118FFA04C0002CABC /* FSParsePlaylistRequest.m */; };
+		BBA405EE18FFA04C0002CABC /* FSParseRssPodcastFeedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA405E318FFA04C0002CABC /* FSParseRssPodcastFeedRequest.m */; };
+		BBA405EF18FFA04C0002CABC /* FSPlaylistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA405E518FFA04C0002CABC /* FSPlaylistItem.m */; };
+		BBA405F018FFA04C0002CABC /* FSXMLHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA405E718FFA04C0002CABC /* FSXMLHttpRequest.m */; };
+		BBA405F118FFA04C0002CABC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA405E918FFA04C0002CABC /* Reachability.m */; };
+		BBA405FF18FFA05A0002CABC /* audio_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBA405F318FFA05A0002CABC /* audio_queue.cpp */; };
+		BBA4060018FFA05A0002CABC /* audio_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBA405F518FFA05A0002CABC /* audio_stream.cpp */; };
+		BBA4060118FFA05A0002CABC /* file_output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBA405F718FFA05A0002CABC /* file_output.cpp */; };
+		BBA4060218FFA05A0002CABC /* http_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBA405F918FFA05A0002CABC /* http_stream.cpp */; };
+		BBA4060318FFA05A0002CABC /* id3_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBA405FB18FFA05A0002CABC /* id3_parser.cpp */; };
+		BBA4060418FFA05A0002CABC /* stream_configuration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BBA405FD18FFA05A0002CABC /* stream_configuration.cpp */; };
+		BBD2E32C18FE2EB6009A08AD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD2E32B18FE2EB6009A08AD /* FacebookSDK.framework */; };
+		BBD2E32E18FE2EE4009A08AD /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD2E32D18FE2EE4009A08AD /* GoogleMaps.framework */; };
+		BBD2E33018FE2EFB009A08AD /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BBD2E32F18FE2EFB009A08AD /* GoogleMaps.bundle */; };
+		BBD2E33318FE3F7E009A08AD /* OpenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E33218FE3F7E009A08AD /* OpenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +88,6 @@
 		A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		A47F120E18FDDFA80077429C /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		A47F120F18FDDFB10077429C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		A47F128818FE0D310077429C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		A47F128A18FE0E850077429C /* USCities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = USCities.txt; sourceTree = "<group>"; };
 		A496A66C18F2050100C18EBB /* GeoGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoGame.h; sourceTree = "<group>"; };
 		A496A66D18F2050100C18EBB /* GeoGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoGame.m; sourceTree = "<group>"; };
@@ -86,7 +108,6 @@
 		A4F1A1E018F1AE2000299AD1 /* Geo MasterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Geo MasterTests-Info.plist"; sourceTree = "<group>"; };
 		A4F1A1E218F1AE2000299AD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A4F1A1E418F1AE2000299AD1 /* Geo_MasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Geo_MasterTests.m; sourceTree = "<group>"; };
-		A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A4F1A1F318F1B8B800299AD1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A4F1A1F418F1B8B800299AD1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -101,6 +122,48 @@
 		A4F1A1FD18F1B8B800299AD1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A4F1A1FE18F1B8B800299AD1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A4F1A1FF18F1B8B800299AD1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BB7F126619001040004E6099 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		BB7F126719001040004E6099 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		BB7F126819001040004E6099 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		BB7F126919001040004E6099 /* UIButton+Bootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Bootstrap.h"; sourceTree = "<group>"; };
+		BB7F126A19001040004E6099 /* UIButton+Bootstrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Bootstrap.m"; sourceTree = "<group>"; };
+		BBA405D118FFA0000002CABC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BBA405D318FFA00B0002CABC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BBA405D518FFA0200002CABC /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		BBA405D718FFA02D0002CABC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BBA405DA18FFA04C0002CABC /* FSAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAudioController.h; sourceTree = "<group>"; };
+		BBA405DB18FFA04C0002CABC /* FSAudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAudioController.m; sourceTree = "<group>"; };
+		BBA405DC18FFA04C0002CABC /* FSAudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAudioStream.h; sourceTree = "<group>"; };
+		BBA405DD18FFA04C0002CABC /* FSAudioStream.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FSAudioStream.mm; sourceTree = "<group>"; };
+		BBA405DE18FFA04C0002CABC /* FSCheckContentTypeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCheckContentTypeRequest.h; sourceTree = "<group>"; };
+		BBA405DF18FFA04C0002CABC /* FSCheckContentTypeRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCheckContentTypeRequest.m; sourceTree = "<group>"; };
+		BBA405E018FFA04C0002CABC /* FSParsePlaylistRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSParsePlaylistRequest.h; sourceTree = "<group>"; };
+		BBA405E118FFA04C0002CABC /* FSParsePlaylistRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSParsePlaylistRequest.m; sourceTree = "<group>"; };
+		BBA405E218FFA04C0002CABC /* FSParseRssPodcastFeedRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSParseRssPodcastFeedRequest.h; sourceTree = "<group>"; };
+		BBA405E318FFA04C0002CABC /* FSParseRssPodcastFeedRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSParseRssPodcastFeedRequest.m; sourceTree = "<group>"; };
+		BBA405E418FFA04C0002CABC /* FSPlaylistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPlaylistItem.h; sourceTree = "<group>"; };
+		BBA405E518FFA04C0002CABC /* FSPlaylistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPlaylistItem.m; sourceTree = "<group>"; };
+		BBA405E618FFA04C0002CABC /* FSXMLHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSXMLHttpRequest.h; sourceTree = "<group>"; };
+		BBA405E718FFA04C0002CABC /* FSXMLHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSXMLHttpRequest.m; sourceTree = "<group>"; };
+		BBA405E818FFA04C0002CABC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		BBA405E918FFA04C0002CABC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		BBA405F318FFA05A0002CABC /* audio_queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audio_queue.cpp; sourceTree = "<group>"; };
+		BBA405F418FFA05A0002CABC /* audio_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio_queue.h; sourceTree = "<group>"; };
+		BBA405F518FFA05A0002CABC /* audio_stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audio_stream.cpp; sourceTree = "<group>"; };
+		BBA405F618FFA05A0002CABC /* audio_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio_stream.h; sourceTree = "<group>"; };
+		BBA405F718FFA05A0002CABC /* file_output.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = file_output.cpp; sourceTree = "<group>"; };
+		BBA405F818FFA05A0002CABC /* file_output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file_output.h; sourceTree = "<group>"; };
+		BBA405F918FFA05A0002CABC /* http_stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = http_stream.cpp; sourceTree = "<group>"; };
+		BBA405FA18FFA05A0002CABC /* http_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http_stream.h; sourceTree = "<group>"; };
+		BBA405FB18FFA05A0002CABC /* id3_parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3_parser.cpp; sourceTree = "<group>"; };
+		BBA405FC18FFA05A0002CABC /* id3_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = id3_parser.h; sourceTree = "<group>"; };
+		BBA405FD18FFA05A0002CABC /* stream_configuration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stream_configuration.cpp; sourceTree = "<group>"; };
+		BBA405FE18FFA05A0002CABC /* stream_configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stream_configuration.h; sourceTree = "<group>"; };
+		BBD2E32B18FE2EB6009A08AD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		BBD2E32D18FE2EE4009A08AD /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		BBD2E32F18FE2EFB009A08AD /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		BBD2E33118FE3F7E009A08AD /* OpenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenViewController.h; sourceTree = "<group>"; };
+		BBD2E33218FE3F7E009A08AD /* OpenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,11 +171,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA17801018FDEC7B007F258D /* GoogleMaps.framework in Frameworks */,
-				A47F128918FE0D310077429C /* FacebookSDK.framework in Frameworks */,
-				A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */,
+				BBA405D818FFA02D0002CABC /* MediaPlayer.framework in Frameworks */,
+				BBA405D618FFA0200002CABC /* libxml2.dylib in Frameworks */,
+				BBA405D418FFA00B0002CABC /* AudioToolbox.framework in Frameworks */,
+				BBA405D218FFA0010002CABC /* CFNetwork.framework in Frameworks */,
+				BBD2E32C18FE2EB6009A08AD /* FacebookSDK.framework in Frameworks */,
+				BB7F126519001000004E6099 /* AVFoundation.framework in Frameworks */,
 				A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */,
-				A4F1A20018F1B8B800299AD1 /* AVFoundation.framework in Frameworks */,
 				A4F1A20218F1B8B800299AD1 /* CoreLocation.framework in Frameworks */,
 				A4F1A20318F1B8B800299AD1 /* CoreText.framework in Frameworks */,
 				A4F1A20418F1B8B800299AD1 /* GLKit.framework in Frameworks */,
@@ -127,6 +192,7 @@
 				A4F1A20D18F1B8B800299AD1 /* SystemConfiguration.framework in Frameworks */,
 				A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */,
 				A4F1A1BB18F1AE2000299AD1 /* UIKit.framework in Frameworks */,
+				BBD2E32E18FE2EE4009A08AD /* GoogleMaps.framework in Frameworks */,
 				A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,7 +231,12 @@
 		A4F1A1B518F1AE2000299AD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A47F128818FE0D310077429C /* FacebookSDK.framework */,
+				BBA405D718FFA02D0002CABC /* MediaPlayer.framework */,
+				BBA405D518FFA0200002CABC /* libxml2.dylib */,
+				BBA405D318FFA00B0002CABC /* AudioToolbox.framework */,
+				BBA405D118FFA0000002CABC /* CFNetwork.framework */,
+				BBD2E32D18FE2EE4009A08AD /* GoogleMaps.framework */,
+				BBD2E32B18FE2EB6009A08AD /* FacebookSDK.framework */,
 				A4F1A1F218F1B8B800299AD1 /* AVFoundation.framework */,
 				A4F1A1F318F1B8B800299AD1 /* CoreData.framework */,
 				A4F1A1F418F1B8B800299AD1 /* CoreLocation.framework */,
@@ -173,6 +244,7 @@
 				A4F1A1F618F1B8B800299AD1 /* GLKit.framework */,
 				A4F1A1F718F1B8B800299AD1 /* ImageIO.framework */,
 				A4F1A1F818F1B8B800299AD1 /* libc++.dylib */,
+				BBD2E32F18FE2EFB009A08AD /* GoogleMaps.bundle */,
 				A4F1A1F918F1B8B800299AD1 /* libc.dylib */,
 				A4F1A1FA18F1B8B800299AD1 /* libicucore.dylib */,
 				A4F1A1FB18F1B8B800299AD1 /* libz.dylib */,
@@ -180,7 +252,6 @@
 				A4F1A1FD18F1B8B800299AD1 /* OpenGLES.framework */,
 				A4F1A1FE18F1B8B800299AD1 /* QuartzCore.framework */,
 				A4F1A1FF18F1B8B800299AD1 /* SystemConfiguration.framework */,
-				A4F1A1EE18F1B7F900299AD1 /* GoogleMaps.framework */,
 				A4F1A1B618F1AE2000299AD1 /* Foundation.framework */,
 				A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */,
 				A4F1A1BA18F1AE2000299AD1 /* UIKit.framework */,
@@ -192,9 +263,6 @@
 		A4F1A1BC18F1AE2000299AD1 /* Geo Master */ = {
 			isa = PBXGroup;
 			children = (
-				A4F1A1C518F1AE2000299AD1 /* GeoAppDelegate.h */,
-				A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */,
-				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
 				A496A66C18F2050100C18EBB /* GeoGame.h */,
 				A496A66D18F2050100C18EBB /* GeoGame.m */,
 				A47F120E18FDDFA80077429C /* MainViewController.h */,
@@ -202,6 +270,9 @@
 				A416379B18F4641E00D8B8F4 /* StreetViewController.h */,
 				A416379C18F4641E00D8B8F4 /* StreetViewController.m */,
 				A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */,
+				BBD2E33118FE3F7E009A08AD /* OpenViewController.h */,
+				BBD2E33218FE3F7E009A08AD /* OpenViewController.m */,
+				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
 				A4F1A1BD18F1AE2000299AD1 /* Supporting Files */,
 				A4F1A1DE18F1AE2000299AD1 /* Geo MasterTests */,
 			);
@@ -211,16 +282,25 @@
 		A4F1A1BD18F1AE2000299AD1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A416379818F463AE00D8B8F4 /* Random.h */,
-				A47F128A18FE0E850077429C /* USCities.txt */,
+				BB7F126619001040004E6099 /* FontAwesome.ttf */,
+				BB7F126719001040004E6099 /* NSString+FontAwesome.h */,
+				BB7F126819001040004E6099 /* NSString+FontAwesome.m */,
+				BB7F126919001040004E6099 /* UIButton+Bootstrap.h */,
+				BB7F126A19001040004E6099 /* UIButton+Bootstrap.m */,
+				BBA405F218FFA05A0002CABC /* astreamer */,
+				BBA405D918FFA04C0002CABC /* Common */,
+				A4F1A1C218F1AE2000299AD1 /* main.m */,
+				A4F1A1C518F1AE2000299AD1 /* GeoAppDelegate.h */,
+				A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */,
 				A416379918F463AE00D8B8F4 /* Random.m */,
+				A416379818F463AE00D8B8F4 /* Random.h */,
 				A416379E18F464BF00D8B8F4 /* XMLParser.h */,
 				A416379F18F464BF00D8B8F4 /* XMLParser.m */,
 				A4F1A1CB18F1AE2000299AD1 /* Main_iPad.storyboard */,
 				A4F1A1BE18F1AE2000299AD1 /* Geo Master-Info.plist */,
 				A4F1A1BF18F1AE2000299AD1 /* InfoPlist.strings */,
-				A4F1A1C218F1AE2000299AD1 /* main.m */,
 				A4F1A1C418F1AE2000299AD1 /* Geo Master-Prefix.pch */,
+				A47F128A18FE0E850077429C /* USCities.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -241,6 +321,48 @@
 				A4F1A1E118F1AE2000299AD1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBA405D918FFA04C0002CABC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BBA405DA18FFA04C0002CABC /* FSAudioController.h */,
+				BBA405DB18FFA04C0002CABC /* FSAudioController.m */,
+				BBA405DC18FFA04C0002CABC /* FSAudioStream.h */,
+				BBA405DD18FFA04C0002CABC /* FSAudioStream.mm */,
+				BBA405DE18FFA04C0002CABC /* FSCheckContentTypeRequest.h */,
+				BBA405DF18FFA04C0002CABC /* FSCheckContentTypeRequest.m */,
+				BBA405E018FFA04C0002CABC /* FSParsePlaylistRequest.h */,
+				BBA405E118FFA04C0002CABC /* FSParsePlaylistRequest.m */,
+				BBA405E218FFA04C0002CABC /* FSParseRssPodcastFeedRequest.h */,
+				BBA405E318FFA04C0002CABC /* FSParseRssPodcastFeedRequest.m */,
+				BBA405E418FFA04C0002CABC /* FSPlaylistItem.h */,
+				BBA405E518FFA04C0002CABC /* FSPlaylistItem.m */,
+				BBA405E618FFA04C0002CABC /* FSXMLHttpRequest.h */,
+				BBA405E718FFA04C0002CABC /* FSXMLHttpRequest.m */,
+				BBA405E818FFA04C0002CABC /* Reachability.h */,
+				BBA405E918FFA04C0002CABC /* Reachability.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BBA405F218FFA05A0002CABC /* astreamer */ = {
+			isa = PBXGroup;
+			children = (
+				BBA405F318FFA05A0002CABC /* audio_queue.cpp */,
+				BBA405F418FFA05A0002CABC /* audio_queue.h */,
+				BBA405F518FFA05A0002CABC /* audio_stream.cpp */,
+				BBA405F618FFA05A0002CABC /* audio_stream.h */,
+				BBA405F718FFA05A0002CABC /* file_output.cpp */,
+				BBA405F818FFA05A0002CABC /* file_output.h */,
+				BBA405F918FFA05A0002CABC /* http_stream.cpp */,
+				BBA405FA18FFA05A0002CABC /* http_stream.h */,
+				BBA405FB18FFA05A0002CABC /* id3_parser.cpp */,
+				BBA405FC18FFA05A0002CABC /* id3_parser.h */,
+				BBA405FD18FFA05A0002CABC /* stream_configuration.cpp */,
+				BBA405FE18FFA05A0002CABC /* stream_configuration.h */,
+			);
+			path = astreamer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +410,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Geo;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = ios.uiowa;
 				TargetAttributes = {
 					A4F1A1D618F1AE2000299AD1 = {
@@ -321,8 +443,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F1A1CD18F1AE2000299AD1 /* Main_iPad.storyboard in Resources */,
+				BB7F126B19001040004E6099 /* FontAwesome.ttf in Resources */,
 				A4F1A1D218F1AE2000299AD1 /* Images.xcassets in Resources */,
 				A47F120D18FDDF9D0077429C /* Main_iPhone.storyboard in Resources */,
+				BBD2E33018FE2EFB009A08AD /* GoogleMaps.bundle in Resources */,
 				A4F1A1C118F1AE2000299AD1 /* InfoPlist.strings in Resources */,
 				A47F128B18FE0E850077429C /* USCities.txt in Resources */,
 			);
@@ -343,11 +467,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA405EA18FFA04C0002CABC /* FSAudioController.m in Sources */,
+				BBD2E33318FE3F7E009A08AD /* OpenViewController.m in Sources */,
 				A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */,
+				BBA4060218FFA05A0002CABC /* http_stream.cpp in Sources */,
+				BBA405F018FFA04C0002CABC /* FSXMLHttpRequest.m in Sources */,
+				BBA4060118FFA05A0002CABC /* file_output.cpp in Sources */,
+				BBA4060018FFA05A0002CABC /* audio_stream.cpp in Sources */,
+				BBA405FF18FFA05A0002CABC /* audio_queue.cpp in Sources */,
+				BBA405EC18FFA04C0002CABC /* FSCheckContentTypeRequest.m in Sources */,
+				BBA405EE18FFA04C0002CABC /* FSParseRssPodcastFeedRequest.m in Sources */,
+				BBA405EB18FFA04C0002CABC /* FSAudioStream.mm in Sources */,
 				A416379D18F4641E00D8B8F4 /* StreetViewController.m in Sources */,
+				BBA405ED18FFA04C0002CABC /* FSParsePlaylistRequest.m in Sources */,
 				A4F1A1C318F1AE2000299AD1 /* main.m in Sources */,
+				BBA405F118FFA04C0002CABC /* Reachability.m in Sources */,
 				A47F121018FDDFB10077429C /* MainViewController.m in Sources */,
+				BB7F126C19001040004E6099 /* NSString+FontAwesome.m in Sources */,
+				BBA4060418FFA05A0002CABC /* stream_configuration.cpp in Sources */,
+				BB7F126D19001040004E6099 /* UIButton+Bootstrap.m in Sources */,
+				BBA4060318FFA05A0002CABC /* id3_parser.cpp in Sources */,
 				A41637A018F464BF00D8B8F4 /* XMLParser.m in Sources */,
+				BBA405EF18FFA04C0002CABC /* FSPlaylistItem.m in Sources */,
 				A416379A18F463AE00D8B8F4 /* Random.m in Sources */,
 				A496A66E18F2050100C18EBB /* GeoGame.m in Sources */,
 			);
@@ -403,7 +544,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -443,7 +583,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -480,16 +619,25 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/ychao/Desktop/Geo\\ Master",
+					/Users/ychao/Desktop/Geo,
+					Master,
 					/Users/jvolker/Desktop/GeoMaster,
 					/Users/jvolker/Desktop/GeoMaster/FacebookSDK,
-					"/Users/ychao/Desktop/Geo\\ Master/FacebookSDK",
+					/Users/ychao/Desktop/Geo,
+					Master/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "Geo Master/Geo Master-Info.plist";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -501,15 +649,24 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/ychao/Desktop/Geo\\ Master",
+					/Users/ychao/Desktop/Geo,
+					Master,
 					/Users/jvolker/Desktop/GeoMaster,
 					/Users/jvolker/Desktop/GeoMaster/FacebookSDK,
-					"/Users/ychao/Desktop/Geo\\ Master/FacebookSDK",
+					/Users/ychao/Desktop/Geo,
+					Master/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "Geo Master/Geo Master-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -517,7 +674,6 @@
 		A4F1A1EC18F1AE2000299AD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Geo Master.app/Geo Master";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -540,7 +696,6 @@
 		A4F1A1ED18F1AE2000299AD1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Geo Master.app/Geo Master";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
