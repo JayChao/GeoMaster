@@ -37,7 +37,7 @@
         x = x -40;
     }
     
-    _score = [ NSNumber numberWithInt:(int)x];
+    _score = [ NSNumber numberWithInt:(int)x*100];
     
     NSLog(@"Socre %@",_score);
 }

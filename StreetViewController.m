@@ -47,7 +47,7 @@ CLLocationCoordinate2D end;
     self.gamePrograssLable = [[UILabel alloc] initWithFrame:CGRectMake(90, 50, 180, 40)];
     self.scoreLable=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
     self.walkCountLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
-    self.finalResultLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 230, 180, 90)];
+    self.finalResultLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 230, 300, 90)];
 
     int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
     if (gameProgress==0) {
@@ -93,7 +93,7 @@ CLLocationCoordinate2D end;
        
        
        NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
-       NSString *text = [NSString stringWithFormat:@"Your score is: %@ /500", score];
+       NSString *text = [NSString stringWithFormat:@"Your score is:%@ \n full score is 50000", score];
        
        [self.finalResultLabel setText:text];
        self.finalResultLabel.textColor = [UIColor blackColor];
@@ -280,6 +280,7 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     self.scoreLable.backgroundColor = [UIColor clearColor];
     
     [self.view addSubview:self.scoreLable];
+    self.scoreLable.hidden = YES;
     // delete the new marker to the list of markers.
     
     self.makeGuess=[[UIButton alloc]initWithFrame:CGRectMake(200, 30, 100, 20)];
@@ -303,6 +304,7 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
 }
 
 -(void)continueButton{
+    self.scoreLable.hidden = NO;
     [_makeGuess removeFromSuperview];
     
     GMSMarker *marker = [[GMSMarker alloc] init];
