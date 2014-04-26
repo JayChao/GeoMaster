@@ -93,7 +93,7 @@ CLLocationCoordinate2D end;
        
        
        NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
-       NSString *text = [NSString stringWithFormat:@"Your score is: %@", score];
+       NSString *text = [NSString stringWithFormat:@"Your score is: %@ /500", score];
        
        [self.finalResultLabel setText:text];
        self.finalResultLabel.textColor = [UIColor blackColor];
