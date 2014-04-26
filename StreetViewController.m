@@ -93,7 +93,7 @@ CLLocationCoordinate2D end;
        
        
        NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
-       NSString *text = [NSString stringWithFormat:@"Your score is:%@ \n full score is 50000", score];
+       NSString *text = [NSString stringWithFormat:@"Your score is:%@ \n full score is 5000", score];
        
        [self.finalResultLabel setText:text];
        self.finalResultLabel.textColor = [UIColor blackColor];
@@ -245,7 +245,7 @@ CLLocationCoordinate2D end;
     //game instruction
     int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
     if (gameProgress==1) {
-        UIAlertView *mBoxView =[[UIAlertView alloc]initWithTitle:@"Tip" message:@"Long press on the screen to drop a marker" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *mBoxView =[[UIAlertView alloc]initWithTitle:@"Tip" message:@"Long press on the screen to drop a marker \n 1000 is full score!!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         mBoxView.alpha=0.1;
         [mBoxView show];
     }
