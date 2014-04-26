@@ -220,7 +220,7 @@ void ID3_Parser_Private::feedData(UInt8 *data, UInt32 numBytes)
                                         m_tagData[pos+3]);
                     if (framesize == 0) {
                         setState(ID3_Parser_State_Not_Valid_Tag);
-                        enoughBytesToParse = false;
+//                        enoughBytesToParse = false;
                         break;
                     }
                     

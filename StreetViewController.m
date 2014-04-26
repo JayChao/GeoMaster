@@ -51,7 +51,7 @@ CLLocationCoordinate2D end;
 
     int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
     if (gameProgress==0) {
-        UIAlertView *mBoxView =[[UIAlertView alloc]initWithTitle:@"Tip" message:@"‘Double click’ on streets to walk around \n Find more in Guides. \n \nYour score(1000) will be minus by 10 for every walk" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *mBoxView =[[UIAlertView alloc]initWithTitle:@"Tip" message:@"‘Double click’ on streets to walk around \n Find more in Guides. \n \nYou will lose a small amount of points for walking" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         mBoxView.alpha=0.1;
         [mBoxView show];
     }

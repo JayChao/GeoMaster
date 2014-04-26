@@ -661,7 +661,7 @@ void Audio_Stream::setCookiesForStream(AudioFileStreamID inAudioFileStream)
     
     // set the cookie on the queue.
     if (m_audioConverter) {
-        err = AudioConverterSetProperty(m_audioConverter, kAudioConverterDecompressionMagicCookie, cookieSize, cookieData);
+//        err = AudioConverterSetProperty(m_audioConverter, kAudioConverterDecompressionMagicCookie, cookieSize, cookieData);
     }
     
     free(cookieData);

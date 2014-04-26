@@ -160,7 +160,7 @@
 		BBA405FD18FFA05A0002CABC /* stream_configuration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stream_configuration.cpp; sourceTree = "<group>"; };
 		BBA405FE18FFA05A0002CABC /* stream_configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stream_configuration.h; sourceTree = "<group>"; };
 		BBD2E32B18FE2EB6009A08AD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		BBD2E32D18FE2EE4009A08AD /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		BBD2E32D18FE2EE4009A08AD /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = SOURCE_ROOT; };
 		BBD2E32F18FE2EFB009A08AD /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		BBD2E33118FE3F7E009A08AD /* OpenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenViewController.h; sourceTree = "<group>"; };
 		BBD2E33218FE3F7E009A08AD /* OpenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenViewController.m; sourceTree = "<group>"; };
@@ -619,12 +619,6 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/ychao/Desktop/Geo,
-					Master,
-					/Users/jvolker/Desktop/GeoMaster,
-					/Users/jvolker/Desktop/GeoMaster/FacebookSDK,
-					/Users/ychao/Desktop/Geo,
-					Master/FacebookSDK,
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -649,12 +643,6 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/ychao/Desktop/Geo,
-					Master,
-					/Users/jvolker/Desktop/GeoMaster,
-					/Users/jvolker/Desktop/GeoMaster/FacebookSDK,
-					/Users/ychao/Desktop/Geo,
-					Master/FacebookSDK,
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
