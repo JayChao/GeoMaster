@@ -47,7 +47,7 @@ CLLocationCoordinate2D end;
     self.gamePrograssLable = [[UILabel alloc] initWithFrame:CGRectMake(90, 50, 180, 40)];
     self.scoreLable=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
     self.walkCountLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
-    self.finalResultLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
+    self.finalResultLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 230, 180, 90)];
 
     int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
     if (gameProgress==0) {
@@ -99,7 +99,7 @@ CLLocationCoordinate2D end;
        self.finalResultLabel.textColor = [UIColor blackColor];
        self.finalResultLabel.backgroundColor = [UIColor clearColor];
        
-       UIButton *playAgain=[[UIButton alloc]initWithFrame:CGRectMake(120, 180, 90, 20)];
+       UIButton *playAgain=[[UIButton alloc]initWithFrame:CGRectMake(120, 300, 90, 90)];
        //[playAgain setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/3.0*2)];
        [playAgain setTitle:@"playAgain" forState:UIControlStateNormal];
        [playAgain setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
@@ -184,7 +184,8 @@ CLLocationCoordinate2D end;
     view_.streetNamesHidden=YES;
     self.view = view_;
     
-    
+
+    //Buttons
     UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 40, 20)];
     [Switch setTitle:@"Map" forState:UIControlStateNormal];
     [Switch setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
@@ -240,6 +241,14 @@ CLLocationCoordinate2D end;
     [Switch setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [self.view addSubview:Switch];
     [Switch addTarget:self action:@selector(backView) forControlEvents:UIControlEventTouchUpInside];
+    
+    //game instruction
+    int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
+    if (gameProgress==1) {
+        UIAlertView *mBoxView =[[UIAlertView alloc]initWithTitle:@"Tip" message:@"Long press on the screen to drop a marker" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        mBoxView.alpha=0.1;
+        [mBoxView show];
+    }
 }
 
 
@@ -278,6 +287,9 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     [_makeGuess setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [self.view addSubview:_makeGuess];
     [_makeGuess addTarget:self action:@selector(continueButton) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+   
     
     
     
