@@ -33,16 +33,17 @@
     }
     return self;
 }
-- (IBAction)startButtonPressed:(UIButton *)sender {
 
-    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:0] forKey:@"gameProgress"];
-    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:0] forKey:@"finalScore"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-
-
-    StreetViewController *StreeVC=[[StreetViewController alloc]init];
-    [self presentViewController:StreeVC animated:YES completion:^{}];
-}
+//- (IBAction)startButtonPressed:(UIButton *)sender {
+//
+//    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:0] forKey:@"gameProgress"];
+//    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:0] forKey:@"finalScore"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+//
+//
+//    StreetViewController *StreeVC=[[StreetViewController alloc]init];
+//    [self presentViewController:StreeVC animated:YES completion:^{}];
+//}
 
 
 - (void)viewDidLoad
@@ -126,7 +127,7 @@
     }
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -135,8 +136,11 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
+-(IBAction)unwindToMainView:(UIStoryboardSegue *)unwindSegue
+{
+    
+}
 
 
 @end

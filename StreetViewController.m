@@ -93,7 +93,7 @@ CLLocationCoordinate2D end;
        
        
        NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
-       NSString *text = [NSString stringWithFormat:@"Your score is:%@ \n full score is 5000", score];
+       NSString *text = [NSString stringWithFormat:@"Your score is: %@ \n full score is 5000", score];
        
        [self.finalResultLabel setText:text];
        self.finalResultLabel.textColor = [UIColor blackColor];
@@ -101,7 +101,7 @@ CLLocationCoordinate2D end;
        
        UIButton *playAgain=[[UIButton alloc]initWithFrame:CGRectMake(120, 300, 90, 90)];
        //[playAgain setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/3.0*2)];
-       [playAgain setTitle:@"playAgain" forState:UIControlStateNormal];
+       [playAgain setTitle:@"play again?" forState:UIControlStateNormal];
        [playAgain setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
        //[quit primaryStyle];
        self.view=resultView;
@@ -174,6 +174,11 @@ CLLocationCoordinate2D end;
     return array;
 }
 
+//-(IBAction)switchMap
+//{
+//    true ? [self showStreetView] : [self map]
+//}
+
 -(void)showStreetView{
     [self findRandomPlace];
     [self setCoordinate];
@@ -225,17 +230,16 @@ CLLocationCoordinate2D end;
 }
 
 
-
 //Following code is MapView
 
--(void)switchView{
+-(IBAction)switchView{
+//-(void)switchView{
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:41
                                                             longitude:-87
                                                                  zoom:2];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.delegate = self;
     self.view = mapView_;
-    
     
     
     UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 45, 20)];
@@ -294,12 +298,6 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     [_makeGuess setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [self.view addSubview:_makeGuess];
     [_makeGuess addTarget:self action:@selector(continueButton) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-   
-    
-    
-    
 }
 
 -(void)backView{
