@@ -270,8 +270,6 @@
 				A416379B18F4641E00D8B8F4 /* StreetViewController.h */,
 				A416379C18F4641E00D8B8F4 /* StreetViewController.m */,
 				A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */,
-				BBD2E33118FE3F7E009A08AD /* OpenViewController.h */,
-				BBD2E33218FE3F7E009A08AD /* OpenViewController.m */,
 				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
 				A4F1A1BD18F1AE2000299AD1 /* Supporting Files */,
 				A4F1A1DE18F1AE2000299AD1 /* Geo MasterTests */,
@@ -282,6 +280,8 @@
 		A4F1A1BD18F1AE2000299AD1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BBD2E33118FE3F7E009A08AD /* OpenViewController.h */,
+				BBD2E33218FE3F7E009A08AD /* OpenViewController.m */,
 				BB7F126619001040004E6099 /* FontAwesome.ttf */,
 				BB7F126719001040004E6099 /* NSString+FontAwesome.h */,
 				BB7F126819001040004E6099 /* NSString+FontAwesome.m */,
