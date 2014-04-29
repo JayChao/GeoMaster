@@ -269,36 +269,27 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Pem-iK-tS9" kind="relationship" relationship="rootViewController" id="1Xo-il-9G6"/>
+                        <segue destination="FC9-Kw-WAT" kind="relationship" relationship="rootViewController" id="eEC-ZH-UOg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RxY-dV-HeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="911" y="1140"/>
         </scene>
-        <!--View Controller - How to Play-->
-        <scene sceneID="hIy-jr-qKP">
+        <!--Geo Tutorial View Controller - How to Play-->
+        <scene sceneID="6XN-n5-hkZ">
             <objects>
-                <viewController id="Pem-iK-tS9" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jNe-MH-Nej"/>
-                        <viewControllerLayoutGuide type="bottom" id="5ui-W6-JCq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fb2-Nq-KBX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="How to Play" id="Ffr-HB-wxH">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="MeH-ql-i0s">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="FC9-Kw-WAT" customClass="GeoTutorialViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="How to Play" id="hOF-2b-D7f">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Sml-x7-RGL">
                             <connections>
-                                <segue destination="JUT-kQ-3o7" kind="unwind" unwindAction="unwindToMainView:" id="CSI-LE-Tp4"/>
+                                <segue destination="UoP-ry-8fk" kind="unwind" unwindAction="unwindToMainView:" id="vWX-Jj-rTU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ntH-LW-gu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="JUT-kQ-3o7" userLabel="Exit" sceneMemberID="exit"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGg-NE-b4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UoP-ry-8fk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1445" y="1140"/>
         </scene>

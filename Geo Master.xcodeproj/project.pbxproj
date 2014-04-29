@@ -66,6 +66,10 @@
 		BBD2E32E18FE2EE4009A08AD /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD2E32D18FE2EE4009A08AD /* GoogleMaps.framework */; };
 		BBD2E33018FE2EFB009A08AD /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BBD2E32F18FE2EFB009A08AD /* GoogleMaps.bundle */; };
 		BBD2E33318FE3F7E009A08AD /* OpenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD2E33218FE3F7E009A08AD /* OpenViewController.m */; };
+		FA3C628119105D8300609E15 /* GeoTutorialChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3C627F19105D8300609E15 /* GeoTutorialChildViewController.m */; };
+		FA3C628219105D8300609E15 /* GeoTutorialChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C628019105D8300609E15 /* GeoTutorialChildViewController.xib */; };
+		FA3C628619105DAA00609E15 /* GeoTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3C628419105DAA00609E15 /* GeoTutorialViewController.m */; };
+		FA3C628719105DAA00609E15 /* GeoTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C628519105DAA00609E15 /* GeoTutorialViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +168,12 @@
 		BBD2E32F18FE2EFB009A08AD /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		BBD2E33118FE3F7E009A08AD /* OpenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenViewController.h; sourceTree = "<group>"; };
 		BBD2E33218FE3F7E009A08AD /* OpenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenViewController.m; sourceTree = "<group>"; };
+		FA3C627E19105D8300609E15 /* GeoTutorialChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoTutorialChildViewController.h; sourceTree = "<group>"; };
+		FA3C627F19105D8300609E15 /* GeoTutorialChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoTutorialChildViewController.m; sourceTree = "<group>"; };
+		FA3C628019105D8300609E15 /* GeoTutorialChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeoTutorialChildViewController.xib; sourceTree = "<group>"; };
+		FA3C628319105DAA00609E15 /* GeoTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoTutorialViewController.h; sourceTree = "<group>"; };
+		FA3C628419105DAA00609E15 /* GeoTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoTutorialViewController.m; sourceTree = "<group>"; };
+		FA3C628519105DAA00609E15 /* GeoTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeoTutorialViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +280,7 @@
 				A416379B18F4641E00D8B8F4 /* StreetViewController.h */,
 				A416379C18F4641E00D8B8F4 /* StreetViewController.m */,
 				A47F120C18FDDF9D0077429C /* Main_iPhone.storyboard */,
+				FA3C627D19105D3A00609E15 /* Tutorial */,
 				BBD2E33118FE3F7E009A08AD /* OpenViewController.h */,
 				BBD2E33218FE3F7E009A08AD /* OpenViewController.m */,
 				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
@@ -365,6 +376,19 @@
 			path = astreamer;
 			sourceTree = "<group>";
 		};
+		FA3C627D19105D3A00609E15 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				FA3C627E19105D8300609E15 /* GeoTutorialChildViewController.h */,
+				FA3C627F19105D8300609E15 /* GeoTutorialChildViewController.m */,
+				FA3C628019105D8300609E15 /* GeoTutorialChildViewController.xib */,
+				FA3C628319105DAA00609E15 /* GeoTutorialViewController.h */,
+				FA3C628419105DAA00609E15 /* GeoTutorialViewController.m */,
+				FA3C628519105DAA00609E15 /* GeoTutorialViewController.xib */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -443,7 +467,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F1A1CD18F1AE2000299AD1 /* Main_iPad.storyboard in Resources */,
+				FA3C628219105D8300609E15 /* GeoTutorialChildViewController.xib in Resources */,
 				BB7F126B19001040004E6099 /* FontAwesome.ttf in Resources */,
+				FA3C628719105DAA00609E15 /* GeoTutorialViewController.xib in Resources */,
 				A4F1A1D218F1AE2000299AD1 /* Images.xcassets in Resources */,
 				A47F120D18FDDF9D0077429C /* Main_iPhone.storyboard in Resources */,
 				BBD2E33018FE2EFB009A08AD /* GoogleMaps.bundle in Resources */,
@@ -469,6 +495,7 @@
 			files = (
 				BBA405EA18FFA04C0002CABC /* FSAudioController.m in Sources */,
 				BBD2E33318FE3F7E009A08AD /* OpenViewController.m in Sources */,
+				FA3C628619105DAA00609E15 /* GeoTutorialViewController.m in Sources */,
 				A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */,
 				BBA4060218FFA05A0002CABC /* http_stream.cpp in Sources */,
 				BBA405F018FFA04C0002CABC /* FSXMLHttpRequest.m in Sources */,
@@ -484,6 +511,7 @@
 				BBA405F118FFA04C0002CABC /* Reachability.m in Sources */,
 				A47F121018FDDFB10077429C /* MainViewController.m in Sources */,
 				BB7F126C19001040004E6099 /* NSString+FontAwesome.m in Sources */,
+				FA3C628119105D8300609E15 /* GeoTutorialChildViewController.m in Sources */,
 				BBA4060418FFA05A0002CABC /* stream_configuration.cpp in Sources */,
 				BB7F126D19001040004E6099 /* UIButton+Bootstrap.m in Sources */,
 				BBA4060318FFA05A0002CABC /* id3_parser.cpp in Sources */,
