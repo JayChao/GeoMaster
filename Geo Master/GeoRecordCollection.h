@@ -14,5 +14,6 @@
 -(void)addRecord:(GeoRecord*)newRecord;
 -(NSArray*)getOrderedrecordList;
 -(NSUInteger)getCount;
+-(GeoRecord*)getRecordAtIndex:(NSUInteger)index;
 
 @end

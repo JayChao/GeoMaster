@@ -74,6 +74,7 @@
 		FAEAD7F41911CDA80060096B /* GeoRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAD7F31911CDA80060096B /* GeoRecord.m */; };
 		FAEAD7F81911CECC0060096B /* GeoRecordCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAD7F71911CECC0060096B /* GeoRecordCollection.m */; };
 		FAEAD7FA1911D9520060096B /* GeoRecordTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAD7F91911D9520060096B /* GeoRecordTestCase.m */; };
+		FAEAD7FD191202490060096B /* GeoHighScoreTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAD7FC191202490060096B /* GeoHighScoreTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +186,8 @@
 		FAEAD7F61911CECC0060096B /* GeoRecordCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoRecordCollection.h; sourceTree = "<group>"; };
 		FAEAD7F71911CECC0060096B /* GeoRecordCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoRecordCollection.m; sourceTree = "<group>"; };
 		FAEAD7F91911D9520060096B /* GeoRecordTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoRecordTestCase.m; sourceTree = "<group>"; };
+		FAEAD7FB191202490060096B /* GeoHighScoreTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoHighScoreTableCell.h; sourceTree = "<group>"; };
+		FAEAD7FC191202490060096B /* GeoHighScoreTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoHighScoreTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,6 +451,8 @@
 			children = (
 				FAEAD7E91911CA650060096B /* GeoHighScoresViewController.h */,
 				FAEAD7EA1911CA650060096B /* GeoHighScoresViewController.m */,
+				FAEAD7FB191202490060096B /* GeoHighScoreTableCell.h */,
+				FAEAD7FC191202490060096B /* GeoHighScoreTableCell.m */,
 			);
 			name = "High Scores";
 			sourceTree = "<group>";
@@ -592,6 +597,7 @@
 				BBA4060118FFA05A0002CABC /* file_output.cpp in Sources */,
 				BBA4060018FFA05A0002CABC /* audio_stream.cpp in Sources */,
 				FAEAD7F81911CECC0060096B /* GeoRecordCollection.m in Sources */,
+				FAEAD7FD191202490060096B /* GeoHighScoreTableCell.m in Sources */,
 				BBA405FF18FFA05A0002CABC /* audio_queue.cpp in Sources */,
 				BBA405EC18FFA04C0002CABC /* FSCheckContentTypeRequest.m in Sources */,
 				BBA405EE18FFA04C0002CABC /* FSParseRssPodcastFeedRequest.m in Sources */,

@@ -43,4 +43,9 @@
     return [self.recordCollection count];
 }
 
+-(GeoRecord*)getRecordAtIndex:(NSUInteger)index
+{
+    return [self.recordCollection objectAtIndex:index];
+}
+
 @end
