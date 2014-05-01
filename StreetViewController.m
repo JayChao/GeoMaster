@@ -403,13 +403,17 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     polyline.map = mapView_;
     
     
-    
+    UIView *clearView=[[UIView alloc]init];
+	clearView.backgroundColor=[UIColor clearColor];
+	[clearView setFrame:self.view.frame];
+	[self.view addSubview:clearView];
     
     UIButton *continueButton=[[UIButton alloc]initWithFrame:CGRectMake(200, 30, 100, 20)];
     [continueButton setTitle:@"Continue" forState:UIControlStateNormal];
     [continueButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [self.view addSubview:continueButton];
     [continueButton addTarget:self action:@selector(initStreetView) forControlEvents:UIControlEventTouchUpInside];
+	
     
 }
 
