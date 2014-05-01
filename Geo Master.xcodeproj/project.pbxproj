@@ -71,6 +71,9 @@
 		FA3C628619105DAA00609E15 /* GeoTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3C628419105DAA00609E15 /* GeoTutorialViewController.m */; };
 		FA3C628719105DAA00609E15 /* GeoTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C628519105DAA00609E15 /* GeoTutorialViewController.xib */; };
 		FAEAD7EB1911CA650060096B /* GeoHighScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAD7EA1911CA650060096B /* GeoHighScoresViewController.m */; };
+		FAEAD7F41911CDA80060096B /* GeoRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAD7F31911CDA80060096B /* GeoRecord.m */; };
+		FAEAD7F81911CECC0060096B /* GeoRecordCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAD7F71911CECC0060096B /* GeoRecordCollection.m */; };
+		FAEAD7FA1911D9520060096B /* GeoRecordTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAD7F91911D9520060096B /* GeoRecordTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +180,11 @@
 		FA3C628519105DAA00609E15 /* GeoTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeoTutorialViewController.xib; sourceTree = "<group>"; };
 		FAEAD7E91911CA650060096B /* GeoHighScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoHighScoresViewController.h; sourceTree = "<group>"; };
 		FAEAD7EA1911CA650060096B /* GeoHighScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoHighScoresViewController.m; sourceTree = "<group>"; };
+		FAEAD7F21911CDA80060096B /* GeoRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoRecord.h; sourceTree = "<group>"; };
+		FAEAD7F31911CDA80060096B /* GeoRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoRecord.m; sourceTree = "<group>"; };
+		FAEAD7F61911CECC0060096B /* GeoRecordCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoRecordCollection.h; sourceTree = "<group>"; };
+		FAEAD7F71911CECC0060096B /* GeoRecordCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoRecordCollection.m; sourceTree = "<group>"; };
+		FAEAD7F91911D9520060096B /* GeoRecordTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoRecordTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				A4F1A1E418F1AE2000299AD1 /* Geo_MasterTests.m */,
+				FAEAD7F91911D9520060096B /* GeoRecordTestCase.m */,
 				A4F1A1DF18F1AE2000299AD1 /* Supporting Files */,
 			);
 			path = "Geo MasterTests";
@@ -388,8 +397,9 @@
 		FAEAD7E71911C9F30060096B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A496A66C18F2050100C18EBB /* GeoGame.h */,
-				A496A66D18F2050100C18EBB /* GeoGame.m */,
+				FAEAD7F51911CEB00060096B /* Geo Record List */,
+				FAEAD7F11911CD930060096B /* Record */,
+				FAEAD7F01911CD8A0060096B /* Geo Game */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -440,6 +450,33 @@
 				FAEAD7EA1911CA650060096B /* GeoHighScoresViewController.m */,
 			);
 			name = "High Scores";
+			sourceTree = "<group>";
+		};
+		FAEAD7F01911CD8A0060096B /* Geo Game */ = {
+			isa = PBXGroup;
+			children = (
+				A496A66C18F2050100C18EBB /* GeoGame.h */,
+				A496A66D18F2050100C18EBB /* GeoGame.m */,
+			);
+			name = "Geo Game";
+			sourceTree = "<group>";
+		};
+		FAEAD7F11911CD930060096B /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				FAEAD7F21911CDA80060096B /* GeoRecord.h */,
+				FAEAD7F31911CDA80060096B /* GeoRecord.m */,
+			);
+			name = Record;
+			sourceTree = "<group>";
+		};
+		FAEAD7F51911CEB00060096B /* Geo Record List */ = {
+			isa = PBXGroup;
+			children = (
+				FAEAD7F61911CECC0060096B /* GeoRecordCollection.h */,
+				FAEAD7F71911CECC0060096B /* GeoRecordCollection.m */,
+			);
+			name = "Geo Record List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,6 +591,7 @@
 				BBA405F018FFA04C0002CABC /* FSXMLHttpRequest.m in Sources */,
 				BBA4060118FFA05A0002CABC /* file_output.cpp in Sources */,
 				BBA4060018FFA05A0002CABC /* audio_stream.cpp in Sources */,
+				FAEAD7F81911CECC0060096B /* GeoRecordCollection.m in Sources */,
 				BBA405FF18FFA05A0002CABC /* audio_queue.cpp in Sources */,
 				BBA405EC18FFA04C0002CABC /* FSCheckContentTypeRequest.m in Sources */,
 				BBA405EE18FFA04C0002CABC /* FSParseRssPodcastFeedRequest.m in Sources */,
@@ -570,6 +608,7 @@
 				BB7F126D19001040004E6099 /* UIButton+Bootstrap.m in Sources */,
 				BBA4060318FFA05A0002CABC /* id3_parser.cpp in Sources */,
 				A41637A018F464BF00D8B8F4 /* XMLParser.m in Sources */,
+				FAEAD7F41911CDA80060096B /* GeoRecord.m in Sources */,
 				BBA405EF18FFA04C0002CABC /* FSPlaylistItem.m in Sources */,
 				A416379A18F463AE00D8B8F4 /* Random.m in Sources */,
 				A496A66E18F2050100C18EBB /* GeoGame.m in Sources */,
@@ -580,6 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEAD7FA1911D9520060096B /* GeoRecordTestCase.m in Sources */,
 				A4F1A1E518F1AE2000299AD1 /* Geo_MasterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
