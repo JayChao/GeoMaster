@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>9D77529B-A506-45EB-AEE7-D79788071C1D</string>
+	<string>C4667BF7-C72A-488B-B542-FE49B5D532D0</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Geo Master</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>39340A6C-24AD-4013-96AC-AB16BAB312FB</key>
-		<string>https://github.com/JayChao/GoeMaster.git</string>
+		<key>D81C89D2-AD2A-42C5-8F8D-9B755A4F3A84</key>
+		<string>https://github.com/JayChao/GeoMaster.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Geo Master.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>39340A6C-24AD-4013-96AC-AB16BAB312FB</key>
+		<key>D81C89D2-AD2A-42C5-8F8D-9B755A4F3A84</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/JayChao/GoeMaster.git</string>
+	<string>https://github.com/JayChao/GeoMaster.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>39340A6C-24AD-4013-96AC-AB16BAB312FB</string>
+	<string>D81C89D2-AD2A-42C5-8F8D-9B755A4F3A84</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>39340A6C-24AD-4013-96AC-AB16BAB312FB</string>
+			<string>D81C89D2-AD2A-42C5-8F8D-9B755A4F3A84</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Geo Master</string>
+			<string>GeoMaster</string>
 		</dict>
 	</array>
 </dict>

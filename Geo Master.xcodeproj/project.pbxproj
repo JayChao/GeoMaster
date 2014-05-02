@@ -70,6 +70,9 @@
 		FA3C628219105D8300609E15 /* GeoTutorialChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C628019105D8300609E15 /* GeoTutorialChildViewController.xib */; };
 		FA3C628619105DAA00609E15 /* GeoTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3C628419105DAA00609E15 /* GeoTutorialViewController.m */; };
 		FA3C628719105DAA00609E15 /* GeoTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C628519105DAA00609E15 /* GeoTutorialViewController.xib */; };
+		FA9B3C9E191317B200618222 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9B3C9B191317B200618222 /* MobileCoreServices.framework */; };
+		FA9B3C9F191317B200618222 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9B3C9C191317B200618222 /* Security.framework */; };
+		FA9B3CA0191317B200618222 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9B3C9D191317B200618222 /* StoreKit.framework */; };
 		FAEAD7EB1911CA650060096B /* GeoHighScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAD7EA1911CA650060096B /* GeoHighScoresViewController.m */; };
 		FAEAD7F41911CDA80060096B /* GeoRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAD7F31911CDA80060096B /* GeoRecord.m */; };
 		FAEAD7F81911CECC0060096B /* GeoRecordCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEAD7F71911CECC0060096B /* GeoRecordCollection.m */; };
@@ -179,6 +182,10 @@
 		FA3C628319105DAA00609E15 /* GeoTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoTutorialViewController.h; sourceTree = "<group>"; };
 		FA3C628419105DAA00609E15 /* GeoTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoTutorialViewController.m; sourceTree = "<group>"; };
 		FA3C628519105DAA00609E15 /* GeoTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeoTutorialViewController.xib; sourceTree = "<group>"; };
+		FA9B3C981913175100618222 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		FA9B3C9B191317B200618222 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FA9B3C9C191317B200618222 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FA9B3C9D191317B200618222 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FAEAD7E91911CA650060096B /* GeoHighScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoHighScoresViewController.h; sourceTree = "<group>"; };
 		FAEAD7EA1911CA650060096B /* GeoHighScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoHighScoresViewController.m; sourceTree = "<group>"; };
 		FAEAD7F21911CDA80060096B /* GeoRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoRecord.h; sourceTree = "<group>"; };
@@ -195,26 +202,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBA405D818FFA02D0002CABC /* MediaPlayer.framework in Frameworks */,
-				BBA405D618FFA0200002CABC /* libxml2.dylib in Frameworks */,
+				FA9B3C9E191317B200618222 /* MobileCoreServices.framework in Frameworks */,
+				FA9B3C9F191317B200618222 /* Security.framework in Frameworks */,
+				FA9B3CA0191317B200618222 /* StoreKit.framework in Frameworks */,
 				BBA405D418FFA00B0002CABC /* AudioToolbox.framework in Frameworks */,
 				BBA405D218FFA0010002CABC /* CFNetwork.framework in Frameworks */,
+				A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */,
+				A4F1A20218F1B8B800299AD1 /* CoreLocation.framework in Frameworks */,
+				A4F1A20918F1B8B800299AD1 /* libz.dylib in Frameworks */,
+				A4F1A20C18F1B8B800299AD1 /* QuartzCore.framework in Frameworks */,
+				A4F1A20D18F1B8B800299AD1 /* SystemConfiguration.framework in Frameworks */,
+				BBA405D818FFA02D0002CABC /* MediaPlayer.framework in Frameworks */,
+				BBA405D618FFA0200002CABC /* libxml2.dylib in Frameworks */,
 				BBD2E32C18FE2EB6009A08AD /* FacebookSDK.framework in Frameworks */,
 				BB7F126519001000004E6099 /* AVFoundation.framework in Frameworks */,
 				A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */,
-				A4F1A20218F1B8B800299AD1 /* CoreLocation.framework in Frameworks */,
 				A4F1A20318F1B8B800299AD1 /* CoreText.framework in Frameworks */,
 				A4F1A20418F1B8B800299AD1 /* GLKit.framework in Frameworks */,
 				A4F1A20518F1B8B800299AD1 /* ImageIO.framework in Frameworks */,
 				A4F1A20618F1B8B800299AD1 /* libc++.dylib in Frameworks */,
 				A4F1A20718F1B8B800299AD1 /* libc.dylib in Frameworks */,
 				A4F1A20818F1B8B800299AD1 /* libicucore.dylib in Frameworks */,
-				A4F1A20918F1B8B800299AD1 /* libz.dylib in Frameworks */,
 				A4F1A20A18F1B8B800299AD1 /* OpenAL.framework in Frameworks */,
 				A4F1A20B18F1B8B800299AD1 /* OpenGLES.framework in Frameworks */,
-				A4F1A20C18F1B8B800299AD1 /* QuartzCore.framework in Frameworks */,
-				A4F1A20D18F1B8B800299AD1 /* SystemConfiguration.framework in Frameworks */,
-				A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */,
 				A4F1A1BB18F1AE2000299AD1 /* UIKit.framework in Frameworks */,
 				BBD2E32E18FE2EE4009A08AD /* GoogleMaps.framework in Frameworks */,
 				A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */,
@@ -255,6 +265,10 @@
 		A4F1A1B518F1AE2000299AD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA9B3C9B191317B200618222 /* MobileCoreServices.framework */,
+				FA9B3C9C191317B200618222 /* Security.framework */,
+				FA9B3C9D191317B200618222 /* StoreKit.framework */,
+				FA9B3C981913175100618222 /* Parse.framework */,
 				BBA405D718FFA02D0002CABC /* MediaPlayer.framework */,
 				BBA405D518FFA0200002CABC /* libxml2.dylib */,
 				BBA405D318FFA00B0002CABC /* AudioToolbox.framework */,
@@ -748,6 +762,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/jvolker/Desktop/GeoMaster,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
@@ -772,6 +787,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/jvolker/Desktop/GeoMaster,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Geo Master/Geo Master-Prefix.pch";
