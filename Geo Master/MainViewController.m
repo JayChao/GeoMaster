@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *ScoreButton;
 @property (strong, nonatomic) IBOutlet UIButton *BackButton;
 @property (strong, nonatomic) IBOutlet UIButton *GuideButton;
+@property (strong, nonatomic) IBOutlet UIButton *ChallengeModeButton;
 @property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
 @end
 
@@ -51,7 +52,7 @@
     FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"basic_info"]];
     loginView.delegate = self;
     loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), self.view.center.y);
-    loginView.center=CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/4.0*3);
+    loginView.center=CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/6.0*5);
     [self.view addSubview:loginView];
     
     _audioStream = [[FSAudioStream alloc] init];
@@ -64,6 +65,7 @@
     [self.ScoreButton primaryStyle];
     [self.BackButton primaryStyle];
     [self.GuideButton primaryStyle];
+    [self.ChallengeModeButton primaryStyle];
 
 }
 

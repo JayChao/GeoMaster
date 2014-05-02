@@ -37,8 +37,9 @@
     mapView_.settings.rotateGestures = NO;
     mapView_.settings.tiltGestures = NO;
     self.view = mapView_;
-    [self.view addSubview:self.startButton];
     [self.startButton primaryStyle];
+    [self.view addSubview:self.startButton];
+    
 
     [self.view addSubview:self.TitleLabel];
 }
