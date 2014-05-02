@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <GoogleMaps/GoogleMaps.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface StreetViewController : UIViewController
+@interface StreetViewController : UIViewController <FBUserSettingsDelegate>
 -(CLLocationCoordinate2D)getCoordinate;
 
 @end

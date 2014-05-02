@@ -12,6 +12,7 @@
 #import "Random.h"
 #import "UIButton+Bootstrap.h"
 #import "GeoGame.h"
+#import "GeoRecord.h"
 #import "MainViewController.h"
 
 @interface StreetViewController ()<GMSPanoramaViewDelegate,GMSMapViewDelegate,UIGestureRecognizerDelegate>
@@ -94,6 +95,30 @@ CLLocationCoordinate2D end;
        
        NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
        NSString *text = [NSString stringWithFormat:@"Your score is: %@ \n full score is 5000", score];
+       
+       
+
+       
+       
+       GeoRecord *newRecord = [[GeoRecord alloc] init];
+       [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error)
+       {
+           if(!error)
+           {
+               newRecord.playerName = [NSString stringWithFormat:@"%@", [result name]];
+           }
+           else
+           {
+               newRecord.playerName = [NSString stringWithFormat:@"Guest"];
+           }
+       }];
+       newRecord.score = score;
+       
+       ///
+       ///
+       /// in this space, we will insert a call to add this record to parse / firebase / sql/ whatever
+       ///
+       ///
        
        [self.finalResultLabel setText:text];
        self.finalResultLabel.textColor = [UIColor blackColor];
