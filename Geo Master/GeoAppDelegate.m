@@ -8,15 +8,43 @@
 
 #import "GeoAppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "GeoRecord.h"
+#import "GeoRecordCollection.h"
+
+#import "OpenViewController.h"
+#import "MainViewController.h"
+#import "GeoHighScoresViewController.h"
 
 @implementation GeoAppDelegate
+{
+    GeoRecordCollection* _recordCollection;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [FBLoginView class];
     [GMSServices provideAPIKey:@"AIzaSyCtGILRnz4sF78fb67SnfIRIvwi4U1e_XI"];
+    
+    [Parse setApplicationId:@"fYJvGJFZtNALTKWBvo4dxLZs4PUAFvZGEJ9PUfsZ"
+                  clientKey:@"y73Kosd3Uk1YZ1k4V5blz2h3HXDZBztseeQ0HcJ2"];
+    
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+     UIRemoteNotificationTypeAlert|
+     UIRemoteNotificationTypeSound];
+    
+//    _recordCollection = [[GeoRecordCollection alloc] init];
+//
+//    GeoRecord* record1 = [[GeoRecord alloc] init];
+//    record1.playerName = [NSString stringWithFormat:@"Katniss Everdeen"];
+//    record1.score = [NSNumber numberWithDouble:45.67];
+//    
+//    GeoRecord* record2 = [[GeoRecord alloc] init];
+//    record2.playerName = [NSString stringWithFormat:@"Peeta Mellark"];
+//    record2.score = [NSNumber numberWithDouble:12.98];
+    
     return YES;
 }
 							
@@ -58,6 +86,20 @@
     // You can add your app-specific url handling code here if needed
     
     return wasHandled;
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 @end

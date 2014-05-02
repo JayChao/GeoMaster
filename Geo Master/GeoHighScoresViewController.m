@@ -7,6 +7,7 @@
 //
 
 #import "GeoHighScoresViewController.h"
+#import "GeoHighScoreTableCell.h"
 
 @interface GeoHighScoresViewController ()
 
@@ -17,8 +18,14 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
+//        if(_recordCollection == nil)
+//        {
+//            NSLog(@"initialized collection!");
+//            _recordCollection = [[GeoRecordCollection alloc] init];
+//        }
     }
     return self;
 }
@@ -26,12 +33,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+//    if(_recordCollection == nil)
+//    {
+//        NSLog(@"initialized collection!");
+//        _recordCollection = [[GeoRecordCollection alloc] init];
+//    }
+    
+    self.tableView.dataSource = self;
+    
+    
+    self.recordCollection = [[GeoRecordCollection alloc] init];
+    GeoRecord* record1 = [[GeoRecord alloc] init];
+    record1.playerName = [NSString stringWithFormat:@"Katniss Everdeen"];
+    record1.score = [NSNumber numberWithDouble:45.67];
+    
+    GeoRecord* record2 = [[GeoRecord alloc] init];
+    record2.playerName = [NSString stringWithFormat:@"Peeta Mellark"];
+    record2.score = [NSNumber numberWithDouble:12.98];
+    
+    [self.recordCollection addRecord:record1];
+    [self.recordCollection addRecord:record2];
+    
+    NSLog(@"initialized collection!");
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,66 +68,35 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.recordCollection getCount];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"recordCell";
+    
+    GeoHighScoreTableCell *cell = [tableView
+                              dequeueReusableCellWithIdentifier:CellIdentifier
+                              forIndexPath:indexPath];
     
     // Configure the cell...
+    
+    long row = [indexPath row];
+    
+    cell.playerNameLabel.text = [self.recordCollection getRecordAtIndex:row].playerName;
+    cell.scoreLabel.text = [NSString stringWithFormat:@"%@", [self.recordCollection getRecordAtIndex:row].score];
+    [cell.playerNameLabel sizeToFit];
+    [cell.scoreLabel sizeToFit];
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation

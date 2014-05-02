@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GeoRecord.h"
+#import "GeoRecordCollection.h"
 
-@interface GeoHighScoresViewController : UITableViewController
+@interface GeoHighScoresViewController : UITableViewController <UITableViewDataSource>
+@property(retain, nonatomic) GeoRecordCollection* recordCollection;
 
 @end
