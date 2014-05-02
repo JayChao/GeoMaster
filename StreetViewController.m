@@ -241,6 +241,11 @@ CLLocationCoordinate2D end;
     return array;
 }
 
+//-(IBAction)switchMap
+//{
+//    true ? [self showStreetView] : [self map]
+//}
+
 -(void)showStreetView{
     [self findRandomPlace];
     [self setCoordinate];
@@ -292,10 +297,10 @@ CLLocationCoordinate2D end;
 }
 
 
-
 //Following code is MapView
 
--(void)switchView{
+-(IBAction)switchView{
+//-(void)switchView{
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:41
                                                             longitude:-87
                                                                  zoom:2];
@@ -362,12 +367,6 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     //[self.makeGuess warningStyle];
     [self.view addSubview:_makeGuess];
     [_makeGuess addTarget:self action:@selector(continueButton) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-   
-    
-    
-    
 }
 
 -(void)backView{
