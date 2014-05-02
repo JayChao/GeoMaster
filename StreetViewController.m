@@ -106,7 +106,7 @@ CLLocationCoordinate2D end;
        
        UIButton *playAgain=[[UIButton alloc]initWithFrame:CGRectMake(120, 300, 90, 90)];
        //[playAgain setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/3.0*2)];
-       [playAgain setTitle:@"Play Again" forState:UIControlStateNormal];
+       [playAgain setTitle:@"play again?" forState:UIControlStateNormal];
        [playAgain setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
        //[quit primaryStyle];
        self.view=resultView;
@@ -309,12 +309,11 @@ CLLocationCoordinate2D end;
     self.view = mapView_;
     
     
-    
-    self.Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 45, 20)];
-    [self.Switch setTitle:@"Back" forState:UIControlStateNormal];
-    [self.Switch setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [self.view addSubview:self.Switch];
-    [self.Switch addTarget:self action:@selector(backView) forControlEvents:UIControlEventTouchUpInside];
+    UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 45, 20)];
+    [Switch setTitle:@"Back" forState:UIControlStateNormal];
+    [Switch setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.view addSubview:Switch];
+    [Switch addTarget:self action:@selector(backView) forControlEvents:UIControlEventTouchUpInside];
     
     //game instruction
     int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
