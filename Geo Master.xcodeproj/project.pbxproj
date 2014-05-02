@@ -182,10 +182,10 @@
 		FA3C628319105DAA00609E15 /* GeoTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoTutorialViewController.h; sourceTree = "<group>"; };
 		FA3C628419105DAA00609E15 /* GeoTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoTutorialViewController.m; sourceTree = "<group>"; };
 		FA3C628519105DAA00609E15 /* GeoTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeoTutorialViewController.xib; sourceTree = "<group>"; };
-		FA9B3C981913175100618222 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		FA9B3C9B191317B200618222 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FA9B3C9C191317B200618222 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FA9B3C9D191317B200618222 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FAA895DF1913241D00A3EB96 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		FAEAD7E91911CA650060096B /* GeoHighScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoHighScoresViewController.h; sourceTree = "<group>"; };
 		FAEAD7EA1911CA650060096B /* GeoHighScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoHighScoresViewController.m; sourceTree = "<group>"; };
 		FAEAD7F21911CDA80060096B /* GeoRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoRecord.h; sourceTree = "<group>"; };
@@ -265,10 +265,10 @@
 		A4F1A1B518F1AE2000299AD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA895DF1913241D00A3EB96 /* Parse.framework */,
 				FA9B3C9B191317B200618222 /* MobileCoreServices.framework */,
 				FA9B3C9C191317B200618222 /* Security.framework */,
 				FA9B3C9D191317B200618222 /* StoreKit.framework */,
-				FA9B3C981913175100618222 /* Parse.framework */,
 				BBA405D718FFA02D0002CABC /* MediaPlayer.framework */,
 				BBA405D518FFA0200002CABC /* libxml2.dylib */,
 				BBA405D318FFA00B0002CABC /* AudioToolbox.framework */,
