@@ -56,7 +56,10 @@
     
     _audioStream = [[FSAudioStream alloc] init];
     [_audioStream playFromURL:[NSURL URLWithString:@"http://sites.google.com/site/georaphymaster/bgm/03%20Morning%20air%20%E6%99%A8%E9%9B%BE.mp3"]];
-    [_audioStream stop];
+    
+
+
+    
     self.view.backgroundColor=[UIColor colorWithWhite:0.800 alpha:1.000];
     
     [self.StartButton primaryStyle];
@@ -65,6 +68,16 @@
     [self.BackButton primaryStyle];
     [self.GuideButton primaryStyle];
 
+}
+-(void)viewDidAppear:(BOOL)animated{
+    NSInteger BGM=[[NSUserDefaults standardUserDefaults]  integerForKey:@"BGMOnOff"];
+    
+    if (!BGM) {
+        [[NSUserDefaults standardUserDefaults]setInteger:1 forKey:@"BGMOnOff"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }else if (BGM==2){
+        [_audioStream stop];
+    }
 }
 
 
