@@ -20,7 +20,6 @@
 		A4F1A1C118F1AE2000299AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1BF18F1AE2000299AD1 /* InfoPlist.strings */; };
 		A4F1A1C318F1AE2000299AD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1C218F1AE2000299AD1 /* main.m */; };
 		A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */; };
-		A4F1A1CD18F1AE2000299AD1 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1CB18F1AE2000299AD1 /* Main_iPad.storyboard */; };
 		A4F1A1D218F1AE2000299AD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1D118F1AE2000299AD1 /* Images.xcassets */; };
 		A4F1A1D918F1AE2000299AD1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1D818F1AE2000299AD1 /* XCTest.framework */; };
 		A4F1A1DA18F1AE2000299AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B618F1AE2000299AD1 /* Foundation.framework */; };
@@ -113,7 +112,6 @@
 		A4F1A1C418F1AE2000299AD1 /* Geo Master-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Geo Master-Prefix.pch"; sourceTree = "<group>"; };
 		A4F1A1C518F1AE2000299AD1 /* GeoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoAppDelegate.h; sourceTree = "<group>"; };
 		A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoAppDelegate.m; sourceTree = "<group>"; };
-		A4F1A1CC18F1AE2000299AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		A4F1A1D118F1AE2000299AD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4F1A1D718F1AE2000299AD1 /* Geo MasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Geo MasterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F1A1D818F1AE2000299AD1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -328,7 +326,6 @@
 				A416379818F463AE00D8B8F4 /* Random.h */,
 				A416379E18F464BF00D8B8F4 /* XMLParser.h */,
 				A416379F18F464BF00D8B8F4 /* XMLParser.m */,
-				A4F1A1CB18F1AE2000299AD1 /* Main_iPad.storyboard */,
 				A4F1A1BE18F1AE2000299AD1 /* Geo Master-Info.plist */,
 				A4F1A1BF18F1AE2000299AD1 /* InfoPlist.strings */,
 				A4F1A1C418F1AE2000299AD1 /* Geo Master-Prefix.pch */,
@@ -575,7 +572,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4F1A1CD18F1AE2000299AD1 /* Main_iPad.storyboard in Resources */,
 				FA3C628219105D8300609E15 /* GeoTutorialChildViewController.xib in Resources */,
 				BB7F126B19001040004E6099 /* FontAwesome.ttf in Resources */,
 				FA3C628719105DAA00609E15 /* GeoTutorialViewController.xib in Resources */,
@@ -661,14 +657,6 @@
 				A4F1A1C018F1AE2000299AD1 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A4F1A1CB18F1AE2000299AD1 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A4F1A1CC18F1AE2000299AD1 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		A4F1A1E118F1AE2000299AD1 /* InfoPlist.strings */ = {
