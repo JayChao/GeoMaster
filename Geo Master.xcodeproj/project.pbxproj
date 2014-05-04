@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EA26DA617B04973A067C0F0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2786699FA45249A898822824 /* libPods.a */; };
 		A416379A18F463AE00D8B8F4 /* Random.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379918F463AE00D8B8F4 /* Random.m */; };
 		A416379D18F4641E00D8B8F4 /* StreetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379C18F4641E00D8B8F4 /* StreetViewController.m */; };
 		A41637A018F464BF00D8B8F4 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A416379F18F464BF00D8B8F4 /* XMLParser.m */; };
@@ -85,6 +86,9 @@
 		EE5E49641913249900728DE1 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5E495A1913249900728DE1 /* AFURLResponseSerialization.m */; };
 		EE5E49651913249900728DE1 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5E495C1913249900728DE1 /* AFURLSessionManager.m */; };
 		EE5E49681913278B00728DE1 /* ChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5E49671913278B00728DE1 /* ChallengeViewController.m */; };
+		EEFFCD8519157A9E00F4DC69 /* ChallengeGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFFCD8419157A9E00F4DC69 /* ChallengeGameViewController.m */; };
+		EEFFCD871916D9C100F4DC69 /* newyorkcity.txt in Resources */ = {isa = PBXBuildFile; fileRef = EEFFCD861916D9C100F4DC69 /* newyorkcity.txt */; };
+		EEFFCD891916DA2E00F4DC69 /* challengeCityList.txt in Resources */ = {isa = PBXBuildFile; fileRef = EEFFCD881916DA2E00F4DC69 /* challengeCityList.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +102,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2786699FA45249A898822824 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E6C9D914F348328C779EA8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		A416379818F463AE00D8B8F4 /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Random.h; path = ../Random.h; sourceTree = "<group>"; };
 		A416379918F463AE00D8B8F4 /* Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Random.m; path = ../Random.m; sourceTree = "<group>"; };
 		A416379B18F4641E00D8B8F4 /* StreetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreetViewController.h; path = ../StreetViewController.h; sourceTree = "<group>"; };
@@ -223,6 +229,10 @@
 		EE5E495C1913249900728DE1 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		EE5E49661913278B00728DE1 /* ChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeViewController.h; sourceTree = "<group>"; };
 		EE5E49671913278B00728DE1 /* ChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeViewController.m; sourceTree = "<group>"; };
+		EEFFCD8319157A9E00F4DC69 /* ChallengeGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeGameViewController.h; sourceTree = "<group>"; };
+		EEFFCD8419157A9E00F4DC69 /* ChallengeGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeGameViewController.m; sourceTree = "<group>"; };
+		EEFFCD861916D9C100F4DC69 /* newyorkcity.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = newyorkcity.txt; sourceTree = "<group>"; };
+		EEFFCD881916DA2E00F4DC69 /* challengeCityList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = challengeCityList.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +263,7 @@
 				A4F1A1BB18F1AE2000299AD1 /* UIKit.framework in Frameworks */,
 				BBD2E32E18FE2EE4009A08AD /* GoogleMaps.framework in Frameworks */,
 				A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */,
+				3EA26DA617B04973A067C0F0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +286,7 @@
 				A4F1A1BC18F1AE2000299AD1 /* Geo Master */,
 				A4F1A1B518F1AE2000299AD1 /* Frameworks */,
 				A4F1A1B418F1AE2000299AD1 /* Products */,
+				98E6C9D914F348328C779EA8 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -315,6 +327,7 @@
 				A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */,
 				A4F1A1BA18F1AE2000299AD1 /* UIKit.framework */,
 				A4F1A1D818F1AE2000299AD1 /* XCTest.framework */,
+				2786699FA45249A898822824 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -332,6 +345,8 @@
 				A4F1A1D118F1AE2000299AD1 /* Images.xcassets */,
 				EE5E49661913278B00728DE1 /* ChallengeViewController.h */,
 				EE5E49671913278B00728DE1 /* ChallengeViewController.m */,
+				EEFFCD8319157A9E00F4DC69 /* ChallengeGameViewController.h */,
+				EEFFCD8419157A9E00F4DC69 /* ChallengeGameViewController.m */,
 				A4F1A1BD18F1AE2000299AD1 /* Supporting Files */,
 				A4F1A1DE18F1AE2000299AD1 /* Geo MasterTests */,
 			);
@@ -365,6 +380,8 @@
 				A4F1A1BE18F1AE2000299AD1 /* Geo Master-Info.plist */,
 				A4F1A1BF18F1AE2000299AD1 /* InfoPlist.strings */,
 				A4F1A1C418F1AE2000299AD1 /* Geo Master-Prefix.pch */,
+				EEFFCD881916DA2E00F4DC69 /* challengeCityList.txt */,
+				EEFFCD861916D9C100F4DC69 /* newyorkcity.txt */,
 				A47F128A18FE0E850077429C /* USCities.txt */,
 			);
 			name = "Supporting Files";
@@ -488,9 +505,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4F1A1E818F1AE2000299AD1 /* Build configuration list for PBXNativeTarget "Geo Master" */;
 			buildPhases = (
+				BDDFAB89B86E457697A168A8 /* Check Pods Manifest.lock */,
 				A4F1A1AF18F1AE2000299AD1 /* Sources */,
 				A4F1A1B018F1AE2000299AD1 /* Frameworks */,
 				A4F1A1B118F1AE2000299AD1 /* Resources */,
+				EA82DE8EB0A943E984AE9B79 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -562,7 +581,9 @@
 				BB7F126B19001040004E6099 /* FontAwesome.ttf in Resources */,
 				A4F1A1D218F1AE2000299AD1 /* Images.xcassets in Resources */,
 				A47F120D18FDDF9D0077429C /* Main_iPhone.storyboard in Resources */,
+				EEFFCD891916DA2E00F4DC69 /* challengeCityList.txt in Resources */,
 				BBD2E33018FE2EFB009A08AD /* GoogleMaps.bundle in Resources */,
+				EEFFCD871916D9C100F4DC69 /* newyorkcity.txt in Resources */,
 				A4F1A1C118F1AE2000299AD1 /* InfoPlist.strings in Resources */,
 				A47F128B18FE0E850077429C /* USCities.txt in Resources */,
 			);
@@ -577,6 +598,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BDDFAB89B86E457697A168A8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA82DE8EB0A943E984AE9B79 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A4F1A1AF18F1AE2000299AD1 /* Sources */ = {
@@ -607,6 +661,7 @@
 				BBA405EB18FFA04C0002CABC /* FSAudioStream.mm in Sources */,
 				A416379D18F4641E00D8B8F4 /* StreetViewController.m in Sources */,
 				BBA405ED18FFA04C0002CABC /* FSParsePlaylistRequest.m in Sources */,
+				EEFFCD8519157A9E00F4DC69 /* ChallengeGameViewController.m in Sources */,
 				A4F1A1C318F1AE2000299AD1 /* main.m in Sources */,
 				BBA405F118FFA04C0002CABC /* Reachability.m in Sources */,
 				EE5E49431913246D00728DE1 /* UIAlertView+AFNetworking.m in Sources */,
@@ -749,6 +804,7 @@
 		};
 		A4F1A1E918F1AE2000299AD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98E6C9D914F348328C779EA8 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -773,6 +829,7 @@
 		};
 		A4F1A1EA18F1AE2000299AD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98E6C9D914F348328C779EA8 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

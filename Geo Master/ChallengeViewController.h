@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RPSlidingMenu.h"
 
-@interface ChallengeViewController : UIViewController
+@interface ChallengeViewController : RPSlidingMenuViewController
 
 @end

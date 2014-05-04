@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="geF-v1-bIg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="geF-v1-bIg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -47,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="-250" y="19"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Main View Controller - Item-->
         <scene sceneID="rSZ-qh-9Pa">
             <objects>
                 <viewController id="WBW-Wh-FiC" customClass="MainViewController" sceneMemberID="viewController">
@@ -118,12 +118,13 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NIP-TF-gdP" kind="modal" id="Vjv-mF-BMl"/>
+                                    <segue destination="3ma-rg-ozh" kind="modal" id="cdl-C3-57z"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="y2M-Q3-ZVU"/>
                     <connections>
                         <outlet property="BackButton" destination="8Qc-Qt-IJM" id="t2a-0V-7Lj"/>
                         <outlet property="ChallengeModeButton" destination="1PH-Lt-0Gi" id="OfJ-T2-R2V"/>
@@ -138,42 +139,44 @@
             </objects>
             <point key="canvasLocation" x="100" y="19"/>
         </scene>
-        <!--Challenge View Controller-->
-        <scene sceneID="n8M-ga-4BZ">
+        <!--Challenge View Controller - Cities-->
+        <scene sceneID="Z64-3u-9D9">
             <objects>
-                <viewController id="NIP-TF-gdP" customClass="ChallengeViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fxI-zl-Yq5"/>
-                        <viewControllerLayoutGuide type="bottom" id="cDC-1w-nXy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rVv-Y4-PmZ">
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="3ma-rg-ozh" customClass="ChallengeViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="iw6-uV-BBa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zaf-3n-rCZ">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Challenge Mode" id="u3B-Qk-d24">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="Gx7-8w-sTl"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Back" style="done" id="rda-1W-UFH">
-                                            <connections>
-                                                <segue destination="WBW-Wh-FiC" kind="modal" id="pK0-tU-c4C"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ALQ-ca-sIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RAu-q5-qx8">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vak-mh-mYL">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="3ma-rg-ozh" id="OqN-c4-FjO"/>
+                            <outlet property="delegate" destination="3ma-rg-ozh" id="6fI-KD-NF0"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Cities" id="xJS-iy-R5C"/>
+                    <navigationItem key="navigationItem" id="MNM-nd-pXF"/>
+                    <connections>
+                        <outlet property="collectionView" destination="iw6-uV-BBa" id="8m4-U5-CJ6"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yI-NR-cAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="636" y="-25"/>
+            <point key="canvasLocation" x="635" y="44"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -181,7 +184,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="pK0-tU-c4C"/>
-    </inferredMetricsTieBreakers>
 </document>
