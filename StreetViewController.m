@@ -123,7 +123,7 @@ CLLocationCoordinate2D end;
        
        UIButton *playAgain=[[UIButton alloc]initWithFrame:CGRectMake(120, 300, 90, 90)];
        //[playAgain setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/3.0*2)];
-       [playAgain setTitle:@"play again?" forState:UIControlStateNormal];
+       [playAgain setTitle:@"Play again?" forState:UIControlStateNormal];
        [playAgain setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
        //[quit primaryStyle];
        self.view=resultView;
