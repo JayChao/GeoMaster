@@ -30,15 +30,15 @@
 {
     [super viewDidLoad];
     
-    PFObject *record1 = [PFObject objectWithClassName:@"GeoRecord"];
-    record1[@"PlayerName"] = [NSString stringWithFormat:@"Katniss Everdeen"];
-    record1[@"Score"] = [NSNumber numberWithDouble:45.67];
-    [record1 saveInBackground];
-    
-    PFObject *record2 = [PFObject objectWithClassName:@"GeoRecord"];
-    record2[@"PlayerName"] = [NSString stringWithFormat:@"Peeta Mellark"];
-    record2[@"Score"] = [NSNumber numberWithDouble:12.98];
-    [record2 saveInBackground];
+//    PFObject *record1 = [PFObject objectWithClassName:@"GeoRecord"];
+//    record1[@"PlayerName"] = [NSString stringWithFormat:@"Katniss Everdeen"];
+//    record1[@"Score"] = [NSNumber numberWithDouble:45.67];
+//    [record1 saveInBackground];
+//    
+//    PFObject *record2 = [PFObject objectWithClassName:@"GeoRecord"];
+//    record2[@"PlayerName"] = [NSString stringWithFormat:@"Peeta Mellark"];
+//    record2[@"Score"] = [NSNumber numberWithDouble:12.98];
+//    [record2 saveInBackground];
     
     self.tableView.dataSource = self;
     

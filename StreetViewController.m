@@ -8,6 +8,7 @@
 
 #import "StreetViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import <Parse/Parse.h>
 #import "XMLParser.h"
 #import "Random.h"
 #import "UIButton+Bootstrap.h"
@@ -102,29 +103,19 @@ CLLocationCoordinate2D end;
        NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
        NSString *text = [NSString stringWithFormat:@"Your final score is:%@ \n full score is 5000", score];
        
-       
-
-       
-       
-       GeoRecord *newRecord = [[GeoRecord alloc] init];
        [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error)
        {
+           PFObject *newrecord = [PFObject objectWithClassName:@"GeoRecord"];
            if(!error)
-           {
-               newRecord.playerName = [NSString stringWithFormat:@"%@", [result name]];
-           }
+               newrecord[@"PlayerName"] = [result name];
+           
            else
-           {
-               newRecord.playerName = [NSString stringWithFormat:@"Guest"];
-           }
+               newrecord[@"PlayerName"] = @"Guest";
+           
+           
+           newrecord[@"Score"] = score;
+           [newrecord saveInBackground];
        }];
-       newRecord.score = score;
-       
-       ///
-       ///
-       /// in this space, we will insert a call to add this record to parse / firebase / sql/ whatever
-       ///
-       ///
        
        [self.finalResultLabel setText:text];
        self.finalResultLabel.textColor = [UIColor blackColor];
@@ -148,8 +139,8 @@ CLLocationCoordinate2D end;
        UILabel *label1=[[UILabel alloc]initWithFrame:CGRectMake(10, 30, 300, 20)];
        UILabel *label2=[[UILabel alloc]initWithFrame:CGRectMake(10, 50, 300, 20)];
 
-       [label1 setText:@"  Following are right answers of your"];
-       [label2 setText:@"  guesses, click for more informations."];
+       [label1 setText:@"  Here are right answers"];
+       [label2 setText:@"  Click to learn more!"];
 
        [self.view addSubview:label1];
        [self.view addSubview:label2];
