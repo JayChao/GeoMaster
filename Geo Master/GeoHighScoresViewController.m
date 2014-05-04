@@ -22,11 +22,6 @@
     if (self)
     {
         // Custom initialization
-//        if(_recordCollection == nil)
-//        {
-//            NSLog(@"initialized collection!");
-//            _recordCollection = [[GeoRecordCollection alloc] init];
-//        }
     }
     return self;
 }
@@ -35,24 +30,30 @@
 {
     [super viewDidLoad];
     
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
+    PFObject *record1 = [PFObject objectWithClassName:@"GeoRecord"];
+    record1[@"PlayerName"] = [NSString stringWithFormat:@"Katniss Everdeen"];
+    record1[@"Score"] = [NSNumber numberWithDouble:45.67];
+    [record1 saveInBackground];
+    
+    PFObject *record2 = [PFObject objectWithClassName:@"GeoRecord"];
+    record2[@"PlayerName"] = [NSString stringWithFormat:@"Peeta Mellark"];
+    record2[@"Score"] = [NSNumber numberWithDouble:12.98];
+    [record2 saveInBackground];
     
     self.tableView.dataSource = self;
     
     
-    self.recordCollection = [[GeoRecordCollection alloc] init];
-    GeoRecord* record1 = [[GeoRecord alloc] init];
-    record1.playerName = [NSString stringWithFormat:@"Katniss Everdeen"];
-    record1.score = [NSNumber numberWithDouble:45.67];
+//    self.recordCollection = [[GeoRecordCollection alloc] init];
+//    GeoRecord* record1 = [[GeoRecord alloc] init];
+//    record1.playerName = [NSString stringWithFormat:@"Katniss Everdeen"];
+//    record1.score = [NSNumber numberWithDouble:45.67];
     
-    GeoRecord* record2 = [[GeoRecord alloc] init];
-    record2.playerName = [NSString stringWithFormat:@"Peeta Mellark"];
-    record2.score = [NSNumber numberWithDouble:12.98];
+//    GeoRecord* record2 = [[GeoRecord alloc] init];
+//    record2.playerName = [NSString stringWithFormat:@"Peeta Mellark"];
+//    record2.score = [NSNumber numberWithDouble:12.98];
     
-    [self.recordCollection addRecord:record1];
-    [self.recordCollection addRecord:record2];
+//    [self.recordCollection addRecord:record1];
+//    [self.recordCollection addRecord:record2];
     
     NSLog(@"initialized collection!");
 }
