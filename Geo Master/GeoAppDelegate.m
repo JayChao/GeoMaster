@@ -9,6 +9,7 @@
 #import "GeoAppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <Parse/Parse.h>
 #import "GeoRecord.h"
 #import "GeoRecordCollection.h"
 
@@ -30,6 +31,11 @@
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
      UIRemoteNotificationTypeAlert|
      UIRemoteNotificationTypeSound];
+    
+    [Parse setApplicationId:@"fYJvGJFZtNALTKWBvo4dxLZs4PUAFvZGEJ9PUfsZ"
+                  clientKey:@"y73Kosd3Uk1YZ1k4V5blz2h3HXDZBztseeQ0HcJ2"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
 //    _recordCollection = [[GeoRecordCollection alloc] init];
 //

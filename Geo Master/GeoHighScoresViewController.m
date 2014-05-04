@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 ios.uiowa. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "GeoHighScoresViewController.h"
 #import "GeoHighScoreTableCell.h"
 
@@ -34,11 +35,9 @@
 {
     [super viewDidLoad];
     
-//    if(_recordCollection == nil)
-//    {
-//        NSLog(@"initialized collection!");
-//        _recordCollection = [[GeoRecordCollection alloc] init];
-//    }
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
     
     self.tableView.dataSource = self;
     
