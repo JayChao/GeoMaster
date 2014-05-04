@@ -53,6 +53,9 @@ CLLocationCoordinate2D end;
     self.scoreLable=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
     self.walkCountLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 90, 180, 40)];
     self.finalResultLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 230, 300, 90)];
+	self.makeGuess=[[UIButton alloc]initWithFrame:CGRectMake(200, 30, 100, 20)];
+    [_makeGuess setTitle:@"MakeGuess" forState:UIControlStateNormal];
+    [_makeGuess setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
 
     int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
     if (gameProgress==0) {
@@ -360,9 +363,7 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     self.scoreLable.hidden = YES;
     // delete the new marker to the list of markers.
     
-    self.makeGuess=[[UIButton alloc]initWithFrame:CGRectMake(200, 30, 100, 20)];
-    [_makeGuess setTitle:@"MakeGuess" forState:UIControlStateNormal];
-    [_makeGuess setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+
     //[self.makeGuess warningStyle];
     [self.view addSubview:_makeGuess];
     [_makeGuess addTarget:self action:@selector(continueButton) forControlEvents:UIControlEventTouchUpInside];
@@ -378,6 +379,7 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
 -(void)continueButton{
     self.Switch.hidden=YES;
     self.scoreLable.hidden = NO;
+	self.makeGuess.hidden=YES;
     [_makeGuess removeFromSuperview];
     
     GMSMarker *marker = [[GMSMarker alloc] init];
@@ -401,13 +403,17 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     polyline.map = mapView_;
     
     
-    
+    UIView *clearView=[[UIView alloc]init];
+	clearView.backgroundColor=[UIColor clearColor];
+	[clearView setFrame:self.view.frame];
+	[self.view addSubview:clearView];
     
     UIButton *continueButton=[[UIButton alloc]initWithFrame:CGRectMake(200, 30, 100, 20)];
     [continueButton setTitle:@"Continue" forState:UIControlStateNormal];
     [continueButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [self.view addSubview:continueButton];
     [continueButton addTarget:self action:@selector(initStreetView) forControlEvents:UIControlEventTouchUpInside];
+	
     
 }
 
