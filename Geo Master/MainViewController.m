@@ -33,17 +33,16 @@
     }
     return self;
 }
-
-//- (IBAction)startButtonPressed:(UIButton *)sender {
-//
-//    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:0] forKey:@"gameProgress"];
-//    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:0] forKey:@"finalScore"];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
-//
-//
-//    StreetViewController *StreeVC=[[StreetViewController alloc]init];
-//    [self presentViewController:StreeVC animated:YES completion:^{}];
-//}
+- (IBAction)startButtonPressed:(UIButton *)sender {
+    NSArray *history=[[NSArray alloc]init];
+    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:0] forKey:@"gameProgress"];
+    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:0] forKey:@"finalScore"];
+    [[NSUserDefaults standardUserDefaults]setObject:history forKey:@"cityHistory"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    StreetViewController *StreeVC=[[StreetViewController alloc]init];
+    [self presentViewController:StreeVC animated:YES completion:^{}];
+}
 
 
 - (void)viewDidLoad
@@ -58,7 +57,7 @@
     _audioStream = [[FSAudioStream alloc] init];
     [_audioStream playFromURL:[NSURL URLWithString:@"http://sites.google.com/site/georaphymaster/bgm/03%20Morning%20air%20%E6%99%A8%E9%9B%BE.mp3"]];
     [_audioStream stop];
-    self.view.backgroundColor=[UIColor colorWithRed:0.800 green:0.600 blue:0.400 alpha:1.000];
+    self.view.backgroundColor=[UIColor colorWithWhite:0.800 alpha:1.000];
     
     [self.StartButton primaryStyle];
     [self.SettingsButton primaryStyle];

@@ -185,7 +185,6 @@
 		FA9B3C9B191317B200618222 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FA9B3C9C191317B200618222 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FA9B3C9D191317B200618222 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		FAA895DF1913241D00A3EB96 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		FAEAD7E91911CA650060096B /* GeoHighScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoHighScoresViewController.h; sourceTree = "<group>"; };
 		FAEAD7EA1911CA650060096B /* GeoHighScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoHighScoresViewController.m; sourceTree = "<group>"; };
 		FAEAD7F21911CDA80060096B /* GeoRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoRecord.h; sourceTree = "<group>"; };
@@ -265,7 +264,6 @@
 		A4F1A1B518F1AE2000299AD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FAA895DF1913241D00A3EB96 /* Parse.framework */,
 				FA9B3C9B191317B200618222 /* MobileCoreServices.framework */,
 				FA9B3C9C191317B200618222 /* Security.framework */,
 				FA9B3C9D191317B200618222 /* StoreKit.framework */,
@@ -314,6 +312,8 @@
 		A4F1A1BD18F1AE2000299AD1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BBD2E33118FE3F7E009A08AD /* OpenViewController.h */,
+				BBD2E33218FE3F7E009A08AD /* OpenViewController.m */,
 				BB7F126619001040004E6099 /* FontAwesome.ttf */,
 				BB7F126719001040004E6099 /* NSString+FontAwesome.h */,
 				BB7F126819001040004E6099 /* NSString+FontAwesome.m */,
