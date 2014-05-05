@@ -14,13 +14,13 @@
 		A47F121018FDDFB10077429C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47F120F18FDDFB10077429C /* MainViewController.m */; };
 		A47F128B18FE0E850077429C /* USCities.txt in Resources */ = {isa = PBXBuildFile; fileRef = A47F128A18FE0E850077429C /* USCities.txt */; };
 		A496A66E18F2050100C18EBB /* GeoGame.m in Sources */ = {isa = PBXBuildFile; fileRef = A496A66D18F2050100C18EBB /* GeoGame.m */; };
+		A49A420D1916E95F00C6E8EF /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A49A420C1916E95F00C6E8EF /* SettingViewController.m */; };
 		A4F1A1B718F1AE2000299AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B618F1AE2000299AD1 /* Foundation.framework */; };
 		A4F1A1B918F1AE2000299AD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */; };
 		A4F1A1BB18F1AE2000299AD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1BA18F1AE2000299AD1 /* UIKit.framework */; };
 		A4F1A1C118F1AE2000299AD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1BF18F1AE2000299AD1 /* InfoPlist.strings */; };
 		A4F1A1C318F1AE2000299AD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1C218F1AE2000299AD1 /* main.m */; };
 		A4F1A1C718F1AE2000299AD1 /* GeoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */; };
-		A4F1A1CD18F1AE2000299AD1 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1CB18F1AE2000299AD1 /* Main_iPad.storyboard */; };
 		A4F1A1D218F1AE2000299AD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4F1A1D118F1AE2000299AD1 /* Images.xcassets */; };
 		A4F1A20118F1B8B800299AD1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F318F1B8B800299AD1 /* CoreData.framework */; };
 		A4F1A20218F1B8B800299AD1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F1A1F418F1B8B800299AD1 /* CoreLocation.framework */; };
@@ -90,6 +90,8 @@
 		A47F128A18FE0E850077429C /* USCities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = USCities.txt; sourceTree = "<group>"; };
 		A496A66C18F2050100C18EBB /* GeoGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoGame.h; sourceTree = "<group>"; };
 		A496A66D18F2050100C18EBB /* GeoGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoGame.m; sourceTree = "<group>"; };
+		A49A420B1916E95F00C6E8EF /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		A49A420C1916E95F00C6E8EF /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		A4F1A1B318F1AE2000299AD1 /* Geo Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geo Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F1A1B618F1AE2000299AD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A4F1A1B818F1AE2000299AD1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -100,7 +102,6 @@
 		A4F1A1C418F1AE2000299AD1 /* Geo Master-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Geo Master-Prefix.pch"; sourceTree = "<group>"; };
 		A4F1A1C518F1AE2000299AD1 /* GeoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoAppDelegate.h; sourceTree = "<group>"; };
 		A4F1A1C618F1AE2000299AD1 /* GeoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoAppDelegate.m; sourceTree = "<group>"; };
-		A4F1A1CC18F1AE2000299AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		A4F1A1D118F1AE2000299AD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4F1A1D818F1AE2000299AD1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A4F1A1E018F1AE2000299AD1 /* Geo MasterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Geo MasterTests-Info.plist"; sourceTree = "<group>"; };
@@ -226,6 +227,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A49A420A1916E94300C6E8EF /* Setting View */ = {
+			isa = PBXGroup;
+			children = (
+				A49A420B1916E95F00C6E8EF /* SettingViewController.h */,
+				A49A420C1916E95F00C6E8EF /* SettingViewController.m */,
+			);
+			name = "Setting View";
+			sourceTree = "<group>";
+		};
 		A4F1A1AA18F1AE1F00299AD1 = {
 			isa = PBXGroup;
 			children = (
@@ -314,7 +324,6 @@
 				A416379818F463AE00D8B8F4 /* Random.h */,
 				A416379E18F464BF00D8B8F4 /* XMLParser.h */,
 				A416379F18F464BF00D8B8F4 /* XMLParser.m */,
-				A4F1A1CB18F1AE2000299AD1 /* Main_iPad.storyboard */,
 				A4F1A1BE18F1AE2000299AD1 /* Geo Master-Info.plist */,
 				A4F1A1BF18F1AE2000299AD1 /* InfoPlist.strings */,
 				A4F1A1C418F1AE2000299AD1 /* Geo Master-Prefix.pch */,
@@ -410,6 +419,7 @@
 		FAEAD7E81911CA000060096B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A49A420A1916E94300C6E8EF /* Setting View */,
 				FAEAD7ED1911CA7F0060096B /* Main View */,
 				FAEAD7EC1911CA710060096B /* Open View */,
 				FAEAD7EE1911CA870060096B /* Street View */,
@@ -537,7 +547,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4F1A1CD18F1AE2000299AD1 /* Main_iPad.storyboard in Resources */,
 				FA3C628219105D8300609E15 /* GeoTutorialChildViewController.xib in Resources */,
 				BB7F126B19001040004E6099 /* FontAwesome.ttf in Resources */,
 				FA3C628719105DAA00609E15 /* GeoTutorialViewController.xib in Resources */,
@@ -570,6 +579,7 @@
 				BBA405EC18FFA04C0002CABC /* FSCheckContentTypeRequest.m in Sources */,
 				BBA405EE18FFA04C0002CABC /* FSParseRssPodcastFeedRequest.m in Sources */,
 				BBA405EB18FFA04C0002CABC /* FSAudioStream.mm in Sources */,
+				A49A420D1916E95F00C6E8EF /* SettingViewController.m in Sources */,
 				A416379D18F4641E00D8B8F4 /* StreetViewController.m in Sources */,
 				BBA405ED18FFA04C0002CABC /* FSParsePlaylistRequest.m in Sources */,
 				A4F1A1C318F1AE2000299AD1 /* main.m in Sources */,
@@ -598,14 +608,6 @@
 				A4F1A1C018F1AE2000299AD1 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A4F1A1CB18F1AE2000299AD1 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A4F1A1CC18F1AE2000299AD1 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		A4F1A1E118F1AE2000299AD1 /* InfoPlist.strings */ = {
