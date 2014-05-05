@@ -7,6 +7,7 @@
 //
 
 #import "GeoHighScoresViewController.h"
+#import "GeoHighScoreTableCell.h"
 
 @implementation GeoHighScoresViewController
 
@@ -18,7 +19,7 @@
         // Custom the table
         
         // The className to query on
-        self.parseClassName = @"GeoRecord";
+        self.parseClassName = @"GeoRecord";//this line ended doing jack shit, thanks parse
         
         // The key of the PFObject to display in the label of the default cell style
         self.textKey = @"PlayerName";
@@ -118,27 +119,27 @@
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     }
     
-    [query orderByAscending:@"priority"];
+    [query orderByDescending:@"Score"];
     
     return query;
 }
 
-
-
-// Override to customize the look of a cell representing an object. The default is to display
-// a UITableViewCellStyleDefault style cell with the label being the first key in the object.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
+- (GeoHighScoreTableCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    GeoHighScoreTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[GeoHighScoreTableCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell
-    cell.textLabel.text = [object objectForKey:@"PlayerName"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Score: %@", [object objectForKey:@"Score"]];
+    cell.playerNameLabel.text = [object objectForKey:@"PlayerName"];
+    cell.scoreLabel.text =
+    [object objectForKey:@"Score"] != nil
+        ? [NSString stringWithFormat:@"%@", [object objectForKey:@"Score"]]
+        : [NSString stringWithFormat:@""];
+    
     
     return cell;
 }
