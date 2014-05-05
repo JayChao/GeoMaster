@@ -91,6 +91,7 @@ CLLocationCoordinate2D end;
     
     
    if (gameProgress >= 6) {
+		
        gameProgress = 0;
        [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:gameProgress] forKey:@"gameProgress"];
        [[NSUserDefaults standardUserDefaults] synchronize];
@@ -98,10 +99,9 @@ CLLocationCoordinate2D end;
        UIView *resultView=[[UIView alloc]init];
        resultView.backgroundColor=[UIColor whiteColor];
      
-       
-       
-       NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
-       NSString *text = [NSString stringWithFormat:@"Your final score is:%@ \n full score is 5000", score];
+
+	   NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
+       NSString *text = [NSString stringWithFormat:@"Your final score is:%@", score];
        
        [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error)
        {
@@ -121,7 +121,7 @@ CLLocationCoordinate2D end;
        self.finalResultLabel.textColor = [UIColor blackColor];
        self.finalResultLabel.backgroundColor = [UIColor clearColor];
        
-       UIButton *playAgain=[[UIButton alloc]initWithFrame:CGRectMake(120, 300, 90, 90)];
+       UIButton *playAgain=[[UIButton alloc]initWithFrame:CGRectMake(120, 300, 180, 90)];
        //[playAgain setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/3.0*2)];
        [playAgain setTitle:@"Play again?" forState:UIControlStateNormal];
        [playAgain setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
@@ -319,8 +319,8 @@ CLLocationCoordinate2D end;
 -(IBAction)switchView{
 //-(void)switchView{
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:41
-                                                            longitude:-87
-                                                                 zoom:2];
+                                                            longitude:-95
+                                                                 zoom:3];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.delegate = self;
     self.view = mapView_;
@@ -428,25 +428,30 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     [self.view addSubview:continueButton];
     [continueButton addTarget:self action:@selector(initStreetView) forControlEvents:UIControlEventTouchUpInside];
 	
+	NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
+    float value = [score floatValue];
+    float value2 = [self.game.score floatValue];
+    float sum=value+value2;
+    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithFloat:sum] forKey:@"finalScore"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
 
 -(void)initStreetView{
     StreetViewController *StreeVC=[[StreetViewController alloc]init];
     [self presentViewController:StreeVC animated:YES completion:^{}];
-}
-
--(void)viewDidDisappear:(BOOL)animated{
-    NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
-    float value = [score floatValue];
-    float value2 = [self.game.score floatValue];
-    
-    float sum=value+value2;
-    
-    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithFloat:sum] forKey:@"finalScore"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
 
 }
+
+//-(void)viewDidDisappear:(BOOL)animated{
+//    NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
+//    float value = [score floatValue];
+//    float value2 = [self.game.score floatValue];
+//    float sum=value+value2;
+//    [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithFloat:sum] forKey:@"finalScore"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+//
+//}
 
 -(void)button1{
     NSArray *history= [[NSUserDefaults standardUserDefaults]  objectForKey:@"cityHistory"];
