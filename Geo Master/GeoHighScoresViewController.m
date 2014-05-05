@@ -6,13 +6,7 @@
 //  Copyright (c) 2014 ios.uiowa. All rights reserved.
 //
 
-#import <Parse/Parse.h>
 #import "GeoHighScoresViewController.h"
-#import "GeoHighScoreTableCell.h"
-
-@interface GeoHighScoresViewController ()
-
-@end
 
 @implementation GeoHighScoresViewController
 
@@ -21,93 +15,140 @@
     self = [super initWithStyle:style];
     if (self)
     {
-        // Custom initialization
+        // Custom the table
+        
+        // The className to query on
+        self.parseClassName = @"GeoRecord";
+        
+        // The key of the PFObject to display in the label of the default cell style
+        self.textKey = @"PlayerName";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = YES;
+        
+        // The number of objects to show per page
+        self.objectsPerPage = 5;
     }
     return self;
 }
+
+#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-//    PFObject *record1 = [PFObject objectWithClassName:@"GeoRecord"];
-//    record1[@"PlayerName"] = [NSString stringWithFormat:@"Katniss Everdeen"];
-//    record1[@"Score"] = [NSNumber numberWithDouble:45.67];
-//    [record1 saveInBackground];
-//    
-//    PFObject *record2 = [PFObject objectWithClassName:@"GeoRecord"];
-//    record2[@"PlayerName"] = [NSString stringWithFormat:@"Peeta Mellark"];
-//    record2[@"Score"] = [NSNumber numberWithDouble:12.98];
-//    [record2 saveInBackground];
-    
-    self.tableView.dataSource = self;
     
     
-//    self.recordCollection = [[GeoRecordCollection alloc] init];
-//    GeoRecord* record1 = [[GeoRecord alloc] init];
-//    record1.playerName = [NSString stringWithFormat:@"Katniss Everdeen"];
-//    record1.score = [NSNumber numberWithDouble:45.67];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
-//    GeoRecord* record2 = [[GeoRecord alloc] init];
-//    record2.playerName = [NSString stringWithFormat:@"Peeta Mellark"];
-//    record2.score = [NSNumber numberWithDouble:12.98];
-    
-//    [self.recordCollection addRecord:record1];
-//    [self.recordCollection addRecord:record2];
-    
-    NSLog(@"initialized collection!");
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (void)didReceiveMemoryWarning
 {
+    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    // Release any cached data, images, etc that aren't in use.
 }
 
-#pragma mark - Table view data source
+#pragma mark - Parse
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
+- (void)objectsDidLoad:(NSError *)error {
+    [super objectsDidLoad:error];
+    
+    // This method is called every time objects are loaded from Parse via the PFQuery
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [self.recordCollection getCount];
+- (void)objectsWillLoad {
+    [super objectsWillLoad];
+    
+    // This method is called before a PFQuery is fired to get more objects
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
+// Override to customize what kind of query to perform on the class. The default is to query for
+// all objects ordered by createdAt descending.
+- (PFQuery *)queryForTable
 {
-    static NSString *CellIdentifier = @"recordCell";
+    PFQuery *query = [PFQuery queryWithClassName:@"GeoRecord"];
     
-    GeoHighScoreTableCell *cell = [tableView
-                              dequeueReusableCellWithIdentifier:CellIdentifier
-                              forIndexPath:indexPath];
+    // If no objects are loaded in memory, we look to the cache first to fill the table
+    // and then subsequently do a query against the network.
+    if ([self.objects count] == 0) {
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    }
     
-    // Configure the cell...
+    [query orderByAscending:@"priority"];
     
-    long row = [indexPath row];
+    return query;
+}
+
+
+
+// Override to customize the look of a cell representing an object. The default is to display
+// a UITableViewCellStyleDefault style cell with the label being the first key in the object.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
+{
+    static NSString *CellIdentifier = @"Cell";
     
-    cell.playerNameLabel.text = [self.recordCollection getRecordAtIndex:row].playerName;
-    cell.scoreLabel.text = [NSString stringWithFormat:@"%@", [self.recordCollection getRecordAtIndex:row].score];
-    [cell.playerNameLabel sizeToFit];
-    [cell.scoreLabel sizeToFit];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell
+    cell.textLabel.text = [object objectForKey:@"PlayerName"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Score: %@", [object objectForKey:@"Score"]];
     
     return cell;
 }
 
+#pragma mark - Table view delegate
 
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
- */
 
 @end

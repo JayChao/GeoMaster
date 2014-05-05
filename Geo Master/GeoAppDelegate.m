@@ -6,21 +6,14 @@
 //  Copyright (c) 2014 ios.uiowa. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "GeoAppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <FacebookSDK/FacebookSDK.h>
-#import <Parse/Parse.h>
-#import "GeoRecord.h"
-#import "GeoRecordCollection.h"
 
 #import "OpenViewController.h"
-#import "MainViewController.h"
-#import "GeoHighScoresViewController.h"
 
 @implementation GeoAppDelegate
-{
-    GeoRecordCollection* _recordCollection;
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -34,18 +27,6 @@
     
     [Parse setApplicationId:@"fYJvGJFZtNALTKWBvo4dxLZs4PUAFvZGEJ9PUfsZ"
                   clientKey:@"y73Kosd3Uk1YZ1k4V5blz2h3HXDZBztseeQ0HcJ2"];
-    
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
-//    _recordCollection = [[GeoRecordCollection alloc] init];
-//
-//    GeoRecord* record1 = [[GeoRecord alloc] init];
-//    record1.playerName = [NSString stringWithFormat:@"Katniss Everdeen"];
-//    record1.score = [NSNumber numberWithDouble:45.67];
-//    
-//    GeoRecord* record2 = [[GeoRecord alloc] init];
-//    record2.playerName = [NSString stringWithFormat:@"Peeta Mellark"];
-//    record2.score = [NSNumber numberWithDouble:12.98];
     
     return YES;
 }
