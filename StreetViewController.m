@@ -56,7 +56,7 @@ CLLocationCoordinate2D end;
 	self.makeGuess=[[UIButton alloc]initWithFrame:CGRectMake(200, 30, 100, 20)];
     [_makeGuess setTitle:@"MakeGuess" forState:UIControlStateNormal];
     [_makeGuess setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-
+	
     int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
     if (gameProgress==0) {
         UIAlertView *mBoxView =[[UIAlertView alloc]initWithTitle:@"Tip" message:@"‘Double click’ on streets to walk around \n Find more in Guides. \n \nYou will lose a small amount of points for walking" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -78,7 +78,7 @@ CLLocationCoordinate2D end;
 
 -(void)gameWillRepeatForFiveTimes{
     int gameProgress = [[NSUserDefaults standardUserDefaults]  integerForKey:@"gameProgress"];
-
+	
     gameProgress++;
     NSString *text = [NSString stringWithFormat:@"Game Progress: %d/5", gameProgress];
     [self.gamePrograssLable setText:text];
@@ -86,106 +86,114 @@ CLLocationCoordinate2D end;
     self.gamePrograssLable.backgroundColor = [UIColor clearColor];
     [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:gameProgress] forKey:@"gameProgress"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-
+	
     
     
     
-   if (gameProgress >= 6) {
+	if (gameProgress >= 6) {
 		
-       gameProgress = 0;
-       [[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:gameProgress] forKey:@"gameProgress"];
-       [[NSUserDefaults standardUserDefaults] synchronize];
-       //[self.main changeToResultViewController];
-       UIView *resultView=[[UIView alloc]init];
-       resultView.backgroundColor=[UIColor whiteColor];
-     
-
-	   NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
-       NSString *text = [NSString stringWithFormat:@"Your final score is:%@", score];
-       
-       [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error)
-       {
-           PFObject *newrecord = [PFObject objectWithClassName:@"GeoRecord"];
-           if(!error)
-               newrecord[@"PlayerName"] = [result name];
-           
-           else
-               newrecord[@"PlayerName"] = @"Guest";
-           
-           
-           newrecord[@"Score"] = score;
-           [newrecord saveInBackground];
-       }];
-       
-       [self.finalResultLabel setText:text];
-       self.finalResultLabel.textColor = [UIColor blackColor];
-       self.finalResultLabel.backgroundColor = [UIColor clearColor];
-       
-       UIButton *playAgain=[[UIButton alloc]initWithFrame:CGRectMake(120, 300, 180, 90)];
-       //[playAgain setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/3.0*2)];
-       [playAgain setTitle:@"Play again?" forState:UIControlStateNormal];
-       [playAgain setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-       //[quit primaryStyle];
-       self.view=resultView;
-       [self.view addSubview:playAgain];
-       [playAgain addTarget:self action:@selector(playAgain) forControlEvents:UIControlEventTouchUpInside];
-       
-       self.view.backgroundColor=[UIColor colorWithWhite:0.800 alpha:1.000];
-       
-       [resultView addSubview:self.finalResultLabel];
-       NSMutableArray *list=[[NSMutableArray alloc]init];
-       NSArray *history= [[NSUserDefaults standardUserDefaults]  objectForKey:@"cityHistory"];
-       
-       UILabel *label1=[[UILabel alloc]initWithFrame:CGRectMake(10, 30, 300, 20)];
-       UILabel *label2=[[UILabel alloc]initWithFrame:CGRectMake(10, 50, 300, 20)];
-
-       [label1 setText:@"  Here are right answers"];
-       [label2 setText:@"  Click to learn more!"];
-
-       [self.view addSubview:label1];
-       [self.view addSubview:label2];
-       
-       UIButton *city1=[[UIButton alloc]initWithFrame:CGRectMake(10, 80, 300, 25)];
-       UIButton *city2=[[UIButton alloc]initWithFrame:CGRectMake(10, 110, 300, 25)];
-       UIButton *city3=[[UIButton alloc]initWithFrame:CGRectMake(10, 140, 300, 25)];
-       UIButton *city4=[[UIButton alloc]initWithFrame:CGRectMake(10, 170, 300, 25)];
-       UIButton *city5=[[UIButton alloc]initWithFrame:CGRectMake(10, 200, 300, 25)];
-       //city1.backgroundColor=[UIColor blueColor];
-       //city2.backgroundColor=[UIColor blueColor];
-       //city3.backgroundColor=[UIColor blueColor];
-       //city4.backgroundColor=[UIColor blueColor];
-       //city5.backgroundColor=[UIColor blueColor];
-
-       for (NSString *city in history) {
-           NSString *name=[city stringByReplacingOccurrencesOfString:@"%20" withString:@" "];
-           [list addObject:name];
-       }
-       
-       [city1 addTarget:self action:@selector(button1) forControlEvents:UIControlEventTouchUpInside];
-       [city2 addTarget:self action:@selector(button2) forControlEvents:UIControlEventTouchUpInside];
-       [city3 addTarget:self action:@selector(button3) forControlEvents:UIControlEventTouchUpInside];
-       [city4 addTarget:self action:@selector(button4) forControlEvents:UIControlEventTouchUpInside];
-       [city5 addTarget:self action:@selector(button5) forControlEvents:UIControlEventTouchUpInside];
-
-       [city1 setTitle:[list objectAtIndex:0] forState:UIControlStateNormal];
-       [city2 setTitle:[list objectAtIndex:1] forState:UIControlStateNormal];
-       [city3 setTitle:[list objectAtIndex:2] forState:UIControlStateNormal];
-       [city4 setTitle:[list objectAtIndex:3] forState:UIControlStateNormal];
-       [city5 setTitle:[list objectAtIndex:4] forState:UIControlStateNormal];
-       
-       [city1 primaryStyle];
-       [city2 primaryStyle];
-       [city3 primaryStyle];
-       [city4 primaryStyle];
-       [city5 primaryStyle];
-
-       [self.view addSubview:city1];
-       [self.view addSubview:city2];
-       [self.view addSubview:city3];
-       [self.view addSubview:city4];
-       [self.view addSubview:city5];
-
-   }
+		gameProgress = 0;
+		[[NSUserDefaults standardUserDefaults]setObject:[NSNumber numberWithInt:gameProgress] forKey:@"gameProgress"];
+		[[NSUserDefaults standardUserDefaults] synchronize];
+		//[self.main changeToResultViewController];
+		UIView *resultView=[[UIView alloc]init];
+		resultView.backgroundColor=[UIColor whiteColor];
+		
+		
+		NSNumber *score = [[NSUserDefaults standardUserDefaults]  objectForKey:@"finalScore"];
+		NSString *text = [NSString stringWithFormat:@"Your final score is:%@", score];
+		
+		[FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error)
+		 {
+			 PFObject *newrecord = [PFObject objectWithClassName:@"GeoRecord"];
+			 if(!error)
+				 newrecord[@"PlayerName"] = [result name];
+			 
+			 else
+				 newrecord[@"PlayerName"] = @"Guest";
+			 
+			 
+			 newrecord[@"Score"] = score;
+			 [newrecord saveInBackground];
+		 }];
+		
+		[self.finalResultLabel setText:text];
+		self.finalResultLabel.textColor = [UIColor blackColor];
+		self.finalResultLabel.backgroundColor = [UIColor clearColor];
+		
+		
+		
+		UIButton *playAgain=[[UIButton alloc]initWithFrame:CGRectMake(90, 300, 180, 90)];
+		//[playAgain setCenter:CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/3.0*2)];
+		[playAgain setTitle:@"Play again" forState:UIControlStateNormal];
+		[playAgain setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+		//[quit primaryStyle];
+		self.view=resultView;
+		[self.view addSubview:playAgain];
+		[playAgain addTarget:self action:@selector(playAgain) forControlEvents:UIControlEventTouchUpInside];
+		UIButton *quit =[[UIButton alloc]initWithFrame:CGRectMake(270, 30, 40, 20)];
+		[quit setTitle:@"Quit" forState:UIControlStateNormal];
+		[quit setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+		//[quit primaryStyle];
+		[self.view addSubview:quit];
+		[quit addTarget:self action:@selector(quitButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+		
+		self.view.backgroundColor=[UIColor colorWithWhite:0.800 alpha:1.000];
+		
+		[resultView addSubview:self.finalResultLabel];
+		NSMutableArray *list=[[NSMutableArray alloc]init];
+		NSArray *history= [[NSUserDefaults standardUserDefaults]  objectForKey:@"cityHistory"];
+		
+		UILabel *label1=[[UILabel alloc]initWithFrame:CGRectMake(10, 30, 300, 20)];
+		UILabel *label2=[[UILabel alloc]initWithFrame:CGRectMake(10, 50, 300, 20)];
+		
+		[label1 setText:@"  Here are right answers"];
+		[label2 setText:@"  Click to learn more!"];
+		
+		[self.view addSubview:label1];
+		[self.view addSubview:label2];
+		
+		UIButton *city1=[[UIButton alloc]initWithFrame:CGRectMake(10, 80, 300, 25)];
+		UIButton *city2=[[UIButton alloc]initWithFrame:CGRectMake(10, 110, 300, 25)];
+		UIButton *city3=[[UIButton alloc]initWithFrame:CGRectMake(10, 140, 300, 25)];
+		UIButton *city4=[[UIButton alloc]initWithFrame:CGRectMake(10, 170, 300, 25)];
+		UIButton *city5=[[UIButton alloc]initWithFrame:CGRectMake(10, 200, 300, 25)];
+		//city1.backgroundColor=[UIColor blueColor];
+		//city2.backgroundColor=[UIColor blueColor];
+		//city3.backgroundColor=[UIColor blueColor];
+		//city4.backgroundColor=[UIColor blueColor];
+		//city5.backgroundColor=[UIColor blueColor];
+		
+		for (NSString *city in history) {
+			NSString *name=[city stringByReplacingOccurrencesOfString:@"%20" withString:@" "];
+			[list addObject:name];
+		}
+		
+		[city1 addTarget:self action:@selector(button1) forControlEvents:UIControlEventTouchUpInside];
+		[city2 addTarget:self action:@selector(button2) forControlEvents:UIControlEventTouchUpInside];
+		[city3 addTarget:self action:@selector(button3) forControlEvents:UIControlEventTouchUpInside];
+		[city4 addTarget:self action:@selector(button4) forControlEvents:UIControlEventTouchUpInside];
+		[city5 addTarget:self action:@selector(button5) forControlEvents:UIControlEventTouchUpInside];
+		
+		[city1 setTitle:[list objectAtIndex:0] forState:UIControlStateNormal];
+		[city2 setTitle:[list objectAtIndex:1] forState:UIControlStateNormal];
+		[city3 setTitle:[list objectAtIndex:2] forState:UIControlStateNormal];
+		[city4 setTitle:[list objectAtIndex:3] forState:UIControlStateNormal];
+		[city5 setTitle:[list objectAtIndex:4] forState:UIControlStateNormal];
+		
+		[city1 primaryStyle];
+		[city2 primaryStyle];
+		[city3 primaryStyle];
+		[city4 primaryStyle];
+		[city5 primaryStyle];
+		
+		[self.view addSubview:city1];
+		[self.view addSubview:city2];
+		[self.view addSubview:city3];
+		[self.view addSubview:city4];
+		[self.view addSubview:city5];
+		
+	}
 }
 
 -(void)playAgain{
@@ -198,7 +206,8 @@ CLLocationCoordinate2D end;
     
     StreetViewController *StreeVC=[[StreetViewController alloc]init];
     [self presentViewController:StreeVC animated:YES completion:^{}];
-   }
+	
+}
 
 -(void)findRandomPlace{
     
@@ -275,7 +284,7 @@ CLLocationCoordinate2D end;
     view_.streetNamesHidden=YES;
     self.view = view_;
     
-
+	
     //Buttons
     UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 40, 20)];
     [Switch setTitle:@"Map" forState:UIControlStateNormal];
@@ -284,7 +293,7 @@ CLLocationCoordinate2D end;
     [self.view addSubview:Switch];
     [Switch addTarget:self action:@selector(switchView) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton *quit=[[UIButton alloc]initWithFrame:CGRectMake(270, 30, 40, 20)];
+    UIButton *quit =[[UIButton alloc]initWithFrame:CGRectMake(270, 30, 40, 20)];
     [quit setTitle:@"Quit" forState:UIControlStateNormal];
     [quit setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     //[quit primaryStyle];
@@ -303,28 +312,28 @@ CLLocationCoordinate2D end;
     self.walkCountLabel.backgroundColor = [UIColor clearColor];
     
     [view_ addSubview:self.walkCountLabel];
-
+	
     [self gameWillRepeatForFiveTimes];
     [view_ addSubview:self.gamePrograssLable];
     
 }
 
 -(void)quitButtonPressed{
-    [self dismissViewControllerAnimated:NO completion:^{}];
+	[self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+	//    [self dismissViewControllerAnimated:NO completion:^{}];
 }
 
 
 //Following code is MapView
 
 -(IBAction)switchView{
-//-(void)switchView{
+	//-(void)switchView{
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:41
                                                             longitude:-95
                                                                  zoom:3];
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     mapView_.delegate = self;
     self.view = mapView_;
-    
     
     UIButton *Switch=[[UIButton alloc]initWithFrame:CGRectMake(10, 30, 45, 20)];
     [Switch setTitle:@"Back" forState:UIControlStateNormal];
@@ -377,7 +386,7 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     self.scoreLable.hidden = YES;
     // delete the new marker to the list of markers.
     
-
+	
     //[self.makeGuess warningStyle];
     [self.view addSubview:_makeGuess];
     [_makeGuess addTarget:self action:@selector(continueButton) forControlEvents:UIControlEventTouchUpInside];
@@ -398,8 +407,8 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
     
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.icon = [GMSMarker markerImageWithColor:[UIColor blueColor]];
-//    marker.title = [NSString stringWithFormat:@"xx\nRight location: %.2f,%.2f",
-//                    coordinatesToGuess.latitude, coordinatesToGuess.longitude];
+	//    marker.title = [NSString stringWithFormat:@"xx\nRight location: %.2f,%.2f",
+	//                    coordinatesToGuess.latitude, coordinatesToGuess.longitude];
     marker.title = self.parser.address;
     marker.position = coordinatesToGuess;
     marker.appearAnimation = kGMSMarkerAnimationPop;
@@ -440,7 +449,6 @@ didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
 -(void)initStreetView{
     StreetViewController *StreeVC=[[StreetViewController alloc]init];
     [self presentViewController:StreeVC animated:YES completion:^{}];
-
 }
 
 //-(void)viewDidDisappear:(BOOL)animated{
